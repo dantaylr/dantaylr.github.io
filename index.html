@@ -1,0 +1,151 @@
+<!--
+    PT Notes:
+
+    How :title works in Jekyll
+        If a title isn't specified for an HTML, nothing is generated. 
+        If it isn't specified for a markdown file, 
+        a title is automatically generated from the file name and 
+        capitalized properly with dashes turned to spaces.
+-->
+
+<html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <!--Header section text changer-->
+            <script>
+                var msgArr = ["Afternoon", "Heyo", "Greetings"];
+                var today = new Date().getHours();
+                var introText = "I’m Dan. I love creating meaningful experiences through a wide range of media. This page walks through the design process of a few recent projects."
+                
+                    window.onload = function () {
+                        if (today > 4 && today <= 12) {
+                            document.getElementById("var-div-greeting").innerHTML = "Mornin'";
+                            document.getElementById("var-div-intro").innerHTML = introText;
+                        }
+                        if (today > 12 && today <= 17) {
+                            document.getElementById("var-div-greeting").innerHTML = msgArr[Math.floor(Math.random()*msgArr.length)];
+                            document.getElementById("var-div-intro").innerHTML = introText;
+                        }
+                        if (today > 17 && today <= 23) { 
+                            document.getElementById("var-div-greeting").innerHTML = "Evenin'";
+                            document.getElementById("var-div-intro").innerHTML = introText;
+                        }
+                        if (today > 23 && today <= 4) {
+                            document.getElementById("var-div-greeting").innerHTML = "It's late";
+                            document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> Anyway " + introText;
+                        }
+                }
+            </script>
+
+            <!--SITE META-->
+
+            <!--If the current page doesn't have a title, the file name is used-->
+            <title>Dan Taylor</title>
+            <meta title=”description” content="Design portfolio of Dan Taylor">
+            
+            <!--
+                Favicons and code below have been generated from:
+                https://favicon.io/
+            -->
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+            <link rel="manifest" href="/site.webmanifest">
+
+            <link rel="stylesheet" href="style.css">
+
+        </head>
+<body>
+
+<div id="container">
+
+<div id="section">
+
+    <div id="block" class="section-header">
+        <h1><b><div id="var-div-greeting"></div></b></h1>
+    </div>
+
+    <div id="block" class="section-content">
+        <h3>
+            <div id="var-div-intro">
+            </div>
+        </h3>
+    </div>
+
+</div>
+
+<div id="section">
+
+    <div id="block" class="border">
+        <p>12/13/2019</p>
+    </div>
+
+    <div id="block" class="section-header">
+        <h2>
+            <b>Cadmium</b>
+            <br />
+            Complex modular synthesizer
+        </h2>
+    </div>
+
+    <div id="block" class="section-content">
+        <div id="row">
+            <div id="column">
+                    <img src="images/image-landscape.jpg">
+                    <p>
+                        I’m Dan. 
+                        I love creating meaningful experiences through a wide range of media. 
+                        This page walks through the design process of a few recent projects.
+                    </p>
+            </div>
+            <div id="column">
+                    <img src="images/image-portrait.jpg">
+                    <p>
+                        I’m Dan. 
+                        I love creating meaningful experiences through a wide range of media. 
+                        This page walks through the design process of a few recent projects.
+                    </p>
+            </div>
+            <div id="column">
+                <p>
+                    I’m Dan. 
+                    I love creating meaningful experiences through a wide range of media. 
+                    This page walks through the design process of a few recent projects.
+                </p>
+            </div>
+        </div>
+        <div id="row">
+            <div id="column">
+                <p>
+                    I’m Dan. 
+                    I love creating meaningful experiences through a wide range of media. 
+                    This page walks through the design process of a few recent projects.
+                </p>
+            </div>
+            <div id="column">
+                <p>
+                    I’m Dan. 
+                    I love creating meaningful experiences through a wide range of media. 
+                    This page walks through the design process of a few recent projects.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="block" class="section-header">
+        <h3>Breakdown</h3>
+    </div> 
+
+    <div id="block" class="section-content">
+        I’m Dan. 
+        I love creating meaningful experiences through a wide range of media. 
+        This page walks through the design process of a few recent projects.
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>

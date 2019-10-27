@@ -1,0 +1,187 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*End CSS Reset*/
+
+
+/*variables*/
+
+:root {
+    --color-primary: black;
+    --color-secondary: white;
+    --color-tertiary: blue;
+    --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --max-width: 960px;
+    --body-size: 12px;
+    --line-height-multiplier: 1.2;
+    --h1-size: calc(var(--body-size)*6);
+    --h2-size: calc(var(--body-size)*3);
+    --h3-size: calc(var(--body-size)*1.5);
+    --h4-size: calc(var(--body-size)*1);
+    --spacing: calc(var(--body-size)*var(--line-height-multiplier));
+    --max-width: calc( 960px + calc(var(--spacing)*4) );
+    --border-width: 1.5px;
+}
+
+/*main css*/
+
+/*text*/
+
+html, body, p, a, h1, h2, h3 {
+    font-family: var(--font);
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    margin-bottom: calc(var(--spacing)*0.5);
+    text-decoration: none;
+}
+
+a, a:hover {
+    padding-bottom: calc(var(--spacing)*0.3);
+    border-bottom: solid var(--color-primary) var(--border-width);
+    display: inline;
+}
+
+body {
+    font-size: var(--body-size);
+    line-height: calc(var(--body-size)*var(--line-height-multiplier));
+}
+
+h1 {
+    font-size: var(--h1-size);
+    line-height: calc(var(--h1-size)*var(--line-height-multiplier));
+    margin-bottom: calc(var(--spacing)*1);
+}
+
+h2 {
+    font-size: var(--h2-size);
+    line-height: calc(var(--h2-size)*var(--line-height-multiplier));
+}
+h3 {
+    font-size: var(--h3-size);
+    line-height: calc(var(--h3-size)*var(--line-height-multiplier));
+}
+
+/*font weights*/
+h1, h2 {
+    font-weight: 300;
+}
+h1 b, h2 b {
+    font-weight: 500;
+}
+
+/*divs*/
+#container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: calc(var(--spacing)*1);
+}
+#section {
+    margin-top: calc(var(--spacing)*4);
+    margin-bottom: calc(var(--spacing)*4);
+}
+#block {
+    margin-bottom: calc(var(--spacing)*2);
+    display: block;
+}
+#row {
+    margin-left: calc(var(--spacing)*-.5);
+    margin-right: calc(var(--spacing)*-.5);
+    margin-bottom: calc(var(--spacing)*1);
+    display: flex;
+    flex-direction: row;
+}
+#column {
+    margin-left: calc(var(--spacing)*.5);
+    margin-right: calc(var(--spacing)*.5);
+    flex: 1 1 0px;
+}
+.section-header {
+    width: calc(33.33% - (var(--spacing)*.5));
+    margin-left: 0;
+    margin-right: auto;
+}
+.section-content {
+    width: calc(66.66% - (var(--spacing)*.5));
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 0;
+}
+.border {
+    width: 100%;
+    border-bottom: var(--color-primary) 1px solid;
+}
+/*images*/
+#column img {
+    max-width: 100%;
+    margin-bottom: calc(var(--spacing));
+}
+
+/*responsive*/
+@media screen and (max-width: 640px) {
+    .section-header, .section-content {
+    width: 100%;
+    margin: 0;
+    }
+}
+
+/*dark mode*/
+
+@media (prefers-color-scheme: dark) {
+    :root {
+	--color-primary: white;
+    --color-secondary: black; 
+    --color-tertiary: yellow;
+    }
+
+    .darkmodelabel:after {
+        content: "☾";
+    }
+}
