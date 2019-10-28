@@ -63,7 +63,7 @@ table {
     --line-height-multiplier: 1.2;
     --h1-size: calc(var(--body-size)*6);
     --h2-size: calc(var(--body-size)*3);
-    --h3-size: calc(var(--body-size)*1.5);
+    --h3-size: calc(var(--body-size)*1.6);
     --h4-size: calc(var(--body-size)*1);
     --spacing: calc(var(--body-size)*var(--line-height-multiplier));
     --max-width: calc( 960px + calc(var(--spacing)*4) );
@@ -83,7 +83,7 @@ html, body, p, a, h1, h2, h3 {
 }
 
 a, a:hover {
-    padding-bottom: calc(var(--spacing)*0.3);
+    padding-bottom: calc(var(--spacing)*0.1);
     border-bottom: solid var(--color-primary) var(--border-width);
     display: inline;
 }
@@ -120,7 +120,7 @@ h1 b, h2 b {
 #container {
     max-width: var(--max-width);
     margin: auto;
-    padding: calc(var(--spacing)*1);
+    padding: calc(var(--spacing)*2);
 }
 #section {
     margin-top: calc(var(--spacing)*4);
@@ -146,6 +146,11 @@ h1 b, h2 b {
     width: calc(33.33% - (var(--spacing)*.5));
     margin-left: 0;
     margin-right: auto;
+}
+.section-footer {
+    width: max-content;
+    margin-left: auto;
+    margin-right: 0;
 }
 .section-content {
     width: calc(66.66% - (var(--spacing)*.5));
