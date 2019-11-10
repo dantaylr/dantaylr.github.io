@@ -32,7 +32,7 @@
                             document.getElementById("var-div-greeting").innerHTML = "Evenin'";
                             document.getElementById("var-div-intro").innerHTML = introText;
                         }
-                        if (today > 23 || today <= 4) {
+                        if (today > 23 && today <= 4) {
                             document.getElementById("var-div-greeting").innerHTML = "It's late";
                             document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> Anyway " + introText;
                         }
