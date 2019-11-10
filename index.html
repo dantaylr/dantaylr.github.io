@@ -15,7 +15,7 @@
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <!--Header section text changer-->
             <script>
-                var msgArr = ["Afternoon", "Heyo", "Greetings", "👋"];
+                var msgArr = ["Afternoon", "Heyo", "Greetings"];
                 var today = new Date().getHours();
                 var introText = "I’m Dan. I love creating meaningful experiences through a wide range of media. This page walks through the design process of a few recent projects."
                 
@@ -84,68 +84,134 @@
         <p>12/13/2019</p>
     </div>
 
-    <!--project title-->
+    <!--project title and description-->
     <div id="block" class="section-header">
         <h2>
-            <b>Cadmium</b>
+            <b>Colony</b>
             <br />
-            Complex modular synthesizer
+            Communicate with people nearby
         </h2>
     </div>
 
-    <!--content-->
     <div id="block" class="section-content">
         <div id="row">
             <div id="column">
-                    <img src="images/image-landscape.jpg">
-                    <p>
-                        I’m Dan. 
-                        I love creating meaningful experiences through a wide range of media. 
-                        This page walks through the design process of a few recent projects.
-                    </p>
-            </div>
-            <div id="column">
-                    <img src="images/image-portrait.jpg">
-                    <p>
-                        I’m Dan. 
-                        I love creating meaningful experiences through a wide range of media. 
-                        This page walks through the design process of a few recent projects.
-                    </p>
-            </div>
-            <div id="column">
-                <p>
-                    I’m Dan. 
-                    I love creating meaningful experiences through a wide range of media. 
-                    This page walks through the design process of a few recent projects.
-                </p>
-            </div>
-        </div>
-        <div id="row">
-            <div id="column">
-                <p>
-                    I’m Dan. 
-                    I love creating meaningful experiences through a wide range of media. 
-                    This page walks through the design process of a few recent projects.
-                </p>
-            </div>
-            <div id="column">
-                <p>
-                    I’m Dan. 
-                    I love creating meaningful experiences through a wide range of media. 
-                    This page walks through the design process of a few recent projects.
-                </p>
+                <h3>
+                    Colony is an app prototype that I designed with some development feedback from Nicholas Glenn, co-founder of Helpful Humans in Seattle. The app idea began as a pain point I personally experienced when going to a local event or exploring a new city.
+                </h3>
             </div>
         </div>
     </div>
 
+    <!--content-->
+    <div class="section-header">
+        <h3><b>Pain point</b></h3>
+    </div>
+
+    <div class="section-content">
+
+        <div id="row">
+            <div id="column">
+                <img src="images/intro-map.png">
+            </div>
+        </div>
+
+        <div id="row">
+            <div id="column">
+                If I wanted to host a block party for my neighbors who I don’t necessarily know, I may have to print physical flyers and stick them to their doors. If I was at an unfamiliar event or venue and had a question I would have to ask someone in person. Meanwhile plenty of digital layers allow us to connect with our “friends”.
+            </div>
+        </div>
+
+    </div>
+
     <div id="block" class="section-header">
-        <h3>Breakdown</h3>
+        <h3>
+            <b>What's out there?</b>
+        </h3>
+    </div>
+
+    <div id="block" class="section-content">
+        <div id="row">
+            <div id="column">
+                    <img class="icon" src="images/icon-nextdoor.png">
+                    <h3>Nextdoor</h3>
+                    <p><b>Pros</b></p>
+                    <ul>
+                        <li>Message your neighbors</li>
+                        <li>Supports commerce</li>
+                        <li>User authenticity</li>
+                    </ul>
+                    <p><b>Cons</b></p>
+                    <ul>
+                        <li>Large barrier to entry</li>
+                        <li>Locked to one location</li>
+                        <li>Less support for general conversation</li>
+                        <li>No incentive to be active</li>
+                    </ul>
+            </div>
+
+            <div id="column">
+                    <img class="icon" src="images/icon-yikyak.png">
+                    <h3>Yik Yak</h3>
+                    <p><b>Pros</b></p>
+                    <ul>
+                        <li>Casual conversation around you</li>
+                        <li>Supported traveling</li>
+                        <li>Less focus on profiles</li>
+                    </ul>
+                    <p><b>Cons</b></p>
+                    <ul>
+                        <li>Anonymity lead to cyber-bullying</li>
+                        <li>Voting system creates a popularity contest</li>
+                        <li>No birds eye view or map</li>
+                        <li>Bothers you to post with notifications</li>
+                    </ul>
+            </div>
+
+            <div id="column">
+                <img class="icon" src="images/icon-twitter.png">
+                <h3>Twitter</h3>
+                    <p><b>Pros</b></p>
+                    <ul>
+                        <li>Easy conversations around a topic</li>
+                        <li>Location can be attached to a post</li>
+                    </ul>
+                    <p><b>Cons</b></p>
+                    <ul>
+                        <li>Location support isn’t required</li>
+                        <li>Messages are tied to a username</li>
+                    </ul>
+            </div>
+
+        </div>
+
+        <div id="row">
+            <div id="column">
+                    Yik Yak’s ultimate failure became a point of study. I determined that much of their failure was due to the platform-centric popularity contest, the distraction of profiles, and the lack of targeting meaningful use-cases. These helped guide a few goals for the feature set of Colony.
+            </div>
+        </div>
+
+    </div>
+
+    <div id="block" class="section-header">
+        <h3><b>Goals</b></h3>
     </div> 
 
     <div id="block" class="section-content">
-        I’m Dan. 
-        I love creating meaningful experiences through a wide range of media. 
-        This page walks through the design process of a few recent projects.
+        <div id="row">
+            <div id="column">
+                <h3>
+                    <ul>
+                        <li>Focus on where the message came from, not the person</li>
+                        <li>Feel secure and accountable to prevent bullying</li>
+                        <li>Easy to filter information into what you’re looking for</li>
+                        <li>Not try and be another social network</li>
+                        <li>Include an incentive to be active on the platform</li>
+                        <li>Support multiple use cases</li>
+                    </ul>
+                </h3>
+            </div>
+        </div>
     </div>
 
 </div>
@@ -155,7 +221,14 @@
 <div id="section">
     <div id="block" class="border"></div>
     <div id="block" class="section-footer">
-        <h3>Thanks for peeking! You can contact me <a href="https://www.linkedin.com/in/dantaylr/">here</a>.</h3>
+        <h3>Thanks for peeking! You can contact me at 
+            <script language="JavaScript">
+                var username = "dantaylr";
+                var hostname = "gmail.com";
+                var linktext = username + "@" + hostname ;
+                document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
+            </script>
+        </h3>
     </div>
 </div>
 

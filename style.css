@@ -74,7 +74,7 @@ table {
 
 /*text*/
 
-html, body, p, a, h1, h2, h3 {
+html, body, p, a, h1, h2, h3, ul {
     font-family: var(--font);
     color: var(--color-primary);
     background-color: var(--color-secondary);
@@ -93,6 +93,20 @@ body {
     line-height: calc(var(--body-size)*var(--line-height-multiplier));
 }
 
+ul {
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+li:before {
+    content: "-";
+    margin-left: calc(var(--spacing)*-1);
+    margin-right: .8em;
+  }
+li {
+    margin-left: calc(var(--spacing)*1);
+}
+
 h1 {
     font-size: var(--h1-size);
     line-height: calc(var(--h1-size)*var(--line-height-multiplier));
@@ -109,10 +123,15 @@ h3 {
 }
 
 /*font weights*/
-h1, h2 {
+h1, h2, h3 {
     font-weight: 300;
 }
-h1 b, h2 b {
+
+body b {
+    font-weight: bold;
+}
+
+h1 b, h2 b, h3 b {
     font-weight: 500;
 }
 
@@ -154,8 +173,7 @@ h1 b, h2 b {
 }
 .section-content {
     width: calc(66.66% - (var(--spacing)*.5));
-    display: flex;
-    flex-direction: row;
+    display: block;
     margin-left: auto;
     margin-right: 0;
 }
@@ -164,11 +182,15 @@ h1 b, h2 b {
     border-bottom: var(--color-primary) 1px solid;
 }
 /*images*/
-#column img {
-    max-width: 100%;
-    margin-bottom: calc(var(--spacing));
+img {
+    width: 100%;
+    margin-bottom: calc(var(--spacing)*2);
 }
 
+.icon {
+    width: calc(100% - (var(--spacing)*4));
+
+}
 /*responsive*/
 @media screen and (max-width: 640px) {
     .section-header, .section-content {
@@ -184,9 +206,5 @@ h1 b, h2 b {
 	--color-primary: white;
     --color-secondary: black; 
     --color-tertiary: yellow;
-    }
-
-    .darkmodelabel:after {
-        content: "☾";
     }
 }
