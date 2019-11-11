@@ -60,7 +60,7 @@ table {
     --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --max-width: 960px;
     --body-size: 12px;
-    --line-height-multiplier: 1.2;
+    --line-height-multiplier: 1.3;
     --h1-size: calc(var(--body-size)*6);
     --h2-size: calc(var(--body-size)*3);
     --h3-size: calc(var(--body-size)*1.6);
@@ -80,6 +80,7 @@ html, body, p, a, h1, h2, h3, ul {
     background-color: var(--color-secondary);
     margin-bottom: calc(var(--spacing)*0.5);
     text-decoration: none;
+    letter-spacing: calc(var(--spacing)*0.03);
 }
 
 a, a:hover {
@@ -184,7 +185,7 @@ h1 b, h2 b, h3 b {
 /*images*/
 img {
     width: 100%;
-    margin-bottom: calc(var(--spacing)*2);
+    margin-bottom: calc(var(--spacing)*1);
 }
 
 .icon {
