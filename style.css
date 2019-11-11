@@ -168,7 +168,8 @@ h1 b, h2 b, h3 b {
     margin-right: auto;
 }
 .section-footer {
-    width: max-content;
+    width: 100%;
+    text-align: right;
     margin-left: auto;
     margin-right: 0;
 }
@@ -192,11 +193,16 @@ img {
     width: calc(100% - (var(--spacing)*4));
 
 }
+
 /*responsive*/
 @media screen and (max-width: 640px) {
     .section-header, .section-content {
     width: 100%;
     margin: 0;
+    }
+    .icon {
+        width: calc(100% - (var(--spacing)*1));
+    
     }
 }
 
