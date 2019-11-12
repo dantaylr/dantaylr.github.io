@@ -9,364 +9,776 @@
 -->
 
 <html>
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
-            <!--Header section text changer-->
-            <script>
-                var msgArr = ["Afternoon", "Heyo", "Greetings"];
-                var today = new Date().getHours();
-                var introText = "I’m Dan. I love creating meaningful experiences through a wide range of media. This page walks through the design process of a few recent projects."
-                
-                    window.onload = function () {
-                        if (today > 4 && today <= 12) {
-                            document.getElementById("var-div-greeting").innerHTML = "Mornin'";
-                            document.getElementById("var-div-intro").innerHTML = introText;
-                        }
-                        if (today > 12 && today <= 17) {
-                            document.getElementById("var-div-greeting").innerHTML = msgArr[Math.floor(Math.random()*msgArr.length)];
-                            document.getElementById("var-div-intro").innerHTML = introText;
-                        }
-                        if (today > 17 && today <= 23) { 
-                            document.getElementById("var-div-greeting").innerHTML = "Evenin'";
-                            document.getElementById("var-div-intro").innerHTML = introText;
-                        }
-                        if (today > 23 && today <= 4) {
-                            document.getElementById("var-div-greeting").innerHTML = "It's late";
-                            document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> Anyway " + introText;
-                        }
-                }
-            </script>
 
-            <!--SITE META-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Header section text changer-->
+    <script>
+        var msgArr = ["Afternoon", "Heyo", "Greetings"];
+        var today = new Date().getHours();
+        var introText = "I’m Dan. I love creating meaningful experiences through a wide range of media. This page walks through the design process of a few recent projects."
 
-            <!--If the current page doesn't have a title, the file name is used-->
-            <title>Dan Taylor</title>
-            <meta title=”description” content="Design portfolio of Dan Taylor">
-            
-            <!--
+        window.onload = function () {
+            if (today > 4 && today <= 12) {
+                document.getElementById("var-div-greeting").innerHTML = "Mornin'";
+                document.getElementById("var-div-intro").innerHTML = introText;
+            }
+            if (today > 12 && today <= 17) {
+                document.getElementById("var-div-greeting").innerHTML = msgArr[Math.floor(Math.random() * msgArr.length)];
+                document.getElementById("var-div-intro").innerHTML = introText;
+            }
+            if (today > 17 && today <= 23) {
+                document.getElementById("var-div-greeting").innerHTML = "Evenin'";
+                document.getElementById("var-div-intro").innerHTML = introText;
+            }
+            if (today > 23 && today <= 4) {
+                document.getElementById("var-div-greeting").innerHTML = "It's late";
+                document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> Anyway " + introText;
+            }
+        }
+    </script>
+
+    <!--SITE META-->
+
+    <!--If the current page doesn't have a title, the file name is used-->
+    <title>Dan Taylor</title>
+    <meta title=”description” content="Design portfolio of Dan Taylor">
+
+    <!--
                 Favicons and code below have been generated from:
                 https://favicon.io/
             -->
-            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-            <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 
-            <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-        </head>
+</head>
+
 <body>
 
-<div id="container">
+    <div id="container">
 
-<!--top of site-->
-<div id="section">
+        <!--top of site-->
+        <div id="section">
 
-    <div id="block" class="section-header">
-        <h1><b><div id="var-div-greeting"></div></b></h1>
-    </div>
-
-    <div id="block" class="section-content">
-        <h3>
-            <div id="var-div-intro">
+            <div id="block" class="section-header">
+                <h1><b>
+                        <div id="var-div-greeting"></div>
+                    </b></h1>
             </div>
-        </h3>
-    </div>
 
-</div>
-
-<!--start of project-->
-<div id="section">
-    <!--date and border-->
-    <div id="block" class="border">
-        <p>12/13/2019</p>
-    </div>
-
-    <!--project title and description-->
-    <div id="block" class="section-header">
-        <h2>
-            <b>Colony</b>
-            <br />
-            Communicate with people nearby
-        </h2>
-    </div>
-
-    <div id="block" class="section-content">
-        <div id="row">
-            <div id="column">
+            <div id="block" class="section-content">
                 <h3>
-                    Colony is an app prototype that I designed with some development feedback from Nicholas Glenn, co-founder of Helpful Humans in Seattle. The app idea began as a pain point I personally experienced when going to a local event or exploring a new city.
+                    <div id="var-div-intro">
+                    </div>
                 </h3>
             </div>
-        </div>
-    </div>
-
-    <!--content-->
-    <div class="section-header">
-        <h3><b>Pain point</b></h3>
-    </div>
-
-    <div class="section-content">
-
-        <div id="row">
-            <div id="column">
-                <img src="images/intro-map.png">
-            </div>
-        </div>
-
-        <div id="row">
-            <div id="column">
-                If I wanted to host a block party for my neighbors who I don’t necessarily know, I may have to print physical flyers and stick them to their doors. If I was at an unfamiliar event or venue and had a question I would have to ask someone in person. Meanwhile plenty of digital layers allow us to connect with our “friends”.
-            </div>
-        </div>
-
-    </div>
-
-    <div id="block" class="section-header">
-        <h3>
-            <b>What's out there?</b>
-        </h3>
-    </div>
-
-    <div id="block" class="section-content">
-        <div id="row">
-            <div id="column">
-                    <img class="icon" src="images/icon-nextdoor.png">
-                    <h3>Nextdoor</h3>
-                    <p><b>Pros</b></p>
-                    <ul>
-                        <li>Message your neighbors</li>
-                        <li>Supports commerce</li>
-                        <li>User authenticity</li>
-                    </ul>
-                    <p><b>Cons</b></p>
-                    <ul>
-                        <li>Large barrier to entry</li>
-                        <li>Locked to one location</li>
-                        <li>Less support for general conversation</li>
-                        <li>No incentive to be active</li>
-                    </ul>
-            </div>
-
-            <div id="column">
-                    <img class="icon" src="images/icon-yikyak.png">
-                    <h3>Yik Yak</h3>
-                    <p><b>Pros</b></p>
-                    <ul>
-                        <li>Casual conversation around you</li>
-                        <li>Supported traveling</li>
-                        <li>Less focus on profiles</li>
-                    </ul>
-                    <p><b>Cons</b></p>
-                    <ul>
-                        <li>Anonymity lead to cyber-bullying</li>
-                        <li>Voting system creates a popularity contest</li>
-                        <li>No birds eye view or map</li>
-                        <li>Bothers you to post with notifications</li>
-                    </ul>
-            </div>
-
-            <div id="column">
-                <img class="icon" src="images/icon-twitter.png">
-                <h3>Twitter</h3>
-                    <p><b>Pros</b></p>
-                    <ul>
-                        <li>Easy conversations around a topic</li>
-                        <li>Location can be attached to a post</li>
-                    </ul>
-                    <p><b>Cons</b></p>
-                    <ul>
-                        <li>Location support isn’t required</li>
-                        <li>Messages are tied to a username</li>
-                    </ul>
-            </div>
 
         </div>
 
-        <div id="row">
-            <div id="column">
-                    Yik Yak’s ultimate failure became a point of study. I determined that much of their failure was due to the platform-centric popularity contest, the distraction of profiles, and the lack of targeting meaningful use-cases. These helped guide a few goals for the feature set of Colony.
+        <!--start of project-->
+        <div id="section">
+            <!--date and border-->
+            <div id="block" class="border">
+                <p>12/13/2019</p>
             </div>
-        </div>
 
-    </div>
+            <!--project title and description-->
+            <div id="block" class="section-header">
+                <h2>
+                    <b>Colony</b>
+                    <br />
+                    Communicate with people nearby
+                </h2>
+            </div>
 
-    <div id="block" class="section-header">
-        <h3><b>Goals</b></h3>
-    </div> 
+            <div id="block" class="section-content">
+                <div id="row">
+                    <div id="column">
+                        <h3>
+                            Colony is an app prototype that I designed with some development feedback from Nicholas
+                            Glenn, co-founder of Helpful Humans in Seattle. The idea began as a pain point I personally
+                            experienced when going to a local event or exploring a new city.
+                        </h3>
+                    </div>
+                </div>
+            </div>
 
-    <div id="block" class="section-content">
-        <div id="row">
-            <div id="column">
+            <!--content-->
+            <div class="section-header">
+                <h3><b>Pain point</b></h3>
+            </div>
+
+            <div class="section-content">
+
+                <div id="row">
+                    <div id="column">
+                        <img src="images/colony/intro-map.png">
+                    </div>
+                </div>
+
+                <div id="row">
+                    <div id="column">
+                        Digital layers allow us to connect with our "friends" but if I wanted to host a block party for
+                        my neighbors who I don’t necessarily know, I would have to print physical flyers and stick them
+                        to their doors.
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="block" class="section-header">
                 <h3>
-                    <ul>
-                        <li>Focus on where the message came from, not the person</li>
-                        <li>Feel secure and accountable to prevent bullying</li>
-                        <li>Easy to filter information into what you’re looking for</li>
-                        <li>Not try and be another social network</li>
-                        <li>Include an incentive to be active on the platform</li>
-                        <li>Support multiple use cases</li>
-                    </ul>
+                    <b>What's out there?</b>
                 </h3>
             </div>
-        </div>
-    </div>
 
-        <div id="block" class="section-header">
+            <div id="block" class="section-content">
+                <div id="row">
+                    <div id="column">
+                        <img class="icon" src="images/colony/icon-nextdoor.png">
+                        <h3>Nextdoor</h3>
+                        <p><b>Pros</b></p>
+                        <ul>
+                            <li>Message your neighbors</li>
+                            <li>Supports commerce</li>
+                            <li>User authenticity</li>
+                        </ul>
+                        <p><b>Cons</b></p>
+                        <ul>
+                            <li>Large barrier to entry</li>
+                            <li>Locked to one location</li>
+                            <li>Less support for general conversation</li>
+                            <li>No incentive to be active</li>
+                        </ul>
+                    </div>
+
+                    <div id="column">
+                        <img class="icon" src="images/colony/icon-yikyak.png">
+                        <h3>Yik Yak</h3>
+                        <p><b>Pros</b></p>
+                        <ul>
+                            <li>Casual conversation around you</li>
+                            <li>Supported traveling</li>
+                            <li>Less focus on profiles</li>
+                        </ul>
+                        <p><b>Cons</b></p>
+                        <ul>
+                            <li>Anonymity lead to cyber-bullying</li>
+                            <li>Voting system creates a popularity contest</li>
+                            <li>No birds eye view or map</li>
+                            <li>Bothers you to post with notifications</li>
+                        </ul>
+                    </div>
+
+                    <div id="column">
+                        <img class="icon" src="images/colony/icon-twitter.png">
+                        <h3>Twitter</h3>
+                        <p><b>Pros</b></p>
+                        <ul>
+                            <li>Easy conversations around a topic</li>
+                            <li>Location can be attached to a post</li>
+                        </ul>
+                        <p><b>Cons</b></p>
+                        <ul>
+                            <li>Location support isn’t required</li>
+                            <li>Messages are tied to a username</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div id="row">
+                    <div id="column">
+                        Yik Yak’s ultimate failure became a point of study. I determined that much of their failure was
+                        due to the platform-centric popularity contest, the distraction of profiles, and the lack of
+                        targeting meaningful use-cases. These helped guide a few goals for the feature set of Colony.
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="block" class="section-header">
+                <h3><b>Goals</b></h3>
+            </div>
+
+            <div id="block" class="section-content">
+                <div id="row">
+                    <div id="column">
+                        <h3>
+                            <ul>
+                                <li>Focus on where the message came from, not the person</li>
+                                <li>Feel secure and accountable to prevent bullying</li>
+                                <li>Easy to filter information into what you’re looking for</li>
+                                <li>Not try and be another social network</li>
+                                <li>Include an incentive to be active on the platform</li>
+                                <li>Support multiple use cases</li>
+                            </ul>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="block" class="section-header">
                 <h3><b>Ideation</b></h3>
             </div>
 
-        <div id="block" class="section-content">
-            
+            <div id="block" class="section-content">
 
-        <div id="row">
-            <div id="column">
-                I initially had wanted to see communication visually on a map. Based on using similar platforms, the need for a list view was very apparent. Toggling between these would support different methods of discovery.
-            </div>
-        </div>
 
-        <div id="row">
-                <div id="column">
-                   <img src="images/sketches-filters.png">
+                <div id="row">
+                    <div id="column">
+                        I initially had wanted to see communication visually on a map. Based on using similar platforms,
+                        the need for a list view was very apparent. Toggling between these would support different
+                        methods of discovery.
+                    </div>
                 </div>
-        </div>
 
-        <div id="row">
-            <div id="column">
-                Major screens were laid out, with all major features broken down in a Marie Kondo sort of method.
-            </div>
-        </div>
-
-        <div id="row">
-                <div id="column">
-                   <img src="images/sketches-flow.png">
+                <div id="row">
+                    <div id="column">
+                        <img src="images/colony/sketches-filters.png">
+                    </div>
                 </div>
-        </div>
 
-        <div id="row">
-            <div id="column">
-                The placement of these features focused on the proximity to the right thumb, followed by expected feature placement in similar apps.
-            </div>
-        </div>
-
-        <div id="row">
-                <div id="column">
-                   <img src="images/wireframes-locations.png">
+                <div id="row">
+                    <div id="column">
+                        Major screens were laid out, with all major features broken down in a Marie Kondo sort of
+                        method.
+                    </div>
                 </div>
-        </div>
 
-        </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/colony/sketches-flow.png">
+                    </div>
+                </div>
 
-        <div id="block" class="section-header">
+                <div id="row">
+                    <div id="column">
+                        The placement of these features focused on the proximity to the right thumb, followed by
+                        expected feature placement in similar apps.
+                    </div>
+                </div>
+
+                <div id="row">
+                    <div id="column">
+                        <img src="images/colony/wireframes-locations.png">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="block" class="section-header">
                 <h3><b>Prototyping</b></h3>
             </div>
 
-        <div id="block" class="section-content">
+            <div id="block" class="section-content">
 
-        <div id="row">
-            <div id="column">
-                Early motion mockups were created and tested on real humans.
-            </div>
-        </div>
-
-        <div id="row">
-                <div id="column">
-                   <img src="images/animation-map.gif">
+                <div id="row">
+                    <div id="column">
+                        Early motion mockups were created and tested on real humans.
+                    </div>
                 </div>
-        </div>
 
-        <div id="row">
-                <div id="column">
-                   <img src="images/animation-newpost.gif">
+                <div id="row">
+                    <div id="column">
+                        <img src="images/colony/animation-map.gif">
+                    </div>
                 </div>
-        </div>
 
-        <div id="row">
-                <div id="column">
-                    Post categories were narrowed down based on feedback.
+                <div id="row">
+                    <div id="column">
+                        <img src="images/colony/animation-newpost.gif">
+                    </div>
                 </div>
-            </div>
 
-        <div id="row">
-                <div id="column">
-                    <img class="icon" src="images/icon-post-general.png">
-                    <p>
-                        General discussion
-                    </p>
+                <div id="row">
+                    <div id="column">
+                        Post categories were narrowed down based on feedback.
+                    </div>
                 </div>
-                <div id="column">
-                        <img class="icon" src="images/icon-post-event.png">
+
+                <div id="row">
+                    <div id="column">
+                        <img class="icon" src="images/colony/icon-post-general.png">
+                        <p>
+                            General discussion
+                        </p>
+                    </div>
+                    <div id="column">
+                        <img class="icon" src="images/colony/icon-post-event.png">
                         <p>
                             Events
                         </p>
-                </div>
-                <div id="column">
-                        <img class="icon" src="images/icon-post-alert.png">
+                    </div>
+                    <div id="column">
+                        <img class="icon" src="images/colony/icon-post-alert.png">
                         <p>
                             Alerts
                         </p>
-                </div>
-                <div id="column">
-                        <img class="icon" src="images/icon-post-help.png">
+                    </div>
+                    <div id="column">
+                        <img class="icon" src="images/colony/icon-post-help.png">
                         <p>
                             Need help with something
                         </p>
+                    </div>
                 </div>
-            </div>
 
             </div>
 
             <div class="section-header">
-                    <h3><b>Refinement</b></h3>
-                </div>
-    
+                <h3><b>Refinement</b></h3>
+            </div>
+
             <div id="block" class="section-content">
 
-            <div id="row">
+                <div id="row">
                     <div id="column">
-                        Screens were fleshed out with an appearance close to the original wireframe. This would facilitate further testing.
+                        Screens were fleshed out with an appearance close to the original wireframe. This would
+                        facilitate further testing.
                     </div>
-            </div>
-            <div id="row">
+                </div>
+                <div id="row">
                     <div id="column">
-                       <img src="images/mockup-filters.jpg">
+                        <img src="images/colony/mockup-filters.jpg">
                     </div>
-            </div>
+                </div>
 
-            <div id="row">
+                <div id="row">
                     <div id="column">
-                       <img src="images/mockup-screens.jpg">
+                        <img src="images/colony/mockup-screens.jpg">
                     </div>
-            </div>
+                </div>
 
-            <div id="row">
+                <div id="row">
                     <div id="column">
-                       <img src="images/mockup-hero.jpg">
+                        <img src="images/colony/mockup-hero.jpg">
                     </div>
-            </div>
+                </div>
 
             </div>
 
-</div>
-<!--end of project-->
+        </div>
+        <!--end of project-->
 
-<!--footer-->
-<div id="section">
-    <div id="block" class="border"></div>
-    <div id="block" class="section-footer">
-        <h3>Thanks for peeking! You can contact me at 
-            <script language="JavaScript">
-                var username = "dantaylr";
-                var hostname = "gmail.com";
-                var linktext = username + "@" + hostname ;
-                document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
-            </script>
-        </h3>
+        <!--start of project-->
+        <div id="section">
+            <!--date and border-->
+            <div id="block" class="border">
+                <p>3/18/2018</p>
+            </div>
+
+            <!--project title and description-->
+            <div id="block" class="section-header">
+                <h2>
+                    <b>Cadmium</b>
+                    <br />
+                    Unique software synthesizer interface
+                </h2>
+            </div>
+
+            <div id="block" class="section-content">
+                <div id="row">
+                    <div id="column">
+                        <h3>
+                            I was approached by William Light, an entrepreneur and previous software engineer at Native
+                            Instruments, to conceptualize the experience, workflow, and skin for an upcoming software
+                            synthesizer he was developing.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <!--content-->
+            <div id="block" class="section-content">
+
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cadmium/lissajous.jpg">
+                    </div>
+                </div>
+
+                <div id="row">
+                    <div id="column">
+                        <p>
+                            The Cadmium synthesizer is driven by a Lissajous figure, which is a graphed system of
+                            parametric equations typically found on an oscilloscope. This gives the resulting sound a
+                            unique
+                            characteristic that would be difficult to replicate using other forms of sound design.
+                        </p>
+                        <p>
+                            My goal was to make it easy to understand and control this type of waveform.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="block" class="section-header">
+                <h3><b>Breaking it down</b></h3>
+            </div>
+
+            <div id="block" class="section-content">
+
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cadmium/ideation.jpg">
+                    </div>
+                </div>
+
+                <div id="row">
+                    <div id="column">
+                        <p>
+                            Each feature that was important for the preliminary release and final release was broken
+                            down and questioned. We worked to reduce and refine these features in order to mitigate
+                            confusion.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="block" class="section-header">
+                <div id="block" class="section-header">
+                    <h3><b>Ideation</b></h3>
+                </div>
+            </div>
+
+            <div id="block" class="section-content">
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cadmium/existing.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <p>
+                            Existing software synthesizers were studied for usability cues, icons, and color usage.
+                        </p>
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cadmium/sketches.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <p>
+                            Sketches and layout prototypes were quickly fabricated with as much stylistic transparency
+                            as possible. A light appearance was used for prototypes as it kept us focused on the
+                            features. It became important to add a highlight color indicating modulated parameters and
+                            waveforms. </p>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="block" class="section-header">
+                <div id="block" class="section-header">
+                    <h3><b>Refinement</b></h3>
+                </div>
+            </div>
+
+            <div id="block" class="section-content">
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cadmium/ui-details.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <p>
+                            A standardized system of controls would allow William to expand and modify the synthesizer
+                            on his own without a total redesign. The visual controls included parameter-sensitive
+                            functions packed into building blocks with consistent pixel dimensions and spacing.
+                        </p>
+                        <p>
+                            A dark interface with red highlights was chosen to reflect William's original brand
+                            direction
+                            for the synthesizer.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cadmium/ui-final.jpg">
+                    </div>
+                </div>
+
+                <div id="row">
+                    <div id="column">
+                        <p>
+                            This mockup highlights the key features, stacked in a workflow that runs left-to-right, and
+                            then downward.
+                            Oscillators that drive the Lissajous curve are located to the left of the visualizer, with
+                            LFOs and Filters (modifiers) below them.
+                            Finally master parameters that affect the entire output are located towards the bottom.
+                        </p>
+                    </div>
+                </div>
+
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cadmium/laptop-mockup.jpg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--end of project-->
+
+        <!--start of project-->
+        <div id="section">
+            <!--date and border-->
+            <div id="block" class="border">
+                <p>9/28/2018</p>
+            </div>
+
+            <!--project title and description-->
+            <div id="block" class="section-header">
+                <h2>
+                    <b>Conquer The Heavens</b>
+                    <br />
+                    Concept art and asset direction
+                </h2>
+            </div>
+
+            <div id="block" class="section-content">
+                <div id="row">
+                    <div id="column">
+                        <h3>
+                            <p>
+                                Conquer The Heavens is a multiplayer space combat game that aims to focus on the fun and
+                                emotional intensity of zero-gravity combat over realism and accuracy.
+
+                            </p>
+                            <p>
+                                I was hired on to direct the concept art and provide assets by Nick Glenn, co-founder of
+                                Helpful Human in Seattle and the developer of the game.
+                        </h3>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!--content-->
+            <div id="block" class="section-content">
+
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/graffiti.jpg">
+                    </div>
+                </div>
+
+                <div id="row">
+                    <div id="column">
+                        <p>
+                            The game’s unique feature is it’s first-person-shooter-inspired ship control system and
+                            gameplay style. To expand on this, I aimed to design an in-space environment that would make
+                            combat feel like a close-quarters city firefight. I began abstract studies, slowly working
+                            from 2D to 3D to begin visualizing what the environment and vehicles would look and feel
+                            like.
+                            In space, there is no up or down.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="block" class="section-header">
+                <h3><b>No up or down</b></h3>
+            </div>
+
+            <div id="block" class="section-content">
+
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/sketches-ship.jpg">
+                    </div>
+                </div>
+
+                <div id="row">
+                    <div id="column">
+                        <p>
+                            Our goal was to put player experience above realism. We asked questions like “What if space
+                            wasn’t black?”. As a result, I began painting scenarios where space could be colored to
+                            match the player’s mood or current game scenario.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="block" class="section-header">
+                <h3><b>Concept renderings</b></h3>
+            </div>
+
+            <div id="block" class="section-content">
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/concept-early.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/concept-purple.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/concept-deepblue.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/concept-blue.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/concept-green.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/concept-orange.jpg">
+                    </div>
+                </div>
+            </div>
+            <div id="block" class="section-header">
+                <h3><b>Font</b></h3>
+            </div>
+            <div id="block" class="section-content">
+
+                <div id="row">
+                    <div id="column">
+                        <p>
+                            For menu and UI, I designed and produced a typeface in four weights that would convey the
+                            retro-future aesthetic that was beginning to evolve.
+                        </p>
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/font-construction.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/font-weights.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/font-emoji.jpg">
+                    </div>
+                </div>
+
+            </div>
+            <div id="block" class="section-header">
+                <h3><b>3D Prefabs</b></h3>
+            </div>
+
+            <div id="block" class="section-content">
+
+                <div id="row">
+                    <div id="column">
+                        <p>
+                            After establishing the general idea of the game environment, I began to model and texture
+                            low-poly components that would be used to populate houses and building faces in the
+                            colonized space environments. Our eventual plan is to procedurally generate these
+                            environments, so a rigid modular system was needed.
+                        </p>
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/unity-solarpanel.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/unity-prefab-1.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/unity-prefab-2.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/unity-prefabs.jpg">
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="block" class="section-header">
+                <h3><b>Testing prefabs</b></h3>
+            </div>
+
+            <div id="block" class="section-content">
+
+                <div id="row">
+                    <div id="column">
+                        <p>
+                            I quickly tested these to see what was possible given the palette.
+                        </p>
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/unity-house-1.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/unity-house-2.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/unity-houses.jpg">
+                    </div>
+                </div>
+                <div id="row">
+                    <div id="column">
+                        <img src="images/cth/unity-city.jpg">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!--end of project-->
+
+        <!--footer-->
+        <div id="section">
+            <div id="block" class="border"></div>
+            <div id="block" class="section-footer">
+                <h3>Thanks for peeking! You can contact me at
+                    <script language="JavaScript">
+                        var username = "dantaylr";
+                        var hostname = "gmail.com";
+                        var linktext = username + "@" + hostname;
+                        document.write("<a href='" + "mail" + "to:" + username + "@" + hostname + "'>" + linktext + "</a>");
+                    </script>
+                </h3>
+            </div>
+        </div>
+
     </div>
-</div>
-
-</div>
 </body>
+
 </html>
