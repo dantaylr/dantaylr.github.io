@@ -165,7 +165,7 @@ h1 b, h2 b, h3 b {
 #container {
     max-width: var(--max-width);
     margin: auto;
-    padding: calc(var(--spacing)*3);
+    padding: calc(var(--spacing)*2.5);
 }
 #section {
     margin-top: calc(var(--spacing)*4);
