@@ -52,19 +52,19 @@
         var introText = "I’m Dan. I love creating meaningful experiences through a wide range of media. This page walks through the design process of a few recent projects."
 
         window.onload = function () {
-            if (today > 4 && today <= 12) {
+            if (today >= 4 && today < 12) {
                 document.getElementById("var-div-greeting").innerHTML = "Mornin'";
                 document.getElementById("var-div-intro").innerHTML = introText;
             }
-            if (today > 12 && today <= 17) {
+            if (today >= 12 && today < 17) {
                 document.getElementById("var-div-greeting").innerHTML = msgArr[Math.floor(Math.random() * msgArr.length)];
                 document.getElementById("var-div-intro").innerHTML = introText;
             }
-            if (today > 17 && today <= 22) {
+            if (today >= 17 && today < 23) {
                 document.getElementById("var-div-greeting").innerHTML = "Evenin'";
                 document.getElementById("var-div-intro").innerHTML = introText;
             }
-            if (today > 22 || today <= 4) {
+            if (today >= 23 || today < 4) {
                 document.getElementById("var-div-greeting").innerHTML = "It's late";
                 document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> Anyway " + introText;
             }
