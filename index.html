@@ -57,11 +57,51 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!--smooth scrolling-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+    <!--end smooth scrolling-->
+
 </head>
 
 <body>
+    <div id="nav-container">
+        <p class="nav-text">
+            <a href="#intro">Intro</a> <a href="#colony">Colony</a> <a href="#cadmium">Cadmium</a> <a
+                href="#conquer-the-heavens">Conquer The Heavens</a> <a href="#contact">Contact</a>
+        </p>
+    </div>
+    
+    <div class="page-section" id="intro"></div>
 
     <div id="container">
+        </p>
 
         <!--top of site-->
         <div id="section">
@@ -83,6 +123,7 @@
 
         <!--start of project-->
         <div id="section">
+            <p class="page-section" id="colony"></p>
             <!--date and border-->
             <div id="block" class="border">
                 <p>12/13/2019</p>
@@ -102,7 +143,8 @@
                     <div id="column">
                         <h3>
                             Colony is an app prototype that I designed with some development feedback from Nicholas
-                            Glenn, co-founder of Helpful Humans in Seattle. The idea began as a pain point I personally
+                            Glenn, co-founder of Helpful Humans in Seattle. The idea began as a pain point I
+                            personally
                             experienced when going to a local event or exploring a new city.
                         </h3>
                     </div>
@@ -124,8 +166,10 @@
 
                 <div id="row">
                     <div id="column">
-                        Digital layers allow us to connect with our "friends" but if I wanted to host a block party for
-                        my neighbors who I don’t necessarily know, I would have to print physical flyers and stick them
+                        Digital layers allow us to connect with our "friends" but if I wanted to host a block party
+                        for
+                        my neighbors who I don’t necessarily know, I would have to print physical flyers and stick
+                        them
                         to their doors.
                     </div>
                 </div>
@@ -195,9 +239,11 @@
 
                 <div id="row">
                     <div id="column">
-                        Yik Yak’s ultimate failure became a point of study. I determined that much of their failure was
+                        Yik Yak’s ultimate failure became a point of study. I determined that much of their failure
+                        was
                         due to the platform-centric popularity contest, the distraction of profiles, and the lack of
-                        targeting meaningful use-cases. These helped guide a few goals for the feature set of Colony.
+                        targeting meaningful use-cases. These helped guide a few goals for the feature set of
+                        Colony.
                     </div>
                 </div>
 
@@ -233,7 +279,8 @@
 
                 <div id="row">
                     <div id="column">
-                        I initially had wanted to see communication visually on a map. Based on using similar platforms,
+                        I initially had wanted to see communication visually on a map. Based on using similar
+                        platforms,
                         the need for a list view was very apparent. Toggling between these would support different
                         methods of discovery.
                     </div>
@@ -369,6 +416,7 @@
 
         <!--start of project-->
         <div id="section">
+            <div class="page-section" id="cadmium"></div>
             <!--date and border-->
             <div id="block" class="border">
                 <p>3/18/2018</p>
@@ -387,8 +435,10 @@
                 <div id="row">
                     <div id="column">
                         <h3>
-                            I was approached by William Light, an entrepreneur and previous software engineer at Native
-                            Instruments, to conceptualize the experience, workflow, and skin for an upcoming software
+                            I was approached by William Light, an entrepreneur and previous software engineer at
+                            Native
+                            Instruments, to conceptualize the experience, workflow, and skin for an upcoming
+                            software
                             synthesizer he was developing.
                         </h3>
                     </div>
@@ -408,7 +458,8 @@
                     <div id="column">
                         <p>
                             The Cadmium synthesizer is driven by a Lissajous figure, which is a graphed system of
-                            parametric equations typically found on an oscilloscope. This gives the resulting sound a
+                            parametric equations typically found on an oscilloscope. This gives the resulting sound
+                            a
                             unique
                             characteristic that would be difficult to replicate using other forms of sound design.
                         </p>
@@ -471,9 +522,11 @@
                 <div id="row">
                     <div id="column">
                         <p>
-                            Sketches and layout prototypes were quickly fabricated with as much stylistic transparency
+                            Sketches and layout prototypes were quickly fabricated with as much stylistic
+                            transparency
                             as possible. A light appearance was used for prototypes as it kept us focused on the
-                            features. It became important to add a highlight color indicating modulated parameters and
+                            features. It became important to add a highlight color indicating modulated parameters
+                            and
                             waveforms. </p>
                     </div>
                 </div>
@@ -496,7 +549,8 @@
                 <div id="row">
                     <div id="column">
                         <p>
-                            A standardized system of controls would allow William to expand and modify the synthesizer
+                            A standardized system of controls would allow William to expand and modify the
+                            synthesizer
                             on his own without a total redesign. The visual controls included parameter-sensitive
                             functions packed into building blocks with consistent pixel dimensions and spacing.
                         </p>
@@ -517,9 +571,11 @@
                 <div id="row">
                     <div id="column">
                         <p>
-                            This mockup highlights the key features, stacked in a workflow that runs left-to-right, and
+                            This mockup highlights the key features, stacked in a workflow that runs left-to-right,
+                            and
                             then downward.
-                            Oscillators that drive the Lissajous curve are located to the left of the visualizer, with
+                            Oscillators that drive the Lissajous curve are located to the left of the visualizer,
+                            with
                             LFOs and Filters (modifiers) below them.
                             Finally master parameters that affect the entire output are located towards the bottom.
                         </p>
@@ -538,6 +594,7 @@
 
         <!--start of project-->
         <div id="section">
+            <div class="page-section" id="conquer-the-heavens"></div>
             <!--date and border-->
             <div id="block" class="border">
                 <p>9/28/2018</p>
@@ -557,12 +614,14 @@
                     <div id="column">
                         <h3>
                             <p>
-                                Conquer The Heavens is a multiplayer space combat game that aims to focus on the fun and
+                                Conquer The Heavens is a multiplayer space combat game that aims to focus on the fun
+                                and
                                 emotional intensity of zero-gravity combat over realism and accuracy.
 
                             </p>
                             <p>
-                                I was hired on to direct the concept art and provide assets by Nick Glenn, co-founder of
+                                I was hired on to direct the concept art and provide assets by Nick Glenn,
+                                co-founder of
                                 Helpful Human in Seattle and the developer of the game.
                         </h3>
 
@@ -584,8 +643,10 @@
                     <div id="column">
                         <p>
                             The game’s unique feature is it’s first-person-shooter-inspired ship control system and
-                            gameplay style. To expand on this, I aimed to design an in-space environment that would make
-                            combat feel like a close-quarters city firefight. I began abstract studies, slowly working
+                            gameplay style. To expand on this, I aimed to design an in-space environment that would
+                            make
+                            combat feel like a close-quarters city firefight. I began abstract studies, slowly
+                            working
                             from 2D to 3D to begin visualizing what the environment and vehicles would look and feel
                             like.
                             In space, there is no up or down.
@@ -610,7 +671,8 @@
                 <div id="row">
                     <div id="column">
                         <p>
-                            Our goal was to put player experience above realism. We asked questions like “What if space
+                            Our goal was to put player experience above realism. We asked questions like “What if
+                            space
                             wasn’t black?”. As a result, I began painting scenarios where space could be colored to
                             match the player’s mood or current game scenario.
                         </p>
@@ -663,7 +725,8 @@
                 <div id="row">
                     <div id="column">
                         <p>
-                            For menu and UI, I designed and produced a typeface in four weights that would convey the
+                            For menu and UI, I designed and produced a typeface in four weights that would convey
+                            the
                             retro-future aesthetic that was beginning to evolve.
                         </p>
                     </div>
@@ -694,7 +757,8 @@
                 <div id="row">
                     <div id="column">
                         <p>
-                            After establishing the general idea of the game environment, I began to model and texture
+                            After establishing the general idea of the game environment, I began to model and
+                            texture
                             low-poly components that would be used to populate houses and building faces in the
                             colonized space environments. Our eventual plan is to procedurally generate these
                             environments, so a rigid modular system was needed.
@@ -765,6 +829,7 @@
 
         <!--footer-->
         <div id="section">
+            <div class="page-section" id="contact"></div>
             <div id="block" class="border"></div>
             <div id="block" class="section-footer">
                 <h3>Thanks for peeking! You can contact me at
