@@ -85,7 +85,7 @@ html, body, p, a, h1, h2, h3, ul {
     letter-spacing: calc(var(--spacing)*0.03);
 }
 
-a, a:hover, a:active {
+a, a:hover, a:active, a.active {
     padding-bottom: calc(var(--spacing)*0.1);
     border-bottom: solid var(--color-primary) var(--border-width);
     display: inline;
@@ -165,11 +165,12 @@ h1 b, h2 b, h3 b {
 #container {
     max-width: var(--max-width);
     margin: auto;
-    padding: calc(var(--spacing)*2.5);
+    padding-right: calc(var(--spacing)*2.5);
+    padding-left: calc(var(--spacing)*2.5);
 }
 .section {
-    margin-top: calc(var(--spacing)*4);
-    margin-bottom: calc(var(--spacing)*4);
+    padding-top: calc(var(--spacing)*4);
+    padding-bottom: calc(var(--spacing)*4);
 }
 #block {
     margin-bottom: calc(var(--spacing)*2);

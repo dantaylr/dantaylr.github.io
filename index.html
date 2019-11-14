@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--smooth scrolling
+    <!--smooth scrolling-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script>
@@ -43,44 +43,13 @@
             });
         });
     </script>
-    end smooth scrolling-->
-
-    <!--nick's scrolling-->
-    <script>
-        var sectionEls = document.querySelectorAll(".section");
-        var borderEl = document.getElementById("nav-border");
-        var sections = [];
-
-        sectionEls.forEach(function (section) {
-            var link = document.querySelector(`a[href=#${section.id}]`);
-            sections.unshift({ el: section, link: link });
-        });
-
-        function updateBorder(activeLink) {
-            var box = activeLink.getBoundingClientRect();
-            borderEl.style.transform = `translateY(${box.top}px) scaleY(${box.height}px)`;
-        }
-
-        function onScroll() {
-            for (var i = 0; i < sections.length; i++) {
-                var section = sections[i];
-                var box = section.el.getBoundingClientRect();
-
-                if (box.top <= 10) {
-                    updateBorder(section.link);
-                }
-            }
-        }
-
-        document.addEventListener("scroll", onScroll);
-    </script>
-    <!--end nick's code-->
+    <!--end smooth scrolling-->
 
     <!--Header section text changer-->
     <script>
         var msgArr = ["Afternoon", "Heyo", "Greetings"];
         var today = new Date().getHours();
-        var introText = "I’m Dan. I love creating meaningful experiences through a wide range of media. This page walks through the design process of a few recent projects."
+        var introText = "I’m Dan. I love creating meaningful experiences through a range of media. This page walks through the design process of a few recent projects."
 
         window.onload = function () {
             if (today >= 4 && today < 12) {
@@ -170,9 +139,7 @@
                     <div id="column">
                         <h3>
                             Colony is an app prototype that I designed with some development feedback from Nicholas
-                            Glenn, co-founder of Helpful Humans in Seattle. The idea began as a pain point I
-                            personally
-                            experienced when going to a local event or exploring a new city.
+                            Glenn, co-founder of Helpful Human in Seattle.
                         </h3>
                     </div>
                 </div>
@@ -194,8 +161,7 @@
                 <div id="row">
                     <div id="column">
                         Digital layers allow us to connect with our "friends" but if I wanted to host a block party
-                        for
-                        my neighbors who I don’t necessarily know, I would have to print physical flyers and stick
+                        for people I don't know, I would have to print physical flyers and stick
                         them
                         to their doors.
                     </div>
@@ -222,9 +188,8 @@
                         </ul>
                         <p><b>Cons</b></p>
                         <ul>
-                            <li>Large barrier to entry</li>
-                            <li>Locked to one location</li>
-                            <li>Less support for general conversation</li>
+                            <li>Barrier to entry</li>
+                            <li>Only works at home</li>
                             <li>No incentive to be active</li>
                         </ul>
                     </div>
@@ -234,16 +199,15 @@
                         <h3>Yik Yak</h3>
                         <p><b>Pros</b></p>
                         <ul>
-                            <li>Casual conversation around you</li>
-                            <li>Supported traveling</li>
+                            <li>Low barrier to entry</li>
+                            <li>Supports travel</li>
                             <li>Less focus on profiles</li>
                         </ul>
                         <p><b>Cons</b></p>
                         <ul>
-                            <li>Anonymity lead to cyber-bullying</li>
-                            <li>Voting system creates a popularity contest</li>
-                            <li>No birds eye view or map</li>
-                            <li>Bothers you to post with notifications</li>
+                            <li>Cyber-bullying</li>
+                            <li>Voting system became a popularity contest</li>
+                            <li>Seedy notifications</li>
                         </ul>
                     </div>
 
@@ -252,12 +216,12 @@
                         <h3>Twitter</h3>
                         <p><b>Pros</b></p>
                         <ul>
-                            <li>Easy conversations around a topic</li>
-                            <li>Location can be attached to a post</li>
+                            <li>Conversations are public</li>
+                            <li>Location can be attached</li>
                         </ul>
                         <p><b>Cons</b></p>
                         <ul>
-                            <li>Location support isn’t required</li>
+                            <li>Location isn’t required</li>
                             <li>Messages are tied to a username</li>
                         </ul>
                     </div>
@@ -868,6 +832,46 @@
         </div>
 
     </div>
+
+
+    <!--nick's scrolling-->
+    <script>
+        var sectionEls = document.querySelectorAll(".section");
+        var sections = [];
+
+        for (var i = 0; i < sectionEls.length; i++) {
+            var section = sectionEls[i];
+            console.log(section);
+            var link = document.querySelector(`a[href="#${section.id}"]`);
+            sections.unshift({ el: section, link: link });
+        }
+
+        function onScroll() {
+            var foundActive = false;
+
+            for (var i = 0; i < sections.length; i++) {
+                var section = sections[i];
+                var box = section.el.getBoundingClientRect();
+
+                // DEBUG ONLY
+                if (i === 0) {
+                    console.log(box.bottom);
+                }
+
+                var isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
+                
+                if (((i === 0 && isAtBottom) || box.top <= 10) && !foundActive) {
+                    section.link.classList.toggle("active", true);
+                    foundActive = true;
+                } else {
+                    section.link.classList.toggle("active", false);
+                }
+            }
+        }
+
+        document.addEventListener("scroll", onScroll);
+    </script>
+    <!--end nick's code-->
 </body>
 
 </html>
