@@ -14,7 +14,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!--smooth scrolling-->
+    <!--smooth scrolling
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <script>
@@ -43,8 +43,39 @@
             });
         });
     </script>
-    <!--end smooth scrolling-->
-    
+    end smooth scrolling-->
+
+    <!--nick's scrolling-->
+    <script>
+        var sectionEls = document.querySelectorAll(".section");
+        var borderEl = document.getElementById("nav-border");
+        var sections = [];
+
+        sectionEls.forEach(function (section) {
+            var link = document.querySelector(`a[href=#${section.id}]`);
+            sections.unshift({ el: section, link: link });
+        });
+
+        function updateBorder(activeLink) {
+            var box = activeLink.getBoundingClientRect();
+            borderEl.style.transform = `translateY(${box.top}px) scaleY(${box.height}px)`;
+        }
+
+        function onScroll() {
+            for (var i = 0; i < sections.length; i++) {
+                var section = sections[i];
+                var box = section.el.getBoundingClientRect();
+
+                if (box.top <= 10) {
+                    updateBorder(section.link);
+                }
+            }
+        }
+
+        document.addEventListener("scroll", onScroll);
+    </script>
+    <!--end nick's code-->
+
     <!--Header section text changer-->
     <script>
         var msgArr = ["Afternoon", "Heyo", "Greetings"];
@@ -98,12 +129,10 @@
         </p>
     </div>
 
-    <div class="page-section" id="intro"></div>
-
     <div id="container">
 
         <!--top of site-->
-        <div id="section">
+        <div class="section" id="intro">
 
             <div id="block" class="section-header">
                 <h1><b>
@@ -121,8 +150,7 @@
         </div>
 
         <!--start of project-->
-        <div id="section">
-            <p class="page-section" id="colony"></p>
+        <div class="section" id="colony">
             <!--date and border-->
             <div id="block" class="border">
                 <p>12/13/2019</p>
@@ -414,8 +442,7 @@
         <!--end of project-->
 
         <!--start of project-->
-        <div id="section">
-            <div class="page-section" id="cadmium"></div>
+        <div class="section" id="cadmium">
             <!--date and border-->
             <div id="block" class="border">
                 <p>3/18/2018</p>
@@ -592,8 +619,7 @@
         <!--end of project-->
 
         <!--start of project-->
-        <div id="section">
-            <div class="page-section" id="conquer-the-heavens"></div>
+        <div class="section" id="conquer-the-heavens">
             <!--date and border-->
             <div id="block" class="border">
                 <p>9/28/2018</p>
@@ -827,8 +853,7 @@
         <!--end of project-->
 
         <!--footer-->
-        <div id="section">
-            <div class="page-section" id="contact"></div>
+        <div class="section" id="contact">
             <div id="block" class="border"></div>
             <div id="block" class="section-footer">
                 <h3>Thanks for peeking! You can contact me at
