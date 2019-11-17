@@ -206,8 +206,7 @@
                 <div id="row">
                     <div id="column">
                         Yik Yak’s ultimate failure became a point of study. I determined that much of their failure
-                        was
-                        due to the platform-centric popularity contest, the distraction of profiles, and the lack of
+                        was due to the platform-centric popularity contest, the distraction of profiles, and the lack of
                         targeting meaningful use-cases. These helped guide a few goals for the feature set of
                         Colony.
                     </div>
@@ -422,8 +421,7 @@
                 <div id="row">
                     <div id="column">
                         <p>
-                            The Cadmium synthesizer is driven by a Lissajous figure, which is a graphed system of
-                            parametric equations typically found on an oscilloscope. This gives the resulting sound
+                            The Cadmium synthesizer is driven by a Lissajous figure, typically found on an oscilloscope. This gives the resulting sound
                             a
                             unique
                             characteristic that would be difficult to replicate using other forms of sound design.
@@ -652,11 +650,6 @@
             <div id="block" class="section-content">
                 <div id="row">
                     <div id="column">
-                        <img src="images/cth/concept-early.png">
-                    </div>
-                </div>
-                <div id="row">
-                    <div id="column">
                         <img src="images/cth/concept-purple.jpg">
                     </div>
                 </div>
@@ -821,7 +814,7 @@
             var link = document.querySelector(`a[href="#${section.id}"]`);
             sections.unshift({ el: section, link: link });
         }
-        
+
         function onScroll() {
             var foundActive = false;
 
@@ -844,10 +837,43 @@
         }
 
         //time status
+        /*
+        function timeStatus() {
+            var today = new Date().getHours();
+            var introText = "I’m Dan. I love creating meaningful experiences through a range of media. This page walks through the design process of a few recent projects I've been excited about."
+
+            document.getElementById("var-div-greeting").innerHTML = "Pseudo Dan";
+
+            if (today >= 7 && today < 12) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably on a quick jog before a cold shower and morning meditation. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 10 && today < 12) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is either working from a grossly third-wave coffee shop or working from home. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 12 && today < 14) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably making a giant multi-faceted salad before going back to work. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 14 && today < 17) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably grinding on a project at home or in a coffee shop he spent too much time researching on Yelp. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 17 && today < 19) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably spending entirely too much time making dinner from scratch before working on a late night project. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 19 && today < 23) {
+                document.getElementById("var-div-intro").innerHTML = "There's a 78% chance actual Dan is grinding on a late night project right now. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 23 || today < 4) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is sleeping... Hopefully. You should too. If you can't sleep, here's a breakdown of a few of his recent projects.";
+            }
+        }
+        */
+
+        //time status
+        
         function timeStatus() {
             var msgArr = ["Afternoon", "Heyo", "Greetings"];
             var today = new Date().getHours();
-            var introText = "I’m Dan. I love creating meaningful experiences through a range of media. This page walks through the design process of a few recent projects."
+            var introText = "I’m Dan. I love creating meaningful experiences through a range of media. This page walks through the design process of a few recent projects I've been excited about."
 
 
             if (today >= 4 && today < 12) {
@@ -867,6 +893,7 @@
                 document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> Anyway " + introText;
             }
         }
+        
 
         //listener for nick's scrolling
         document.addEventListener("scroll", onScroll);
