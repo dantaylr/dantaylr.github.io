@@ -151,7 +151,7 @@ h1 b, h2 b, h3 b {
     border-left: solid var(--color-secondary) var(--border-width);
     display: inline;
 }
-.nav-text a:hover, .nav-text a.active {
+.nav-text a.active {
     border-left: solid var(--color-primary) var(--border-width);
 }
 #nav-container {
