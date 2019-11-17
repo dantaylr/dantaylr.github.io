@@ -45,32 +45,6 @@
     </script>
     <!--end smooth scrolling-->
 
-    <!--Header section text changer-->
-    <script>
-        var msgArr = ["Afternoon", "Heyo", "Greetings"];
-        var today = new Date().getHours();
-        var introText = "I’m Dan. I love creating meaningful experiences through a range of media. This page walks through the design process of a few recent projects."
-
-        window.onload = function () {
-            if (today >= 4 && today < 12) {
-                document.getElementById("var-div-greeting").innerHTML = "Mornin'";
-                document.getElementById("var-div-intro").innerHTML = introText;
-            }
-            if (today >= 12 && today < 17) {
-                document.getElementById("var-div-greeting").innerHTML = msgArr[Math.floor(Math.random() * msgArr.length)];
-                document.getElementById("var-div-intro").innerHTML = introText;
-            }
-            if (today >= 17 && today < 23) {
-                document.getElementById("var-div-greeting").innerHTML = "Evenin'";
-                document.getElementById("var-div-intro").innerHTML = introText;
-            }
-            if (today >= 23 || today < 4) {
-                document.getElementById("var-div-greeting").innerHTML = "It's late";
-                document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> Anyway " + introText;
-            }
-        }
-    </script>
-
     <!--SITE META-->
 
     <!--If the current page doesn't have a title, the file name is used-->
@@ -834,8 +808,9 @@
     </div>
 
 
-    <!--nick glenn's scroll highlighter-->
+    <!--scripts-->
     <script>
+        //nick glenn's scroll highlighter
         var sectionEls = document.querySelectorAll(".section");
         var sections = [];
 
@@ -845,7 +820,7 @@
             var link = document.querySelector(`a[href="#${section.id}"]`);
             sections.unshift({ el: section, link: link });
         }
-
+        
         function onScroll() {
             var foundActive = false;
 
@@ -856,19 +831,52 @@
                 //this var isn't being used
                 var isAtTop = (window.scrollY) <= 0;
                 var isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
-                
-                if (((i === 0 && isAtBottom) || (i === sections.length-1 && isAtTop) || box.top <= 10) && !foundActive) {
+
+                if (((i === 0 && isAtBottom) || (i === sections.length - 1 && isAtTop) || box.top <= 10) && !foundActive) {
                     section.link.classList.toggle("active", true);
                     foundActive = true;
                 } else {
                     section.link.classList.toggle("active", false);
                 }
+
             }
         }
 
+        //time status
+        function timeStatus() {
+            var msgArr = ["Afternoon", "Heyo", "Greetings"];
+            var today = new Date().getHours();
+            var introText = "I’m Dan. I love creating meaningful experiences through a range of media. This page walks through the design process of a few recent projects."
+
+
+            if (today >= 4 && today < 12) {
+                document.getElementById("var-div-greeting").innerHTML = "Mornin'";
+                document.getElementById("var-div-intro").innerHTML = introText;
+            }
+            if (today >= 12 && today < 17) {
+                document.getElementById("var-div-greeting").innerHTML = msgArr[Math.floor(Math.random() * msgArr.length)];
+                document.getElementById("var-div-intro").innerHTML = introText;
+            }
+            if (today >= 17 && today < 23) {
+                document.getElementById("var-div-greeting").innerHTML = "Evenin'";
+                document.getElementById("var-div-intro").innerHTML = introText;
+            }
+            if (today >= 23 || today < 4) {
+                document.getElementById("var-div-greeting").innerHTML = "It's late";
+                document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> Anyway " + introText;
+            }
+        }
+
+        //listener for nick's scrolling
         document.addEventListener("scroll", onScroll);
+
+        //load nick's scrolling function on load and time status
+        window.onload = function () {
+            onScroll();
+            timeStatus();
+        }
     </script>
-    <!--end nick glenn's scroll highlighter-->
+
 </body>
 
 </html>
