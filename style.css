@@ -154,60 +154,62 @@ h1 b, h2 b, h3 b {
 .nav-text a.active {
     border-left: solid var(--color-primary) var(--border-width);
 }
-#nav-container {
+.nav-container {
     position: fixed;
     top:calc(var(--spacing) * 1);
     right:calc(var(--body-size) + var(--spacing) * 1);
     background: none;
     height: 2000px;
 }
-
-#container {
+.container, .content-container {
+    padding-top: calc(var(--spacing)*2);
+    padding-bottom: calc(var(--spacing)*2);
+}
+.container {
     max-width: var(--max-width);
     margin: auto;
-    padding-right: calc(var(--spacing)*2.5);
-    padding-left: calc(var(--spacing)*2.5);
+    padding-right: calc(var(--spacing)*3);
+    padding-left: calc(var(--spacing)*2);
 }
-.section {
-    padding-top: calc(var(--spacing)*4);
-    padding-bottom: calc(var(--spacing)*4);
-}
-#block {
-    margin-bottom: calc(var(--spacing)*2);
-    display: block;
-}
-#row {
+.row {
     margin-left: calc(var(--spacing)*-.5);
     margin-right: calc(var(--spacing)*-.5);
     margin-bottom: calc(var(--spacing)*1);
     display: flex;
     flex-direction: row;
 }
-#column {
+.column {
     margin-left: calc(var(--spacing)*.5);
     margin-right: calc(var(--spacing)*.5);
     flex: 1 1 0px;
 }
-.section-header {
+.left-content, .right-content, .center-content, .border {
+    display: block;
+    margin-bottom: calc(var(--spacing)*0);
+}
+.left-content {
     width: calc(33.33% - (var(--spacing)*.5));
     margin-left: 0;
     margin-right: auto;
 }
-.section-footer {
-    width: 100%;
-    text-align: right;
+.right-content {
+    width: calc(66.66% - (var(--spacing)*.5));
     margin-left: auto;
     margin-right: 0;
 }
-.section-content {
-    width: calc(66.66% - (var(--spacing)*.5));
-    display: block;
+.center-content {
+    width: 100%;
+}
+.footer {
+    width: 100%;
+    text-align: right;
     margin-left: auto;
     margin-right: 0;
 }
 .border {
     width: 100%;
     border-bottom: var(--color-primary) 1px solid;
+    margin-bottom: calc(var(--spacing)*1);
 }
 /*images*/
 img {
@@ -222,7 +224,7 @@ img {
 
 /*responsive*/
 @media screen and (max-width: 640px) {
-    .section-header, .section-content {
+    .left-content, .right-content {
     width: 100%;
     margin: 0;
     }
