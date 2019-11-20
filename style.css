@@ -211,6 +211,12 @@ h1 b, h2 b, h3 b {
     border-bottom: var(--color-primary) 1px solid;
     margin-bottom: calc(var(--spacing)*1);
 }
+#intro {
+    height: 100vh;
+}
+#intro .content-container {
+    padding-top: 25%;
+}
 /*images*/
 img {
     width: 100%;

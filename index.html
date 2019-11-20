@@ -983,6 +983,14 @@
 
         //listener for nick's scrolling
         document.addEventListener("scroll", onScroll);
+
+//lazyload stuff
+        var lazyLoadInstance = new LazyLoad({
+    elements_selector: ".lazy"
+    // ... more custom settings?
+});
+
+lazyLoadInstance.update();
     </script>
 
 <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js">//lazyload</script>
