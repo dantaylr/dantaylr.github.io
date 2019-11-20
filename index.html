@@ -113,10 +113,6 @@
         }
         </script>
 
-<!--lazyload stuff-->
-<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js">//lazyload</script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.3.0/dist/lazyload.min.js">//lazyload</script>
-
     <!--SITE META-->
 
     <!--If the current page doesn't have a title, the file name is used-->
@@ -987,15 +983,21 @@
 
         //listener for nick's scrolling
         document.addEventListener("scroll", onScroll);
+    </script>
 
-//lazyload stuff
-        var lazyLoadInstance = new LazyLoad({
+
+<!--lazyload stuff-->
+<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js">//lazyload</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.3.0/dist/lazyload.min.js">//lazyload</script>
+<script>
+var lazyLoadInstance = new LazyLoad({
     elements_selector: ".lazy"
     // ... more custom settings?
 });
 
 lazyLoadInstance.update();
-    </script>
+</script>
+
 
 </body>
 
