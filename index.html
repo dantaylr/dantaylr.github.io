@@ -987,14 +987,54 @@
 
 
 <!--lazyload stuff-->
-<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js">//lazyload</script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.3.0/dist/lazyload.min.js">//lazyload</script>
-<script>
-var lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy"
-    // ... more custom settings?
-});
-</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.js"></script>
+		<script>
+			function logElementEvent(eventName, element) {
+				console.log(
+					Date.now(),
+					eventName,
+					element.getAttribute("data-src")
+				);
+			}
+			var polyfillAmdUrl =
+				"https://cdn.jsdelivr.net/npm/intersection-observer-amd@1.0.0/intersection-observer-amd.js";
+			var dependencies = [
+				"IntersectionObserver" in window ? null : polyfillAmdUrl,
+				"../dist/lazyload.amd.js"
+			];
+			var callback_enter = function(element) {
+				logElementEvent("🔑 ENTERED", element);
+			};
+			var callback_exit = function(element) {
+				logElementEvent("🚪 EXITED", element);
+			};
+			var callback_reveal = function(element) {
+				logElementEvent("👁️ REVEALED", element);
+			};
+			var callback_loaded = function(element) {
+				logElementEvent("👍 LOADED", element);
+			};
+			var callback_error = function(element) {
+				logElementEvent("💀 ERROR", element);
+				element.src =
+					"https://via.placeholder.com/440x560/?text=Error+Placeholder";
+			};
+			var callback_finish = function() {
+				logElementEvent("✔️ FINISHED", document.documentElement);
+			};
+			require(dependencies, function(_, LazyLoad) {
+				window.ll = new LazyLoad({
+					elements_selector: ".lazy",
+					// Assign the callbacks defined above
+					callback_enter: callback_enter,
+					callback_exit: callback_exit,
+					callback_reveal: callback_reveal,
+					callback_loaded: callback_loaded,
+					callback_error: callback_error,
+					callback_finish: callback_finish
+				});
+			});
+		</script>
 
 
 </body>
