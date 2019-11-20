@@ -46,6 +46,14 @@
     </script>
     <!--end smooth scrolling-->
 
+    <script>
+    //load nick's scrolling function on load and time status
+    window.onload = function () {
+            onScroll();
+            timeStatus();
+        }
+        </script>
+
     <!--SITE META-->
 
     <!--If the current page doesn't have a title, the file name is used-->
@@ -974,12 +982,6 @@
 
         //listener for nick's scrolling
         document.addEventListener("scroll", onScroll);
-
-        //load nick's scrolling function on load and time status
-        window.onload = function () {
-            onScroll();
-            timeStatus();
-        }
     </script>
 
 </body>
