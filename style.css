@@ -212,10 +212,10 @@ h1 b, h2 b, h3 b {
     margin-bottom: calc(var(--spacing)*1);
 }
 #intro {
-    height: 100vh;
+    height: calc(100vh);
 }
 #intro .content-container {
-    padding-top: 30%;
+    transform: translateY(calc(50vh - 50% - calc(var(--spacing)*2)));
 }
 /*images*/
 img {
