@@ -241,6 +241,18 @@ img {
     }
 }
 
+@media screen and (max-height: 640px) {
+    .nav-text {
+        font-size: var(--body-size);
+    }
+}
+
+@media screen and (max-height: 400px) {
+    .nav-text {
+        font-size: calc(var(--body-size)*.8);
+    }
+}
+
 /*dark mode*/
 
 @media (prefers-color-scheme: dark) {
