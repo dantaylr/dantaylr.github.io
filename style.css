@@ -241,7 +241,7 @@ img {
     }
 }
 
-@media screen and (max-height: 640px) {
+@media screen and (max-height: 570px) {
     .nav-text {
         font-size: var(--body-size);
     }
