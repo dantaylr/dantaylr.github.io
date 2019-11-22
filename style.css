@@ -221,6 +221,7 @@ h1 b, h2 b, h3 b {
 img {
     width: 100%;
     margin-bottom: calc(var(--spacing)*1);
+  image-rendering: pixelated;
 }
 
 .icon {
