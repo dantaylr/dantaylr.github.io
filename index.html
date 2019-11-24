@@ -48,7 +48,7 @@
 
     <script>
 
-               //time status alternative
+        //time status alternative
         /*
         function timeStatus() {
             var today = new Date().getHours();
@@ -85,33 +85,33 @@
         function timeStatus() {
             var msgArr = ["Afternoon", "Heyo", "Greetings"];
             var today = new Date().getHours();
-            var introText = "<p>I’m Dan. I love creating meaningful experiences through a range of media. This page breaks down my process behind a few recent projects.</p>"
+            var introText = "I’m Dan. I love creating meaningful experiences through a range of media. This page breaks down my design process behind a few recent projects."
 
 
             if (today >= 4 && today < 12) {
                 document.getElementById("var-div-greeting").innerHTML = "Mornin'";
-                document.getElementById("var-div-intro").innerHTML = introText;
+                document.getElementById("var-div-intro").innerHTML = "<p>"+introText+"</p>";
             }
             if (today >= 12 && today < 17) {
                 document.getElementById("var-div-greeting").innerHTML = msgArr[Math.floor(Math.random() * msgArr.length)];
-                document.getElementById("var-div-intro").innerHTML = introText;
+                document.getElementById("var-div-intro").innerHTML = "<p>"+introText+"</p>";
             }
             if (today >= 17 && today < 23) {
                 document.getElementById("var-div-greeting").innerHTML = "Evenin'";
-                document.getElementById("var-div-intro").innerHTML = introText;
+                document.getElementById("var-div-intro").innerHTML = "<p>"+introText+"</p>";
             }
             if (today >= 23 || today < 4) {
                 document.getElementById("var-div-greeting").innerHTML = "It's late";
-                document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> Anyway " + introText;
+                document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> <p>Anyway " + introText+"</p>";
             }
         }
 
-    //load nick's scrolling function on load and time status
-    window.onload = function () {
+        //load nick's scrolling function on load and time status
+        window.onload = function () {
             onScroll();
             timeStatus();
         }
-        </script>
+    </script>
 
     <!--SITE META-->
 
@@ -218,7 +218,8 @@
                 <div class="center-content">
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/colony/intro-map.jpg" src="images/colony/intro-map-lazy.gif" class="lazy">
+                            <img data-src="images/colony/intro-map.jpg" src="images/colony/intro-map-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
@@ -340,14 +341,9 @@
                 <div class="left-content">
                     <div class="row">
                         <div class="column">
-                            <h3><b>Ideation</b></h3>
+                            <h3><b>Map or post list?</b></h3>
                         </div>
                     </div>
-                </div>
-
-                <div class="right-content">
-
-
                     <div class="row">
                         <div class="column">
                             I initially had wanted to see communication visually on a map. Based on using similar
@@ -356,12 +352,27 @@
                             methods of discovery.
                         </div>
                     </div>
+                </div>
 
+                <div class="right-content">
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/colony/sketches-filters.jpg" src="images/colony/sketches-filters-lazy.gif" class="lazy">
+                            <img data-src="images/colony/sketches-filters.jpg"
+                                src="images/colony/sketches-filters-lazy.gif" class="lazy">
                         </div>
                     </div>
+                </div>
+            </div>
+
+
+            <div class="content-container">
+                <div class="left-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3><b>Flow</b></h3>
+                        </div>
+                    </div>
+
 
                     <div class="row">
                         <div class="column">
@@ -369,28 +380,43 @@
                             method.
                         </div>
                     </div>
+                </div>
 
+                <div class="right-content">
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/colony/sketches-flow.jpg" src="images/colony/sketches-flow-lazy.gif" class="lazy">
+                            <img data-src="images/colony/sketches-flow.jpg" src="images/colony/sketches-flow-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
+                </div>
+            </div>
 
+            <div class="content-container">
+                <div class="left-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3><b>"Ergonomics"</b></h3>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="column">
                             The placement of these features focused on the proximity to the right thumb, followed by
                             expected feature placement in similar apps.
                         </div>
                     </div>
-
+                </div>
+                <div class="right-content">
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/colony/wireframes-locations.jpg" src="images/colony/wireframes-locations-lazy.gif" class="lazy">
+                            <img data-src="images/colony/wireframes-locations.jpg"
+                                src="images/colony/wireframes-locations-lazy.gif" class="lazy">
                         </div>
                     </div>
-
                 </div>
+            </div>
 
+            <div class="content-container">
                 <div class="left-content">
                     <div class="row">
                         <div class="column">
@@ -399,32 +425,35 @@
                     </div>
                 </div>
 
-                <div class="right-content">
+                <div class="center-content">
 
                     <div class="row">
                         <div class="column">
-                            Early motion mockups were created and tested on real humans.
+                            Early motion mockups were created and tested on real humans!
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/colony/animation-map.gif" class="lazy">
+                            <img data-src="images/colony/animation-map.gif" src="images/colony/animation-map-lazy.gif" class="lazy">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/colony/animation-newpost.gif" class="lazy">
+                            <img data-src="images/colony/animation-newpost.gif" src="images/colony/animation-newpost-lazy.gif" class="lazy">
                         </div>
                     </div>
+                </div>
+            </div>
 
+            <div class="content-container">
+                <div class="center-content">
                     <div class="row">
                         <div class="column">
                             Post categories were narrowed down based on feedback.
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="column">
                             <img class="icon" src="images/colony/icon-post-general.png" class="lazy">
@@ -447,11 +476,10 @@
                         <div class="column">
                             <img class="icon" src="images/colony/icon-post-help.png" class="lazy">
                             <p>
-                                Need help with something
+                                Help/assistance
                             </p>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -469,21 +497,24 @@
                             facilitate further testing.
                         </div>
                     </div>
+
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/colony/mockup-filters.jpg" src="images/colony/mockup-filters-lazy.gif" class="lazy">
+                            <img data-src="images/colony/mockup-isometric.jpg"
+                                src="images/colony/mockup-isometric-lazy.gif" class="lazy">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="images/colony/mockup-flow.jpg" src="images/colony/mockup-flow-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/colony/mockup-screens.jpg" src="images/colony/mockup-screens-lazy.gif" class="lazy">
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="column">
-                            <img data-src="images/colony/mockup-hero.jpg" src="images/colony/mockup-hero-lazy.gif" class="lazy">
+                            <img data-src="images/colony/mockup-hero.jpg" src="images/colony/mockup-hero-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
 
@@ -508,7 +539,7 @@
                             <h2>
                                 <b>Cadmium</b>
                                 <br />
-                                Unique software synthesizer interface
+                                Software synthesizer interface
                             </h2>
                         </div>
                     </div>
@@ -530,30 +561,35 @@
             </div>
 
             <!--content-->
-            <div class="center-content">
+            <div class="content-container">
+                <div class="center-content">
 
-                <div class="row">
-                    <div class="column">
-                        <img data-src="images/cadmium/lissajous.jpg" src="images/cadmium/lissajous-lazy.gif" class="lazy">
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="images/cadmium/lissajous.jpg" src="images/cadmium/lissajous-lazy.gif"
+                                class="lazy">
+                        </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="column">
-                        <p>
-                            The Cadmium synthesizer is driven by a Lissajous figure, typically found on an oscilloscope.
-                            This gives the resulting sound
-                            a
-                            unique
-                            characteristic that would be difficult to replicate using other forms of sound design.
-                        </p>
-                        <p>
-                            My goal was to make it easy to understand and control this type of waveform.
-                        </p>
+                    <div class="row">
+                        <div class="column">
+                            <p>
+                                The Cadmium synthesizer is driven by a Lissajous figure, typically found on an
+                                oscilloscope.
+                                This gives the resulting sound
+                                a
+                                unique
+                                characteristic that would be difficult to replicate using other forms of sound design.
+                            </p>
+                            <p>
+                                My goal was to make it easy to understand and control this type of waveform.
+                            </p>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
+
 
             <div class="content-container">
                 <div class="left-content">
@@ -562,28 +598,34 @@
                             <h3><b>Breaking it down</b></h3>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="column">
+                            <p>
+                                Each feature that was important for the preliminary release and final release was
+                                broken
+                                down and questioned. We worked to reduce and refine these features in order to
+                                mitigate
+                                confusion.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="right-content">
 
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cadmium/ideation.jpg" src="images/cadmium/ideation-lazy.gif" class="lazy">
+                            <img data-src="images/cadmium/ideation.jpg" src="images/cadmium/ideation-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="column">
-                            <p>
-                                Each feature that was important for the preliminary release and final release was broken
-                                down and questioned. We worked to reduce and refine these features in order to mitigate
-                                confusion.
-                            </p>
-                        </div>
-                    </div>
+
 
                 </div>
+            </div>
 
+            <div class="content-container">
                 <div class="left-content">
                     <div class="row">
                         <div class="column">
@@ -595,19 +637,22 @@
                 <div class="right-content">
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cadmium/existing.jpg" src="images/cadmium/existing-lazy.gif" class="lazy">
+                            <img data-src="images/cadmium/existing.jpg" src="images/cadmium/existing-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
                             <p>
-                                Existing software synthesizers were studied for usability cues, icons, and color usage.
+                                Existing software synthesizers were studied for usability cues, icons, and color
+                                usage.
                             </p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cadmium/sketches.jpg" src="images/cadmium/sketches-lazy.gif" class="lazy">
+                            <img data-src="images/cadmium/sketches.jpg" src="images/cadmium/sketches-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
@@ -616,15 +661,46 @@
                                 Sketches and layout prototypes were quickly fabricated with as much stylistic
                                 transparency
                                 as possible. A light appearance was used for prototypes as it kept us focused on the
-                                features. It became important to add a highlight color indicating modulated parameters
+                                features. It became important to add a highlight color indicating modulated
+                                parameters
                                 and
                                 waveforms. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="left-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3><b>"Ergonomics"</b></h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <p>
+                                Parameters needed to be finely adjustible while utilizing as small of a
+                                footprint as possible. Many existing software synthesizers use a circular control that
+                                can be dragged up or down to adjust. We settled on a similar design with a full ring to maximize the granular feedback.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-content">
+
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="images/cadmium/ergo-knobs.gif" src="images/cadmium/ergo-knobs-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
 
 
                 </div>
             </div>
+
 
             <div class="content-container">
                 <div class="center-content">
@@ -636,7 +712,8 @@
 
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cadmium/ui-details.jpg" src="images/cadmium/ui-details-lazy.gif" src="images/cadmium/ui-details-lazy.gif" class="lazy">
+                            <img data-src="images/cadmium/ui-details.jpg" src="images/cadmium/ui-details-lazy.gif"
+                                src="images/cadmium/ui-details-lazy.gif" class="lazy">
                         </div>
                     </div>
                     <div class="row">
@@ -644,7 +721,8 @@
                             <p>
                                 A standardized system of controls would allow William to expand and modify the
                                 synthesizer
-                                on his own without a total redesign. The visual controls included parameter-sensitive
+                                on his own without a total redesign. The visual controls included
+                                parameter-sensitive
                                 functions packed into building blocks with consistent pixel dimensions and spacing.
                             </p>
                             <p>
@@ -657,27 +735,32 @@
 
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cadmium/ui-final.jpg" src="images/cadmium/ui-final-lazy.gif" class="lazy">
+                            <img data-src="images/cadmium/ui-final.jpg" src="images/cadmium/ui-final-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="column">
                             <p>
-                                This mockup highlights the key features, stacked in a workflow that runs left-to-right,
+                                This mockup highlights the key features, stacked in a workflow that runs
+                                left-to-right,
                                 and
                                 then downward.
-                                Oscillators that drive the Lissajous curve are located to the left of the visualizer,
+                                Oscillators that drive the Lissajous curve are located to the left of the
+                                visualizer,
                                 with
                                 LFOs and Filters (modifiers) below them.
-                                Finally master parameters that affect the entire output are located towards the bottom.
+                                Finally master parameters that affect the entire output are located towards the
+                                bottom.
                             </p>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cadmium/laptop-mockup.jpg" src="images/cadmium/laptop-mockup-lazy.gif" class="lazy">
+                            <img data-src="images/cadmium/laptop-mockup.jpg" src="images/cadmium/laptop-mockup-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                 </div>
@@ -712,7 +795,8 @@
                         <div class="column">
                             <h3>
                                 <p>
-                                    Conquer The Heavens is a multiplayer space combat game that aims to focus on the fun
+                                    Conquer The Heavens is a multiplayer space combat game that aims to focus on the
+                                    fun
                                     and
                                     emotional intensity of zero-gravity combat over realism and accuracy.
 
@@ -730,7 +814,7 @@
             </div>
 
             <!--content-->
- <div class="content-container">
+            <div class="content-container">
                 <div class="center-content">
                     <div class="row">
                         <div class="column">
@@ -739,33 +823,27 @@
                     </div>
 
                     <div class="row">
-                            <div class="column">
-                                <p>
-                                    The game’s unique feature is it’s first-person-shooter-inspired ship control system and
-                                    gameplay style. To expand on this, I aimed to design an in-space environment that would
-                                    make
-                                    combat feel like a close-quarters city firefight. I began abstract studies, slowly
-                                    working
-                                    from 2D to 3D to begin visualizing what a gravity-less sprawl would look like, and how that may manifest in vehicle designs.
-                                </p>
-                            </div>
-                        </div>
-
-
-                    <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/sketches-ship.jpg" src="images/cth/sketches-ship-lazy.gif" class="lazy">
+                            <p>
+                                The game’s unique feature is it’s first-person-shooter-inspired ship control system
+                                and
+                                gameplay style. To expand on this, I aimed to design an in-space environment that
+                                would
+                                make
+                                combat feel like a close-quarters city firefight. I began abstract studies, slowly
+                                working
+                                from 2D to 3D to begin visualizing what a gravity-less sprawl would look like, and
+                                how
+                                that may manifest in vehicle designs.
+                            </p>
                         </div>
                     </div>
 
+
                     <div class="row">
                         <div class="column">
-                            <p>
-                                Our goal was to put player experience above realism. We asked questions like “What if
-                                space
-                                wasn’t black?”. As a result, I began painting scenarios where space could be colored to
-                                match the player’s mood or current game scenario.
-                            </p>
+                            <img data-src="images/cth/sketches-ship.jpg" src="images/cth/sketches-ship-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
 
@@ -776,33 +854,51 @@
                 <div class="center-content">
                     <div class="row">
                         <div class="column">
-                            <h3><b>Concept renderings</b></h3>
+                            <h3><b>What if space wasn't black?</b></h3>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/concept-purple.jpg" src="images/cth/concept-purple-lazy.gif" class="lazy">
+                            <p>
+                                Our goal was to put player experience above realism. This gave the team the idea to
+                                think of space as a canvas that could visually support the emotional ambiance of the
+                                current situation. I painted scenarios where the ambient color of space might match the
+                                mood of
+                                the
+                                scene.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="images/cth/concept-purple.jpg" src="images/cth/concept-purple-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/concept-deepblue.jpg" src="images/cth/concept-deepblue-lazy.gif" class="lazy">
+                            <img data-src="images/cth/concept-deepblue.jpg" src="images/cth/concept-deepblue-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/concept-blue.jpg" src="images/cth/concept-blue-lazy.gif" class="lazy">
+                            <img data-src="images/cth/concept-blue.jpg" src="images/cth/concept-blue-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/concept-green.jpg" src="images/cth/concept-green-lazy.gif" class="lazy">
+                            <img data-src="images/cth/concept-green.jpg" src="images/cth/concept-green-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/concept-orange.jpg" src="images/cth/concept-orange-lazy.gif" class="lazy">
+                            <img data-src="images/cth/concept-orange.jpg" src="images/cth/concept-orange-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                 </div>
@@ -818,7 +914,8 @@
                     <div class="row">
                         <div class="column">
                             <p>
-                                For menu and UI, I designed and produced a typeface in four weights that would convey
+                                For menu and UI, I designed and produced a typeface in four weights that would
+                                convey
                                 the
                                 retro-future aesthetic that was beginning to evolve.
                             </p>
@@ -826,12 +923,14 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/font-construction.jpg" src="images/cth/font-construction-lazy.gif" class="lazy">
+                            <img data-src="images/cth/font-construction.jpg" src="images/cth/font-construction-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/font-weights.jpg" src="images/cth/font-weights-lazy.gif" class="lazy">
+                            <img data-src="images/cth/font-weights.jpg" src="images/cth/font-weights-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
@@ -863,22 +962,26 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/unity-solarpanel.jpg" src="images/cth/unity-solarpanel-lazy.gif" class="lazy">
+                            <img data-src="images/cth/unity-solarpanel.jpg" src="images/cth/unity-solarpanel-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/unity-prefab-1.jpg" src="images/cth/unity-prefab-1-lazy.gif" class="lazy">
+                            <img data-src="images/cth/unity-prefab-1.jpg" src="images/cth/unity-prefab-1-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/unity-prefab-2.jpg" src="images/cth/unity-prefab-2-lazy.gif" class="lazy">
+                            <img data-src="images/cth/unity-prefab-2.jpg" src="images/cth/unity-prefab-2-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/unity-prefabs.jpg" src="images/cth/unity-prefabs-lazy.gif" class="lazy">
+                            <img data-src="images/cth/unity-prefabs.jpg" src="images/cth/unity-prefabs-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
 
@@ -903,17 +1006,20 @@
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/unity-house-1.jpg" src="images/cth/unity-house-1-lazy.gif" class="lazy">
+                            <img data-src="images/cth/unity-house-1.jpg" src="images/cth/unity-house-1-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/unity-house-2.jpg" src="images/cth/unity-house-2-lazy.gif" class="lazy">
+                            <img data-src="images/cth/unity-house-2.jpg" src="images/cth/unity-house-2-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/cth/unity-houses.jpg" src="images/cth/unity-houses-lazy.gif" class="lazy">
+                            <img data-src="images/cth/unity-houses.jpg" src="images/cth/unity-houses-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
                     <div class="row">
@@ -986,15 +1092,15 @@
     </script>
 
 
-<!--lazyload stuff-->
-<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
-<script>
-    var lazyLoadInstance = new LazyLoad({
-    elements_selector: ".lazy"
-    // ... more custom settings?
-});
-</script>
+    <!--lazyload stuff-->
+    <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+    <script>
+        var lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazy"
+            // ... more custom settings?
+        });
+    </script>
 
 
 </body>

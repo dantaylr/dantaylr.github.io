@@ -65,7 +65,7 @@ table {
     --h2-size: calc(var(--body-size)*3);
     --h3-size: calc(var(--body-size)*1.6);
     --h4-size: calc(var(--body-size)*1);
-    --spacing: calc(var(--body-size)*var(--line-height-multiplier));
+    --spacing: calc(var(--h3-size)*var(--line-height-multiplier));
     --border-width: 1.5px;
 }
 
@@ -82,7 +82,7 @@ html, body, p, a, h1, h2, h3, ul {
     color: var(--color-primary);
     margin-bottom: calc(var(--spacing)*0.5);
     text-decoration: none;
-    letter-spacing: calc(var(--spacing)*0.03);
+    letter-spacing: calc(var(--spacing)*0.02);
 }
 
 a, a:hover, a:active, a.active {
@@ -97,17 +97,15 @@ body {
 }
 
 ul {
-    list-style-type: none;
-    list-style-position: inside;
+    list-style:none;
+    margin-left:1.2em;
 }
 
-li:before {
-    content: "-";
-    margin-left: calc(var(--spacing)*-1);
-    margin-right: .8em;
-  }
-li {
-    margin-left: calc(var(--spacing)*1);
+ul li:before {
+    display:inline-block;
+    content:"–";
+    width:1.2em;
+    margin-left:-1.2em;
 }
 
 h1 {
@@ -182,6 +180,7 @@ h1 b, h2 b, h3 b {
     margin-left: calc(var(--spacing)*.5);
     margin-right: calc(var(--spacing)*.5);
     flex: 1 1 0px;
+    min-width: min-content;
 }
 .left-content, .right-content, .center-content, .border {
     display: block;
@@ -220,12 +219,13 @@ h1 b, h2 b, h3 b {
 /*images*/
 img {
     width: 100%;
-    margin-bottom: calc(var(--spacing)*1);
+    margin-bottom: calc(var(--spacing)*0);
   image-rendering: pixelated;
 }
 
 .icon {
-    width: calc(100% - (var(--spacing)*4));
+    width: 66.66%;
+    margin-bottom: calc(var(--spacing)*1);
 
 }
 
@@ -234,10 +234,6 @@ img {
     .left-content, .right-content {
     width: 100%;
     margin: 0;
-    }
-    .icon {
-        width: calc(100% - (var(--spacing)*1));
-    
     }
 }
 
