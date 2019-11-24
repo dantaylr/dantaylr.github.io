@@ -180,7 +180,6 @@ h1 b, h2 b, h3 b {
     margin-left: calc(var(--spacing)*.5);
     margin-right: calc(var(--spacing)*.5);
     flex: 1 1 0px;
-    min-width: min-content;
 }
 .left-content, .right-content, .center-content, .border {
     display: block;
@@ -236,6 +235,7 @@ img {
     margin: 0;
     }
 }
+
 
 @media screen and (max-height: 570px) {
     .nav-text {
