@@ -90,19 +90,19 @@
 
             if (today >= 4 && today < 12) {
                 document.getElementById("var-div-greeting").innerHTML = "Mornin'";
-                document.getElementById("var-div-intro").innerHTML = "<p>"+introText+"</p>";
+                document.getElementById("var-div-intro").innerHTML = "<p>" + introText + "</p>";
             }
             if (today >= 12 && today < 17) {
                 document.getElementById("var-div-greeting").innerHTML = msgArr[Math.floor(Math.random() * msgArr.length)];
-                document.getElementById("var-div-intro").innerHTML = "<p>"+introText+"</p>";
+                document.getElementById("var-div-intro").innerHTML = "<p>" + introText + "</p>";
             }
             if (today >= 17 && today < 23) {
                 document.getElementById("var-div-greeting").innerHTML = "Evenin'";
-                document.getElementById("var-div-intro").innerHTML = "<p>"+introText+"</p>";
+                document.getElementById("var-div-intro").innerHTML = "<p>" + introText + "</p>";
             }
             if (today >= 23 || today < 4) {
                 document.getElementById("var-div-greeting").innerHTML = "It's late";
-                document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> <p>Anyway " + introText+"</p>";
+                document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> <p>Anyway " + introText + "</p>";
             }
         }
 
@@ -245,7 +245,7 @@
                 </div>
 
                 <div class="right-content">
-                    <div class="row">
+                    <div class="row three-column">
                         <div class="column">
                             <img class="icon" src="images/colony/icon-nextdoor.png">
                             <h3>Nextdoor</h3>
@@ -435,13 +435,15 @@
 
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/colony/animation-map.gif" src="images/colony/animation-map-lazy.gif" class="lazy">
+                            <img data-src="images/colony/animation-map.gif" src="images/colony/animation-map-lazy.gif"
+                                class="lazy">
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="column">
-                            <img data-src="images/colony/animation-newpost.gif" src="images/colony/animation-newpost-lazy.gif" class="lazy">
+                            <img data-src="images/colony/animation-newpost.gif"
+                                src="images/colony/animation-newpost-lazy.gif" class="lazy">
                         </div>
                     </div>
                 </div>
@@ -454,7 +456,7 @@
                             Post categories were narrowed down based on feedback.
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row four-column">
                         <div class="column">
                             <img class="icon" src="images/colony/icon-post-general.png" class="lazy">
                             <p>
@@ -682,7 +684,8 @@
                             <p>
                                 Parameters needed to be finely adjustible while utilizing as small of a
                                 footprint as possible. Many existing software synthesizers use a circular control that
-                                can be dragged up or down to adjust. We settled on a similar design with a full ring to maximize the granular feedback.
+                                can be dragged up or down to adjust. We settled on a similar design with a full ring to
+                                maximize the granular feedback.
                             </p>
                         </div>
                     </div>

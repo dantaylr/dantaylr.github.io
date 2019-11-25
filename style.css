@@ -172,14 +172,23 @@ h1 b, h2 b, h3 b {
 .row {
     margin-left: calc(var(--spacing)*-.5);
     margin-right: calc(var(--spacing)*-.5);
-    margin-bottom: calc(var(--spacing)*1);
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .column {
     margin-left: calc(var(--spacing)*.5);
     margin-right: calc(var(--spacing)*.5);
+    margin-bottom: calc(var(--spacing)*1);
     flex: 1 1 0px;
+}
+.three-column .column {
+    min-width: calc(33.33% - calc(var(--spacing)*1));
+    max-width: calc(33.33% - calc(var(--spacing)*1));
+}
+.four-column .column {
+    min-width: calc(25% - calc(var(--spacing)*1));
+    max-width: calc(25% - calc(var(--spacing)*1));
 }
 .left-content, .right-content, .center-content, .border {
     display: block;
@@ -229,6 +238,7 @@ img {
 }
 
 /*responsive*/
+/*width*/
 @media screen and (max-width: 640px) {
     .left-content, .right-content {
     width: 100%;
@@ -236,7 +246,20 @@ img {
     }
 }
 
+@media screen and (max-width: 540px) {
+    .four-column .column, .three-column .column {
+        min-width: calc(50% - calc(var(--spacing)*1));
+        max-width: calc(50% - calc(var(--spacing)*1));
+    }
+}
 
+@media screen and (max-width: 360px) {
+    .four-column .column, .three-column .column {
+        min-width: calc(100% - calc(var(--spacing)*1));
+        max-width: calc(100% - calc(var(--spacing)*1));
+    }
+}
+/*height*/
 @media screen and (max-height: 570px) {
     .nav-text {
         font-size: var(--body-size);
@@ -250,7 +273,6 @@ img {
 }
 
 /*dark mode*/
-
 @media (prefers-color-scheme: dark) {
     :root {
 	--color-primary: white;
