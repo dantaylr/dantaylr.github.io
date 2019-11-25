@@ -144,7 +144,7 @@ h1 b, h2 b, h3 b {
 .nav-text a {
     padding-bottom: none;
     border-bottom: none;
-    margin-bottom: var(--spacing);
+    margin-bottom: 1em;
     padding-left: calc(var(--spacing)*0.1);
     border-left: solid var(--color-secondary) var(--border-width);
     display: inline;
