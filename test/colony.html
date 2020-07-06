@@ -1,0 +1,555 @@
+<!--
+    PT Notes:
+
+    How :title works in Jekyll
+        If a title isn't specified for an HTML, nothing is generated. 
+        If it isn't specified for a markdown file, 
+        a title is automatically generated from the file name and 
+        capitalized properly with dashes turned to spaces.
+-->
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--smooth scrolling-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, "swing", function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+    <!--end smooth scrolling-->
+
+    <script>
+
+        //time status alternative
+        /*
+        function timeStatus() {
+            var today = new Date().getHours();
+            var introText = "I’m Dan. I love creating meaningful experiences through a range of media. This page walks through the design process of a few recent projects I've been excited about."
+
+            document.getElementById("var-div-greeting").innerHTML = "Pseudo Dan";
+
+            if (today >= 7 && today < 12) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably on a quick jog before a cold shower and morning meditation. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 10 && today < 12) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is either working from a grossly third-wave coffee shop or working from home. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 12 && today < 14) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably making a giant multi-faceted salad before going back to work. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 14 && today < 17) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably grinding on a project at home or in a coffee shop he spent too much time researching on Yelp. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 17 && today < 19) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably spending entirely too much time making dinner from scratch before working on a late night project. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 19 && today < 23) {
+                document.getElementById("var-div-intro").innerHTML = "There's a 78% chance actual Dan is grinding on a late night project right now. Here's a breakdown of a few of his recent projects.";
+            }
+            if (today >= 23 || today < 4) {
+                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is sleeping... Hopefully. You should too. If you can't sleep, here's a breakdown of a few of his recent projects.";
+            }
+        }
+        */
+
+        //time status
+
+        function timeStatus() {
+            var msgArr = ["Afternoon", "Heyo", "Greetings"];
+            var today = new Date().getHours();
+            var introText = "I’m Dan. I love creating meaningful experiences through a range of media. This page breaks down my design process and execution behind a few recent projects."
+
+
+            if (today >= 4 && today < 12) {
+                document.getElementById("var-div-greeting").innerHTML = "Mornin'";
+                document.getElementById("var-div-intro").innerHTML = "<p>" + introText + "</p>";
+            }
+            if (today >= 12 && today < 17) {
+                document.getElementById("var-div-greeting").innerHTML = msgArr[Math.floor(Math.random() * msgArr.length)];
+                document.getElementById("var-div-intro").innerHTML = "<p>" + introText + "</p>";
+            }
+            if (today >= 17 && today < 23) {
+                document.getElementById("var-div-greeting").innerHTML = "Evenin'";
+                document.getElementById("var-div-intro").innerHTML = "<p>" + introText + "</p>";
+            }
+            if (today >= 23 || today < 4) {
+                document.getElementById("var-div-greeting").innerHTML = "It's late";
+                document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> <p>Anyway " + introText + "</p>";
+            }
+        }
+
+        //load nick's scrolling function on load and time status
+        window.onload = function () {
+            onScroll();
+            timeStatus();
+        }
+    </script>
+
+    <!--SITE META-->
+
+    <!--If the current page doesn't have a title, the file name is used-->
+    <title>Dan Taylor</title>
+    <meta title=”description” content="Design portfolio of Dan Taylor">
+
+    <!--
+                Favicons and code below have been generated from:
+                https://favicon.io/
+            -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="style-test.css">
+
+</head>
+
+<body>
+    <div class="nav-container">
+        <h3 class="nav-text">
+            <a href="index">Back</a>
+        </h3>
+    </div>
+
+    <div class="container">
+
+        <!--start of project-->
+        <div class="section" id="colony">
+            <!--date and border-->
+            <div class="content-container">
+                <!--<div class="border">
+                    <p>12/13/2019</p>
+                </div>-->
+                <p>12/13/2019</p>
+
+                <!--project title and description-->
+                <div class="left-minor">
+                    <div class="row">
+                        <div class="column">
+                            <h2>
+                                <b>Colony</b>
+                                <br />
+                                Communicate with people nearby
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-major">
+                    <div class="row">
+                        <div class="column">
+                            <h3>
+                                Colony is an app prototype that I designed with some development feedback from Nicholas
+                                Glenn, co-founder of Helpful Human in Seattle.
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--content-->
+            <div class="content-container">
+                <div class="left-minor">
+                    <div class="row">
+                        <div class="column">
+                            <h3><b>Pain point</b></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center-content">
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="../images/colony/intro-map.jpg" src="../images/colony/intro-map-lazy.gif"
+                                class="lazy">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            Digital layers allow us to connect with our "friends". But if I wanted to host a block party
+                            for people I don't know I would have to print physical flyers and stick
+                            them
+                            to their doors.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="left-minor">
+                    <div class="row">
+                        <div class="column">
+                            <h3>
+                                <b>What's out there?</b>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-major">
+                    <div class="row three-column">
+                        <div class="column">
+                            <img class="icon" src="../images/colony/icon-nextdoor.png">
+                            <h3>Nextdoor</h3>
+                            <p><b>Pros</b></p>
+                            <ul>
+                                <li>Message your neighbors</li>
+                                <li>Supports commerce</li>
+                                <li>User authenticity</li>
+                            </ul>
+                            <p><b>Cons</b></p>
+                            <ul>
+                                <li>Barrier to entry</li>
+                                <li>Only works at home</li>
+                                <li>No incentive to be active</li>
+                            </ul>
+                        </div>
+
+                        <div class="column">
+                            <img class="icon" src="../images/colony/icon-yikyak.png">
+                            <h3>Yik Yak</h3>
+                            <p><b>Pros</b></p>
+                            <ul>
+                                <li>Low barrier to entry</li>
+                                <li>Supports travel</li>
+                                <li>Less focus on profiles</li>
+                            </ul>
+                            <p><b>Cons</b></p>
+                            <ul>
+                                <li>Cyber-bullying</li>
+                                <li>Voting system became a popularity contest</li>
+                                <li>Seedy notifications</li>
+                            </ul>
+                        </div>
+
+                        <div class="column">
+                            <img class="icon" src="../images/colony/icon-twitter.png">
+                            <h3>Twitter</h3>
+                            <p><b>Pros</b></p>
+                            <ul>
+                                <li>Conversations are public</li>
+                                <li>Location can be attached</li>
+                            </ul>
+                            <p><b>Cons</b></p>
+                            <ul>
+                                <li>Location isn’t required</li>
+                                <li>Messages are tied to a username</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            Yik Yak’s ultimate failure became a point of study. I determined that much of their failure
+                            was due to the platform-centric popularity contest, the distraction of profiles, and the
+                            lack of
+                            targeting meaningful use-cases. These helped guide a few goals for the feature set of
+                            Colony.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="left-minor">
+                    <div class="row">
+                        <div class="column">
+                            <h3><b>Goals</b></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-major">
+                    <div class="row">
+                        <div class="column">
+                            <h3>
+                                <ul>
+                                    <li>Focus on where the message came from, not the person</li>
+                                    <li>Feel secure and accountable to prevent bullying</li>
+                                    <li>Easy to filter information into what you’re looking for</li>
+                                    <li>Not try and be another social network</li>
+                                    <li>Include an incentive to be active on the platform</li>
+                                    <li>Support multiple use cases</li>
+                                </ul>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="left-minor">
+                    <div class="row">
+                        <div class="column">
+                            <h3><b>Map or list?</b></h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            I initially had wanted to see communication visually on a map. Based on using similar
+                            platforms,
+                            the need for a list view was very apparent. Toggling between these would support different
+                            methods of discovery.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-major">
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="../images/colony/sketches-filters.jpg"
+                                src="../images/colony/sketches-filters-lazy.gif" class="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="content-container">
+                <div class="left-minor">
+                    <div class="row">
+                        <div class="column">
+                            <h3><b>Flow</b></h3>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="column">
+                            Major screens were laid out, with all major features broken down in a Marie Kondo sort of
+                            method.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="right-major">
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="../images/colony/sketches-flow.jpg" src="../images/colony/sketches-flow-lazy.gif"
+                                class="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="left-minor">
+                    <div class="row">
+                        <div class="column">
+                            <h3><b>"Ergonomics"</b></h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            The placement of these features focused on the proximity to the right thumb, followed by
+                            cues taken from the placement of similar features in other apps.
+                        </div>
+                    </div>
+                </div>
+                <div class="right-major">
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="../images/colony/wireframes-locations.jpg"
+                                src="../images/colony/wireframes-locations-lazy.gif" class="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="left-minor">
+                    <div class="row">
+                        <div class="column">
+                            <h3><b>Prototyping</b></h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="center-content">
+
+                    <div class="row">
+                        <div class="column">
+                            Early motion mockups were created and tested on real humans!
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="../images/colony/animation-map.gif" src="../images/colony/animation-map-lazy.gif"
+                                class="lazy">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="../images/colony/animation-newpost.gif"
+                                src="../images/colony/animation-newpost-lazy.gif" class="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="center-content">
+                    <div class="row">
+                        <div class="column">
+                            Post categories were narrowed down based on feedback.
+                        </div>
+                    </div>
+                    <div class="row four-column">
+                        <div class="column">
+                            <img class="icon" src="../images/colony/icon-post-general.png" class="lazy">
+                            <p>
+                                General discussion
+                            </p>
+                        </div>
+                        <div class="column">
+                            <img class="icon" src="../images/colony/icon-post-event.png" class="lazy">
+                            <p>
+                                Events
+                            </p>
+                        </div>
+                        <div class="column">
+                            <img class="icon" src="../images/colony/icon-post-alert.png" class="lazy">
+                            <p>
+                                Alerts
+                            </p>
+                        </div>
+                        <div class="column">
+                            <img class="icon" src="../images/colony/icon-post-help.png" class="lazy">
+                            <p>
+                                Help/assistance
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="center-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3><b>Refinement</b></h3>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            Screens were fleshed out with an appearance close to the original wireframe. This would
+                            facilitate further testing.
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="../images/colony/mockup-isometric.jpg"
+                                src="../images/colony/mockup-isometric-lazy.gif" class="lazy">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="../images/colony/mockup-flow.jpg" src="../images/colony/mockup-flow-lazy.gif"
+                                class="lazy">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="column">
+                            <img data-src="../images/colony/mockup-hero.jpg" src="../images/colony/mockup-hero-lazy.gif"
+                                class="lazy">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!--end of project-->
+
+    </div>
+
+
+    <!--scripts-->
+    <script>
+        //nick glenn's scroll highlighter
+        var sectionEls = document.querySelectorAll(".section");
+        var sections = [];
+
+        for (var i = 0; i < sectionEls.length; i++) {
+            var section = sectionEls[i];
+            console.log(section);
+            var link = document.querySelector(`a[href="#${section.id}"]`);
+            sections.unshift({ el: section, link: link });
+        }
+
+        function onScroll() {
+            var foundActive = false;
+
+            for (var i = 0; i < sections.length; i++) {
+                var section = sections[i];
+                var box = section.el.getBoundingClientRect();
+
+                //this var isn't being used
+                var isAtTop = (window.scrollY) <= 0;
+                var isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
+
+                if (((i === 0 && isAtBottom) || (i === sections.length - 1 && isAtTop) || box.top <= 10) && !foundActive) {
+                    section.link.classList.toggle("active", true);
+                    foundActive = true;
+                } else {
+                    section.link.classList.toggle("active", false);
+                }
+
+            }
+        }
+
+
+        //listener for nick's scrolling
+        document.addEventListener("scroll", onScroll);
+    </script>
+
+
+    <!--lazyload stuff-->
+    <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+    <script>
+        var lazyLoadInstance = new LazyLoad({
+            elements_selector: ".lazy"
+            // ... more custom settings?
+        });
+    </script>
+
+
+</body>
+
+</html>
