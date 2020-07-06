@@ -207,18 +207,14 @@ h1 b, h2 b, h3 b {
     margin-bottom: calc(var(--spacing)*0);
 }
 
-.left-minor, .left-major .right-minor, .right-major
-{
-    margin-left: 0;
-    margin-right: 0;
-}
-
 .left-minor, .left-major {
-    float:left;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 .right-minor, .right-major {
-    float:right;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 .left-minor, .right-minor {
@@ -232,6 +228,7 @@ h1 b, h2 b, h3 b {
 .center-content {
     width: 100%;
 }
+
 .footer {
     width: 100%;
     text-align: right;
