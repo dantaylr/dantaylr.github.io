@@ -48,40 +48,6 @@
 
     <script>
 
-        //time status alternative
-        /*
-        function timeStatus() {
-            var today = new Date().getHours();
-            var introText = "I’m Dan. I love creating meaningful experiences through a range of media. This page walks through the design process of a few recent projects I've been excited about."
-
-            document.getElementById("var-div-greeting").innerHTML = "Pseudo Dan";
-
-            if (today >= 7 && today < 12) {
-                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably on a quick jog before a cold shower and morning meditation. Here's a breakdown of a few of his recent projects.";
-            }
-            if (today >= 10 && today < 12) {
-                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is either working from a grossly third-wave coffee shop or working from home. Here's a breakdown of a few of his recent projects.";
-            }
-            if (today >= 12 && today < 14) {
-                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably making a giant multi-faceted salad before going back to work. Here's a breakdown of a few of his recent projects.";
-            }
-            if (today >= 14 && today < 17) {
-                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably grinding on a project at home or in a coffee shop he spent too much time researching on Yelp. Here's a breakdown of a few of his recent projects.";
-            }
-            if (today >= 17 && today < 19) {
-                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is probably spending entirely too much time making dinner from scratch before working on a late night project. Here's a breakdown of a few of his recent projects.";
-            }
-            if (today >= 19 && today < 23) {
-                document.getElementById("var-div-intro").innerHTML = "There's a 78% chance actual Dan is grinding on a late night project right now. Here's a breakdown of a few of his recent projects.";
-            }
-            if (today >= 23 || today < 4) {
-                document.getElementById("var-div-intro").innerHTML = "Right now actual Dan is sleeping... Hopefully. You should too. If you can't sleep, here's a breakdown of a few of his recent projects.";
-            }
-        }
-        */
-
-        //time status
-
         function timeStatus() {
             var msgArr = ["Afternoon", "Heyo", "Greetings"];
             var today = new Date().getHours();
@@ -135,13 +101,14 @@
 <body>
     <div class="nav-container">
         <h3 class="nav-text">
-            <a href="#intro">Intro</a> <a href="#colony">Colony</a> <a href="#cadmium">Cadmium</a> <a href="#contact">Contact</a>
+            <a href="#intro">Intro</a> <a href="#colony">Colony</a> <a href="#cadmium">Cadmium</a> <a
+                href="#conquer-the-heavens">Conquer The Heavens</a> <a href="#contact">Contact</a>
         </h3>
     </div>
 
     <div class="container">
 
-        <!--top of site-->
+        <!--start top of site-->
         <div class="section" id="intro">
 
             <div class="content-container">
@@ -170,6 +137,7 @@
             </div>
 
         </div>
+        <!--end top of site-->
 
         <!--start of project-->
         <div class="section" id="colony">
@@ -178,8 +146,10 @@
                 <div class="center-content">
                     <div class="row">
                         <div class="column">
-                            <img data-src="../images/colony/mockup-hero.jpg" src="../images/colony/mockup-hero-lazy.gif"
-                                class="lazy">
+                            <a href="colony.html">
+                                <img data-src="images/colony/mockup-hero.jpg"
+                                    src="images/colony/mockup-hero-lazy.gif" class="lazy">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -190,7 +160,7 @@
                     <div class="row">
                         <div class="column">
                             <h3>
-                                <b>Colony</b> 12/13/2019 
+                                <b>Colony</b> 12/13/2019
                                 <a class="right" href="colony.html">
                                     Breakdown
                                 </a>
@@ -214,51 +184,106 @@
         </div>
         <!--end of project-->
 
-                <!--start of project-->
-                <div class="section" id="cadmium">
-                    <div class="content-container">
-                        <!--start image-->
-                        <div class="center-content">
-                            <div class="row">
-                                <div class="column">
-                                    <img data-src="../images/cadmium/laptop-mockup.jpg" src="../images/colony/laptop-mockup-lazy.gif"
-                                        class="lazy">
-                                </div>
-                            </div>
+        <!--start of project-->
+        <div class="section" id="cadmium">
+            <div class="content-container">
+                <!--start image-->
+                <div class="center-content">
+                    <div class="row">
+                        <div class="column">
+                            <a href="cadmium.html">
+                                <img data-src="images/cadmium/laptop-mockup.jpg"
+                                    src="images/colony/laptop-mockup-lazy.gif" class="lazy">
+                            </a>
                         </div>
-                        <!--end image-->
-        
-                        <!--start title and description-->
-                        <div class="center-content">
-                            <div class="row">
-                                <div class="column">
-                                    <h3>
-                                        <b>Cadmium</b> 3/18/2018
-                                        <a class="right" href="cadmium.html">
-                                            Breakdown
-                                        </a>
-                                    </h3>
-                                </div>
-                            </div>
+                    </div>
+                </div>
+                <!--end image-->
+
+                <!--start title and description-->
+                <div class="center-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3>
+                                <b>Cadmium</b> 3/18/2018
+                                <a class="right" href="cadmium.html">
+                                    Breakdown
+                                </a>
+                            </h3>
                         </div>
-        
-                        <div class="left-minor">
-                            <div class="row">
-                                <div class="column">
-                                    <p>
-                                        I was approached by William Light, an entrepreneur and previous software engineer at
+                    </div>
+                </div>
+
+                <div class="left-minor">
+                    <div class="row">
+                        <div class="column">
+                            <p>
+                                I was approached by William Light, an entrepreneur and previous software engineer at
                                 Native
                                 Instruments, to conceptualize the experience, workflow, and skin for an upcoming
                                 software
                                 synthesizer he was developing.
-                                    </p>
-                                </div>
-                            </div>
+                            </p>
                         </div>
-                        <!--end title and description-->
                     </div>
                 </div>
-                <!--end of project-->
+                <!--end title and description-->
+            </div>
+        </div>
+        <!--end of project-->
+
+        <!--start of project-->
+        <div class="section" id="conquer-the-heavens">
+            <div class="content-container">
+                <!--start image-->
+                <div class="center-content">
+                    <div class="row">
+                        <div class="column">
+                            <a href="conquer-the-heavens.html">
+                                <img data-src="images/cth/concept-deepblue.jpg"
+                                    src="images/cth/concept-deepblue-lazy.gif" class="lazy">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--end image-->
+
+                <!--start title and description-->
+                <div class="center-content">
+                    <div class="row">
+                        <div class="column">
+                            <h3>
+                                <b>Conquer The Heavens</b> 9/28/2018
+                                <a class="right" href="conquer-the-heavens.html">
+                                    Breakdown
+                                </a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="left-minor">
+                    <div class="row">
+                        <div class="column">
+                            <p>
+                                Conquer The Heavens is a multiplayer space combat game that aims to focus on the
+                                fun
+                                and
+                                emotional intensity of zero-gravity combat over realism and accuracy.
+
+                            </p>
+                            <p>
+                                I was hired on to direct the concept art and provide assets by Nick Glenn,
+                                co-founder of
+                                Helpful Human in Seattle and the primary developer of the game.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--end title and description-->
+            </div>
+        </div>
+        <!--end of project-->
 
         <!--footer-->
         <div class="section" id="contact">
