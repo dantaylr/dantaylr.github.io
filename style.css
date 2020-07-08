@@ -66,7 +66,7 @@ table {
     --h3-size: calc(var(--body-size)*1.6);
     --h4-size: calc(var(--body-size)*1);
     --spacing: calc(var(--h3-size)*var(--line-height-multiplier));
-    --border-width: 1.5px;
+    --border-width: 1px;
 }
 
 /*main css*/
@@ -136,6 +136,11 @@ h1 b, h2 b, h3 b {
     font-weight: 500;
 }
 
+.right {
+    text-align: right;
+    float: right;
+}
+
 /*divs*/
 .nav-text {
     writing-mode: vertical-lr;
@@ -169,6 +174,13 @@ h1 b, h2 b, h3 b {
     padding-right: calc(var(--spacing)*2.5);
     padding-left: calc(var(--spacing)*1.5);
 }
+
+.section {
+    margin:auto;
+    padding:auto;
+    display: inline-block;
+    width:100%;
+}
 .row {
     margin-left: calc(var(--spacing)*-.5);
     margin-right: calc(var(--spacing)*-.5);
@@ -190,23 +202,33 @@ h1 b, h2 b, h3 b {
     min-width: calc(25% - calc(var(--spacing)*1));
     max-width: calc(25% - calc(var(--spacing)*1));
 }
-.left-content, .right-content, .center-content, .border {
+.left-minor, .left-major .right-minor, .right-major .center-content, .border {
     display: block;
     margin-bottom: calc(var(--spacing)*0);
 }
-.left-content {
-    width: calc(33.33% - (var(--spacing)*.5));
+
+.left-minor, .left-major {
     margin-left: 0;
     margin-right: auto;
 }
-.right-content {
-    width: calc(66.66% - (var(--spacing)*.5));
+
+.right-minor, .right-major {
     margin-left: auto;
     margin-right: 0;
 }
+
+.left-minor, .right-minor {
+    width: calc(33.33% - (var(--spacing)*.5));
+}
+
+.left-major, .right-major {
+        width: calc(66.66% - (var(--spacing)*.5));
+}
+
 .center-content {
     width: 100%;
 }
+
 .footer {
     width: 100%;
     text-align: right;
@@ -240,7 +262,7 @@ img {
 /*responsive*/
 /*width*/
 @media screen and (max-width: 640px) {
-    .left-content, .right-content {
+    .left-minor, .left-major, .right-minor, .right-major {
     width: 100%;
     margin: 0;
     }
