@@ -273,6 +273,10 @@ img {
         min-width: calc(50% - calc(var(--spacing)*1));
         max-width: calc(50% - calc(var(--spacing)*1));
     }
+
+    .project-title-text, .nav-text {
+        font-size: var(--body-size);
+    }
 }
 
 @media screen and (max-width: 360px) {
