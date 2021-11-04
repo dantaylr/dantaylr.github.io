@@ -302,7 +302,7 @@ img {
     }
 }
 
-/*dark mode*/
+/*dark mode
 @media (prefers-color-scheme: dark) {
     :root {
 	--color-primary: white;
@@ -310,3 +310,4 @@ img {
     --color-tertiary: yellow;
     }
 }
+*/
