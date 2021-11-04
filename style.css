@@ -198,6 +198,10 @@ h1 b, h2 b, h3 b {
     min-width: calc(33.33% - calc(var(--spacing)*1));
     max-width: calc(33.33% - calc(var(--spacing)*1));
 }
+.two-column .column {
+    min-width: calc(50% - calc(var(--spacing)*1));
+    max-width: calc(50% - calc(var(--spacing)*1));
+}
 .four-column .column {
     min-width: calc(25% - calc(var(--spacing)*1));
     max-width: calc(25% - calc(var(--spacing)*1));
