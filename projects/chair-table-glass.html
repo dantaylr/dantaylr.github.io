@@ -1,0 +1,386 @@
+<!--
+    PT Notes:
+
+    How :title works in Jekyll
+        If a title isn't specified for an HTML, nothing is generated. 
+        If it isn't specified for a markdown file, 
+        a title is automatically generated from the file name and 
+        capitalized properly with dashes turned to spaces.
+-->
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--smooth scrolling-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, "swing", function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+    <!--end smooth scrolling-->
+
+    <script>
+
+
+        function timeStatus() {
+            var msgArr = ["Afternoon", "Heyo", "Greetings"];
+            var today = new Date().getHours();
+            var introText = "I’m Dan. I love creating meaningful experiences through a range of media. This page breaks down my design process and execution behind a few recent projects."
+
+
+            if (today >= 4 && today < 12) {
+                document.getElementById("var-div-greeting").innerHTML = "Mornin'";
+                document.getElementById("var-div-intro").innerHTML = "<p>" + introText + "</p>";
+            }
+            if (today >= 12 && today < 17) {
+                document.getElementById("var-div-greeting").innerHTML = msgArr[Math.floor(Math.random() * msgArr.length)];
+                document.getElementById("var-div-intro").innerHTML = "<p>" + introText + "</p>";
+            }
+            if (today >= 17 && today < 23) {
+                document.getElementById("var-div-greeting").innerHTML = "Evenin'";
+                document.getElementById("var-div-intro").innerHTML = "<p>" + introText + "</p>";
+            }
+            if (today >= 23 || today < 4) {
+                document.getElementById("var-div-greeting").innerHTML = "It's late";
+                document.getElementById("var-div-intro").innerHTML = "<p>Why are you looking at my portfolio right now? Go to bed... </p> <p>Anyway " + introText + "</p>";
+            }
+        }
+
+        //load nick's scrolling function on load and time status
+        window.onload = function () {
+            onScroll();
+            timeStatus();
+        }
+    </script>
+
+    <!--SITE META-->
+
+    <!--If the current page doesn't have a title, the file name is used-->
+    <title>Dan Taylor</title>
+    <meta title=”description” content="Design portfolio of Dan Taylor">
+
+    <!--
+                Favicons and code below have been generated from:
+                https://favicon.io/
+            -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+<div class="nav-container">
+    <h3 class="nav-text">
+        <a href="../index.html">Done breaking it down</a>
+    </h3>
+</div>
+
+<div class="container">
+
+    <!--start of project-->
+
+    <!--date and border-->
+    <div class="content-container">
+        <p>6/15/2016</p>
+
+        <!--project title and description-->
+        <div class="left-minor">
+            <div class="row">
+                <div class="column">
+                    <h2>
+                        <b>Chair Table Glass</b>
+                        <br/>
+                        design and manufacturing
+                    </h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-major">
+            <div class="row">
+                <div class="column">
+                    <h3>
+                        This full-scale production of three complimentary dining elements functioned as my senior thesis
+                        while studying Industrial Design at Western Washington University.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--content-->
+
+    <div class="content-container">
+        <div class="center-content">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/outline.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="center-content">
+            <div class="row">
+                <div class="column">
+                    <h3>
+                        With the initial goal of designing a chair, I was dove into floods of research on sitting in
+                        chairs, all
+                        of which seemed to indicate that it was terrible for you.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="center-content">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/sketches.jpg"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <p>
+                        This prompted me to explore seating solutions that "supported" the user less while elevating the
+                        sitting experience slightly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="center-content">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/models.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="two-column">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/mini-prototype-1.jpg"/>
+                </div>
+                <div class="column">
+                    <img src="../images/chair-table-glass/mini-prototype-2.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="center-content">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/rhino.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="two-column">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/chair-testing-1.jpg"/>
+                </div>
+                <div class="column">
+                    <img src="../images/chair-table-glass/chair-testing-2.jpg"/>
+                </div>
+            </div>
+        </div>
+        <div class="two-column">
+            <div class="row">
+                <div class="column">
+                    <p>
+                        Ergonomic testing ensured that the visual height and width of each component actually made sense.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="content-container">
+        <div class="left-major">
+            <div class="row">
+                <div class="column">
+                    <h3>
+                        Materials were chosen that could be easily recycled, and nearly every piece was designed to
+                        pressure fit together.
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="three-column">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/manufacturing-1.jpg"/>
+                </div>
+                <div class="column">
+                    <img src="../images/chair-table-glass/manufacturing-2.jpg"/>
+                </div>
+                <div class="column">
+                    <img src="../images/chair-table-glass/manufacturing-3.jpg"/>
+                </div>
+            </div>
+        </div>
+        <div class="two-column">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/glass-manufacturing-1.jpg"/>
+                </div>
+                <div class="column">
+                    <img src="../images/chair-table-glass/glass-manufacturing-2.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="center-content">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/chair-studio.jpg"/>
+                </div>
+            </div>
+        </div>
+        <div class="center-content">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/chair-close.jpg"/>
+                </div>
+            </div>
+        </div>
+        <div class="center-content">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/table-studio.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="two-column">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/all-studio-2.jpg"/>
+                </div>
+                <div class="column">
+                    <img src="../images/chair-table-glass/glass-studio.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="center-content">
+            <div class="row">
+                <div class="column">
+                    <img src="../images/chair-table-glass/all-studio-1.jpg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--end of project-->
+
+</div>
+
+
+<!--scripts-->
+<script>
+    //nick glenn's scroll highlighter
+    var sectionEls = document.querySelectorAll(".section");
+    var sections = [];
+
+    for (var i = 0; i < sectionEls.length; i++) {
+        var section = sectionEls[i];
+        console.log(section);
+        var link = document.querySelector(`a[href="#${section.id}"]`);
+        sections.unshift({el: section, link: link});
+    }
+
+    function onScroll() {
+        var foundActive = false;
+
+        for (var i = 0; i < sections.length; i++) {
+            var section = sections[i];
+            var box = section.el.getBoundingClientRect();
+
+            //this var isn't being used
+            var isAtTop = (window.scrollY) <= 0;
+            var isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight;
+
+            if (((i === 0 && isAtBottom) || (i === sections.length - 1 && isAtTop) || box.top <= 10) && !foundActive) {
+                section.link.classList.toggle("active", true);
+                foundActive = true;
+            } else {
+                section.link.classList.toggle("active", false);
+            }
+
+        }
+    }
+
+
+    //listener for nick's scrolling
+    document.addEventListener("scroll", onScroll);
+</script>
+
+
+<!--lazyload stuff-->
+<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@12.4.0/dist/lazyload.min.js"></script>
+<script>
+    var lazyLoadInstance = new LazyLoad({
+        elements_selector: ".lazy"
+        // ... more custom settings?
+    });
+</script>
+
+
+</body>
+
+</html>
