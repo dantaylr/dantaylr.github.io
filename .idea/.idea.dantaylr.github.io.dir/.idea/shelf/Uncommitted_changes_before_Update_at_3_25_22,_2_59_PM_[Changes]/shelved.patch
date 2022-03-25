@@ -1,0 +1,72 @@
+Index: .idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"fe62273e-f7a0-4a28-a1f2-90334b560da2\" name=\"Changes\" comment=\"\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"Git.Merge.Settings\">\n    <option name=\"BRANCH\" value=\"origin/master\" />\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"26tZh6603MJMBZxZdKACJMhLLhX\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task id=\"LOCAL-00001\" summary=\"New site\">\n      <created>1648235809009</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1648235809009</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"video page\">\n      <created>1648243398721</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1648243398721</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"video page\">\n      <created>1648244151144</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1648244151144</updated>\n    </task>\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"fe62273e-f7a0-4a28-a1f2-90334b560da2\" name=\"Changes\" comment=\"video page\" />\n      <created>1648244966002</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1648244966002</updated>\n      <workItem from=\"1648244969487\" duration=\"22000\" />\n    </task>\n    <option name=\"localTasksCounter\" value=\"4\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"UnityCheckinConfiguration\" checkUnsavedScenes=\"false\" />\n  <component name=\"UnityProjectConfiguration\" hasMinimizedUI=\"false\" />\n  <component name=\"UnityUnitTestConfiguration\" currentTestLauncher=\"Both\" />\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <option name=\"CLEAR_INITIAL_COMMIT_MESSAGE\" value=\"true\" />\n    <MESSAGE value=\"New site\" />\n    <MESSAGE value=\"video page\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"video page\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml b/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml
+--- a/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml	(revision 350acab7b7ad5a74fd377727ac7ecb08bd763cca)
++++ b/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml	(date 1648245596840)
+@@ -4,8 +4,8 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="fe62273e-f7a0-4a28-a1f2-90334b560da2" name="Changes" comment="">
+-      <change beforePath="$PROJECT_DIR$/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml" afterDir="false" />
++    <list default="true" id="fe62273e-f7a0-4a28-a1f2-90334b560da2" name="Changes" comment="edits">
++      <change beforePath="$PROJECT_DIR$/CNAME" beforeDir="false" afterPath="$PROJECT_DIR$/CNAME" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -34,6 +34,7 @@
+     <property name="node.js.detected.package.tslint" value="true" />
+     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+     <property name="node.js.selected.package.tslint" value="(autodetect)" />
++    <property name="nodejs_package_manager_path" value="npm" />
+     <property name="vue.rearranger.settings.migration" value="true" />
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+@@ -66,8 +67,16 @@
+       <option name="presentableId" value="Default" />
+       <updated>1648244966002</updated>
+       <workItem from="1648244969487" duration="22000" />
++      <workItem from="1648245265679" duration="331000" />
++    </task>
++    <task id="LOCAL-00004" summary="edits">
++      <created>1648245374125</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1648245374125</updated>
+     </task>
+-    <option name="localTasksCounter" value="4" />
++    <option name="localTasksCounter" value="5" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+@@ -92,6 +101,7 @@
+     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+     <MESSAGE value="New site" />
+     <MESSAGE value="video page" />
+-    <option name="LAST_COMMIT_MESSAGE" value="video page" />
++    <MESSAGE value="edits" />
++    <option name="LAST_COMMIT_MESSAGE" value="edits" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: CNAME
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>pedestriantactics.com
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/CNAME b/CNAME
+--- a/CNAME	(revision 350acab7b7ad5a74fd377727ac7ecb08bd763cca)
++++ b/CNAME	(date 1648245577068)
+@@ -1,1 +1,1 @@
+-pedestriantactics.com
+\ No newline at end of file
++dantaylr.com
+\ No newline at end of file
