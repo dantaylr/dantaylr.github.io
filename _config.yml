@@ -1,0 +1,10 @@
+permalink: /:title
+
+plugins:
+  - jekyll-redirect-from
+
+defaults:
+  - scope:
+      path: "_posts" # an empty string here means all files in the project
+    values:
+      layout: "page" # this defaults all pages to the page template 
