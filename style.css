@@ -139,11 +139,13 @@ a:hover {
   display: grid;
   gap: 8px;
   grid-template-columns: repeat(3, auto);
-  grid-template-rows: masonry; 
+  grid-template-rows: masonry;
+  margin-bottom: 16px;
 }
  
- .contentgrid a, .contentgrid a img {
+ .contentgrid a, .contentgrid a img, .contentgrid video, .contentgrid img {
     margin: 0;
+    
  }
 
  .header {

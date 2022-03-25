@@ -5,17 +5,13 @@ image: ../images/pt-videos/thumb-2.png
 
 A few recent teaser videos and visualizers for the [Pedestrian Tactics](https://pedestriantactics.com) project
 
-Bronze Whale - Never (Pedestrian Tactics Remix)
-
+<div class=“contentgrid”>
 <video controls src="images/pt-videos/bronze-whale-video.mp4"></video>
-
-PT-T42 Mind Palace
 
 <video controls src="images/pt-videos/mind-palace-video.mov"></video>
 
-PT-A7 In Transit
-
 <video controls src="images/pt-videos/in-transit-video.mp4"></video>
+</div>
 
 Visualizer for a recent mix
 
