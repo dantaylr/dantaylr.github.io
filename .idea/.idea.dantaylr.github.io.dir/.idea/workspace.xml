@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe62273e-f7a0-4a28-a1f2-90334b560da2" name="Changes" comment="edits" />
+    <list default="true" id="fe62273e-f7a0-4a28-a1f2-90334b560da2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/_posts/2020-8-1-pt-visualizer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2017-12-1-in-transit.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2017-12-1-in-transit.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2020-8-1-pt-videos.html" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2020-1-1-pt-videos.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,8 +69,23 @@
       <option name="presentableId" value="Default" />
       <updated>1648244966002</updated>
       <workItem from="1648244969487" duration="22000" />
+      <workItem from="1648255224637" duration="422000" />
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="video edits">
+      <created>1648246104273</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1648246104273</updated>
+    </task>
+    <task id="LOCAL-00005" summary="visualizers">
+      <created>1648246330798</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648246330798</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,6 +110,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="New site" />
     <MESSAGE value="video page" />
-    <option name="LAST_COMMIT_MESSAGE" value="video page" />
+    <MESSAGE value="video edits" />
+    <MESSAGE value="visualizers" />
+    <option name="LAST_COMMIT_MESSAGE" value="visualizers" />
   </component>
 </project>

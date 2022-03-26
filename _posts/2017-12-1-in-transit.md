@@ -26,3 +26,7 @@ A compilation of sound and visuals captured and synthesized during 5.5 months in
 ![](../images/in-transit/in-transit-photo-series-9.jpg)
 
 ![](../images/in-transit/in-transit-photo-series-10.jpg)
+
+An accompanying promo video showcased the EP
+
+<video controls src="images/pt-videos/in-transit-video.mp4"></video>
