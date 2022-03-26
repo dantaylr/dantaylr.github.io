@@ -1,13 +1,13 @@
 ---
 title: Graypants Wick
-image: ../images/wick/wick-preview.jpg
+image: ../images/wick/wick-hearth.jpeg
 ---
 
 Wick design and manufacture consulting
 
 I worked directly with [Graypants](https://graypants.com) to design and manufacture a new portable light, as the company's first entry into the consumer goods market
 
-![](../images/wick/wick-preview.jpg)
+![](../images/wick/wick-hearth.jpeg)
 
 ![](../images/wick/wick-prototypes.jpg)
 
