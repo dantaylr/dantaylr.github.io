@@ -116,28 +116,9 @@ a:hover {
     box-sizing: border-box;
  }
  
- /*
- .contentgrid {
-     display: flex;
-     flex-wrap: wrap;
-     flex-direction: row;
-     justify-content: normal;
-     width: auto;
-     margin-left: -4px;
-     margin-right: -4px;
- }
- 
-  .contentgrid a {
-    width: calc(33.333% - 8px);
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-bottom: 8px;
- }
- */
- 
   .contentgrid {
   display: grid;
-  gap: 8px;
+  gap: 16px;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: masonry;
   margin-bottom: 16px;
