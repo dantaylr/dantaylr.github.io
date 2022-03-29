@@ -175,12 +175,13 @@ margin-right: -4px;
   grid-template-columns: repeat(1, auto);
 }
 */
-.contentgrid {
-margin:0;
-}
-.contentgrid img, .contentgrid video {
-width: 100%;
-margin-left: 0;
-margin-right: 0;
-}
+  .contentgrid {
+    margin: 0;
+  }
+  
+  .contentgrid img, .contentgrid video {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
