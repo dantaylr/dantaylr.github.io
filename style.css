@@ -133,8 +133,13 @@ a:hover {
 margin-left: -4px;
 margin-right: -4px;
 }
+
+.contentgrid a {
+margin: 0;
+padding: 0;
+}
  
-  .contentgrid img {
+.contentgrid img {
     margin-top: 0;
     margin-bottom: 8px; 
     margin-left: 4px;
