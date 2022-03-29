@@ -136,6 +136,7 @@ margin-right: -4px;
  
  .contentgrid a, .contentgrid a img, .contentgrid video, .contentgrid img {
 margin:0;
+padding:0;
  }
  
   .contentgrid a {
