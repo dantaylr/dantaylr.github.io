@@ -115,7 +115,7 @@ a:hover {
     max-width: 1024px;
     box-sizing: border-box;
  }
- 
+ /*
   .contentgrid {
   display: grid;
   gap: 16px;
@@ -123,6 +123,7 @@ a:hover {
   grid-template-rows: masonry;
   margin-bottom: 16px;
 }
+*/
  
  .contentgrid a, .contentgrid a img, .contentgrid video, .contentgrid img {
     margin: 0;
