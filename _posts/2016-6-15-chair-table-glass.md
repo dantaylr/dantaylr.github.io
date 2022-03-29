@@ -1,7 +1,6 @@
 ---
 title: Chair Table Glass
 image: ../images/chair-table-glass/chair-studio.jpg
-width: 30
 ---
 
 Chair Table Glass

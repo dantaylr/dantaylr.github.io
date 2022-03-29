@@ -1,7 +1,7 @@
 ---
 title: Fishtank Sessions EP Promo Art
 image: ../images/fishtank sessions/fishtank-sessions-1.jpeg
-width: 60
+width: 40
 ---
 
 Cover art and promo material for a release by [Pedestrian Tactics](https://pedestriantactics.com)
