@@ -87,13 +87,8 @@ h2
 
 a {
     color: var(--color-tertiary);
-    /*border-bottom: 2px solid;*/
     text-decoration: none;
 }
-
-/*.contentcontainer a {*/
-/*    border-bottom: none;*/
-/*}*/
 
 a:hover {
     color: var(--color-primary);
@@ -132,11 +127,6 @@ a:hover {
 .contentgrid {
 margin-left: -4px;
 margin-right: -4px;
-}
-
-.contentgrid a {
-margin: 0;
-padding: 0;
 }
  
 .contentgrid img {
@@ -178,15 +168,19 @@ padding: 0;
  /*screen size*/
 
 @media screen and (max-width: 750px) {
+/*
   .contentgrid {
   grid-template-columns: repeat(2, auto);
 }
+*/
 }
 
 @media screen and (max-width: 480px) {
+/*
   .contentgrid {
   grid-template-columns: repeat(1, auto);
 }
+*/
 img, video {
 width: 100%;
 }
