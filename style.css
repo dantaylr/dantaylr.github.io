@@ -135,6 +135,10 @@ margin-right: -4px;
 }
  
  .contentgrid a, .contentgrid a img, .contentgrid video, .contentgrid img {
+margin:0;
+ }
+ 
+  .contentgrid a {
     margin-top: 0;
     margin-bottom: 8px; 
     margin-left: 4px;
