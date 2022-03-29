@@ -1,6 +1,6 @@
 ---
 image: images/no-sculpture.jpeg
-width: 50
+width: 24
 ---
 
 Misc sculpture
