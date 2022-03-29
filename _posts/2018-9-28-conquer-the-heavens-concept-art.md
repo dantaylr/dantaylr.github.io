@@ -1,6 +1,7 @@
 ---
 title: Conquer The Heavens Concept Art
 image: ../images/cth/concept-purple.jpg
+width: 50
 ---
 
 Concept artwork for a game conceived by [Nick Glenn](https://twitter.com/nickglenndotcom)
