@@ -12,40 +12,46 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
     vertical-align: baseline;
     -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
+
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
+
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 /*End CSS Reset*/
@@ -71,17 +77,15 @@ html, body, p, a, h1, h2, h3 {
     background-color: var(--color-secondary);
 }
 
-body
-{
+body {
     line-height: 24px;
 }
 
-h1
-{
+h1 {
     font-size: 48px;
 }
-h2
-{
+
+h2 {
     font-size: 36px;
 }
 
@@ -92,96 +96,85 @@ a {
 
 a:hover {
     color: var(--color-primary);
-    text-decoration:none;
+    text-decoration: none;
 }
- 
- .pagecontent img, .pagecontent video {
- width: 100%;
- margin-bottom: 16px;
- }
+
+.pagecontent img, .pagecontent video {
+    width: 100%;
+    margin-bottom: 16px;
+}
 
 /*containers*/
 
- .container {
+.container {
     padding: 16px;
     width: 100%;
     max-width: 1024px;
     box-sizing: border-box;
- }
- /*
-  .contentgrid {
-  display: grid;
-  gap: 8px;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: masonry;
-  margin-bottom: 16px;
+}
+
+/*
+ .contentgrid {
+ display: grid;
+ gap: 8px;
+ grid-template-columns: repeat(3, auto);
+ grid-template-rows: masonry;
+ margin-bottom: 16px;
 }
 */
 
 .contentgrid {
-margin-left: -4px;
-margin-right: -4px;
+    margin-left: -4px;
+    margin-right: -4px;
 }
- 
+
 .contentgrid img, .contentgrid video {
-    margin-bottom: 8px; 
+    margin-bottom: 8px;
     margin-left: 4px;
     margin-right: 4px;
     vertical-align: top;
- }
+}
 
- .header {
-     margin-top: 64px;
-     margin-bottom: 64px;
- }
+.header {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
 
 /*responsive stuff*/
 
-/*dark mode*/
-
-.darkmodelabel {
-    text-align: right;
-}
-
-.darkmodelabel:after {
-    content: "☀️";
-}
 /*
 @media (prefers-color-scheme: dark) {
     :root {
 	--color-primary: white;
     --color-secondary: black;
     }
-
-    .darkmodelabel:after {
-        content: "🌙";
-    }
 }
 */
- /*screen size*/
+
+/*screen size*/
 
 @media screen and (max-width: 750px) {
-/*
-  .contentgrid {
-  grid-template-columns: repeat(2, auto);
-}
-*/
-
+    /*
+      .contentgrid {
+      grid-template-columns: repeat(2, auto);
+    }
+    */
 }
 
 @media screen and (max-width: 480px) {
-/*
-  .contentgrid {
-  grid-template-columns: repeat(1, auto);
-}
-*/
-  .contentgrid {
-    margin: 0;
-  }
-  
-  .contentgrid img, .contentgrid video {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
+    /*
+      .contentgrid 
+      {
+      grid-template-columns: repeat(1, auto);
+    }
+    */
+    .contentgrid {
+        margin: 0;
+    }
+
+    .contentgrid img, .contentgrid video {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
