@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe62273e-f7a0-4a28-a1f2-90334b560da2" name="Changes" comment="wick">
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/style.css" afterDir="false" />
+    <list default="true" id="fe62273e-f7a0-4a28-a1f2-90334b560da2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.dantaylr.github.io.dir/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +67,7 @@
       <updated>1648244966002</updated>
       <workItem from="1648244969487" duration="22000" />
       <workItem from="1648255224637" duration="1012000" />
+      <workItem from="1648576724458" duration="157000" />
     </task>
     <task id="LOCAL-00004" summary="video edits">
       <created>1648246104273</created>
@@ -110,7 +111,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648256226318</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="link change">
+      <created>1648576199013</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648576199013</updated>
+    </task>
+    <task id="LOCAL-00011" summary="size update">
+      <created>1648576683241</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1648576683241</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +156,8 @@
     <MESSAGE value="date change" />
     <MESSAGE value="new george floyd image" />
     <MESSAGE value="wick" />
-    <option name="LAST_COMMIT_MESSAGE" value="wick" />
+    <MESSAGE value="link change" />
+    <MESSAGE value="size update" />
+    <option name="LAST_COMMIT_MESSAGE" value="size update" />
   </component>
 </project>
