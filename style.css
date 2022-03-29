@@ -108,7 +108,7 @@ a:hover {
 /*containers*/
 
  .container {
-    margin: 0 auto;
+    margin: 0;
     padding: 16px;
     width: 100%;
     max-width: 1024px;
@@ -124,13 +124,13 @@ a:hover {
 }
 */
 
-.grid {
+.contentgrid {
 padding: 0;
 margin-left: -4px;
 margin-right: -4px;
 }
  
-.grid img {
+.contentgrid img {
 padding: 0;
     margin-top: 0;
     margin-bottom: 8px; 
@@ -183,7 +183,7 @@ padding: 0;
   grid-template-columns: repeat(1, auto);
 }
 */
-.grid {
+.contentgrid {
 margin:0;
 }
 img, video {
