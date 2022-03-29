@@ -103,7 +103,6 @@ a:hover {
 /*containers*/
 
  .container {
-    margin: 0;
     padding: 16px;
     width: 100%;
     max-width: 1024px;
@@ -120,14 +119,11 @@ a:hover {
 */
 
 .contentgrid {
-padding: 0;
 margin-left: -4px;
 margin-right: -4px;
 }
  
 .contentgrid img {
-padding: 0;
-    margin-top: 0;
     margin-bottom: 8px; 
     margin-left: 4px;
     margin-right: 4px;
@@ -182,8 +178,9 @@ padding: 0;
 .contentgrid {
 margin:0;
 }
-img, video {
+.contentgrid img {
 width: 100%;
 margin-left: 0;
 margin-right: 0;
+}
 }
