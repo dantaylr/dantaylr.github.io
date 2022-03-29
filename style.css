@@ -102,7 +102,7 @@ a:hover {
 
  img, video {
      margin-bottom: 16px;
-     float: top;
+     vertical-align: top;
      height: auto;
  }
  
