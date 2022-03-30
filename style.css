@@ -180,9 +180,9 @@ a:hover {
       grid-template-columns: repeat(2, auto);
     }
     */
-    .contentgrid img, .contentgrid video
+    .pagegrid img, .pagegrid video
     {
-        transform: scale(1.5);
+        width: calc(50% - 8px);
     }
 }
 
