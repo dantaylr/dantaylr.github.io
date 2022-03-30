@@ -134,17 +134,26 @@ a:hover {
 }
 
 .contentgrid img, .contentgrid video {
-    width: 33.33%; !important;
+    width: 33%;
     margin-bottom: 8px;
     margin-left: 4px;
     margin-right: 4px;
     vertical-align: top;
 }
 
-/* content grid items not on the main grid */
-.pagecontent .contentgrid img, .pagecontent .contentgrid video
+.pagegrid
 {
-    width: 33.33%;
+    margin-left:-4px;
+    margin-right: -4px;
+}
+
+/* content grid items not on the main grid */
+.pagegrid img, .pagegrid video
+{
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 8px;
+    width: 33%;
 }
 
 .header {
