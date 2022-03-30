@@ -110,7 +110,7 @@ a:hover {
     margin: 0 auto;
     padding: 16px;
     width: 100%;
-    max-width: 1024px;
+    /*max-width: 1024px;*/
     box-sizing: border-box;
 }
 
@@ -134,7 +134,7 @@ a:hover {
 }
 
 .contentgrid img, .contentgrid video {
-    width: 33.33%;
+    width: 33.33%; !important;
     margin-bottom: 8px;
     margin-left: 4px;
     margin-right: 4px;
