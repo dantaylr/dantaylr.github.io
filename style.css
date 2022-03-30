@@ -147,7 +147,7 @@ a:hover {
 }
 
 .contentgrid #test img, .contentgrid #test video {
-    width: calc(33.33% - 8px);
+    width: calc(33.33% - 8px); !important;
 }
 
 .pagegrid
