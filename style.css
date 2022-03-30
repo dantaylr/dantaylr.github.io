@@ -114,6 +114,10 @@ a:hover {
     box-sizing: border-box;
 }
 
+.pagecontent {
+    max-width: 960px;
+}
+
 /*
  .contentgrid {
  display: grid;
