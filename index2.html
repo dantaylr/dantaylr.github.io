@@ -9,5 +9,5 @@ title: Index
     Contact me <a href="mailto:dantaylr@gmail.com">here</a>
 </div>
 <div class="contentgrid">
-    {% for post in site.posts %}<a href="{{ post.url }}"><img src="{{ post.image }}" width="{% if post:width %}{{ post:width }}{% else %}33{% endif %}%" class="test"></a>{% endfor %}
+    {% for post in site.posts %}<a href="{{ post.url }}"><img src="{{ post.image }}" width="{% if post:width %}{{ post:width }}{% else %}33{% endif %}%"></a>{% endfor %}
 </div>
