@@ -8,6 +8,6 @@ title: Index
     This is a selection of some of my previous work<br/>
     Contact me <a href="mailto:dantaylr@gmail.com">here</a>
 </div>
-<div class="contentgrid" id="test">
-    {% for post in site.posts %}<a href="{{ post.url }}"><img src="{{ post.image }}" width="{% if post:width %}{{ post:width }}{% else %}33{% endif %}%"></a>{% endfor %}
+<div class="contentgrid">
+    {% for post in site.posts %}<a href="{{ post.url }}"><img src="{{ post.image }}" width="{% if post:width %}{{ post:width }}{% else %}33{% endif %}%" class="test"></a>{% endfor %}
 </div>

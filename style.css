@@ -146,7 +146,7 @@ a:hover {
     vertical-align: top;
 }
 
-#test .contentgrid img, #test .contentgrid video {
+.test {
     width: calc(33.33% - 8px);
 }
 
