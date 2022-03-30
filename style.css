@@ -146,7 +146,7 @@ a:hover {
     vertical-align: top;
 }
 
-.test {
+.test img {
     width: calc(33.33% - 8px);
 }
 
