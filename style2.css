@@ -59,7 +59,7 @@ table {
 :root {
     --color-primary: white;
     --color-secondary: #b8b8b8;
-    --color-tertiary: red;
+    --color-tertiary: black;
 }
 
 
@@ -132,6 +132,7 @@ a:hover {
 .contentgrid {
     margin-left: -4px;
     margin-right: -4px;
+    justify-content: center;
 }
 
 .contentgrid a{
