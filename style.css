@@ -134,10 +134,17 @@ a:hover {
 }
 
 .contentgrid img, .contentgrid video {
+    width: 33.33%;
     margin-bottom: 8px;
     margin-left: 4px;
     margin-right: 4px;
     vertical-align: top;
+}
+
+/* content grid items not on the main grid */
+.pagecontent .contentgrid img, .pagecontent .contentgrid video
+{
+    width: 33.33%;
 }
 
 .header {
