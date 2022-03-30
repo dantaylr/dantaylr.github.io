@@ -146,8 +146,8 @@ a:hover {
     vertical-align: top;
 }
 
-.contentgrid #test img, .contentgrid #test video {
-    width: calc(33.33% - 8px); !important;
+#test .contentgrid img, #test .contentgrid video {
+    width: calc(33.33% - 8px);
 }
 
 .pagegrid
