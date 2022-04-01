@@ -139,7 +139,7 @@ a:hover {
 }
 
 .griditem {
-    width: calc(33.33% - 8px) !important;
+    /*width: calc(33.33% - 8px) !important;*/
     margin-bottom: 8px;
     margin-left: 4px;
     margin-right: 4px;
@@ -200,7 +200,7 @@ a:hover {
       grid-template-columns: repeat(1, auto);
     }
     */
-    .contentgrid img, .contentgrid video {
+    .griditem {
         width: calc(100% - 8px);
     }
 }
