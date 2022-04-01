@@ -136,11 +136,10 @@ a:hover {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: start;
- 
 }
 
 .griditem {
-    width: calc(33.33% - 8px) important!;
+    width: calc(33.33% - 8px);
     margin-bottom: 8px;
     margin-left: 4px;
     margin-right: 4px;
