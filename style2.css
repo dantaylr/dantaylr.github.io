@@ -140,7 +140,7 @@ a:hover {
 }
 
 .griditem {
-    /*width: calc(33.33% - 8px);*/
+    width: calc(33.33% - 8px);
     margin-bottom: 8px;
     margin-left: 4px;
     margin-right: 4px;
