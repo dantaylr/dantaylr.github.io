@@ -130,8 +130,8 @@ a:hover {
 */
 
 .contentgrid {
-    margin-left: -4px;
-    margin-right: -4px;
+    margin-left: -8px;
+    margin-right: -8px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -140,9 +140,9 @@ a:hover {
 
 .griditem {
     /*width: calc(33.33% - 8px) !important;*/
-    margin-bottom: 8px;
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-bottom: 16px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 .griditem img {
@@ -151,17 +151,17 @@ a:hover {
 
 .pagegrid
 {
-    margin-left:-4px;
-    margin-right: -4px;
+    margin-left:-8px;
+    margin-right: -8px;
 }
 
 /* content grid items not on the main grid */
 .pagegrid img, .pagegrid video
 {
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-bottom: 8px;
-    width: calc(33.33% - 8px);
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 16px;
+    width: calc(33.33% - 16px);
 }
 
 .header {
@@ -190,7 +190,7 @@ a:hover {
     */
     .pagegrid img, .pagegrid video
     {
-        width: calc(50% - 8px);
+        width: calc(50% - 16px);
     }
 }
 
@@ -202,6 +202,6 @@ a:hover {
     }
     */
     .griditem {
-        width: calc(100% - 8px);
+        width: calc(100% - 16px);
     }
 }
