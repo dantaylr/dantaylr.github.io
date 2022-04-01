@@ -146,10 +146,6 @@ a:hover {
     margin-right: 4px;
 }
 
-.test {
-    width: calc(33.33% - 8px);
-}
-
 .pagegrid
 {
     margin-left:-4px;
