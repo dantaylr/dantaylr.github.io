@@ -116,7 +116,7 @@ a:hover {
 
 .pagecontent {
     margin: 0 auto;
-    max-width: 85vh;
+    max-width: 80vh;
 }
 
 /*
@@ -132,22 +132,20 @@ a:hover {
 .contentgrid {
     margin-left: -4px;
     margin-right: -4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: start;
 }
 
-.contentgrid a{
-    vertical-align: top;
-}
-
-.contentgrid img, .contentgrid video {
-    /*width: calc(33.33% - 8px);*/
+.griditem {
+    /*width: calc(33.33% - 8px) !important;*/
     margin-bottom: 8px;
     margin-left: 4px;
     margin-right: 4px;
-    vertical-align: top;
 }
-
-.test {
-    width: calc(33.33% - 8px);
+.griditem img {
+    width: 100%;
 }
 
 .pagegrid
@@ -202,7 +200,7 @@ a:hover {
       grid-template-columns: repeat(1, auto);
     }
     */
-    .contentgrid img, .contentgrid video {
+    .griditem {
         width: calc(100% - 8px);
     }
 }
