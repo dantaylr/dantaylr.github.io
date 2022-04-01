@@ -9,5 +9,5 @@ title: Index
     Contact me <a href="mailto:dantaylr@gmail.com">here</a>
 </div>
 <div class="contentgrid">
-    {% for post in site.posts %}<div class="griditem" style="width:{% if post:width %}{{ post:width }}{% else %}33{% endif %}%{% if post:order %};order:{{ post:order }}{% else %}{% endif %}"><a href="{{ post.url }}"><img src="{{ post.image }}"></a></div>{% endfor %}
+    {% for post in site.posts %}<div class="griditem" style="width:{% if post:width %}{{ post:width }}{% else %}33{% endif %}%;order:{% if post:order %}{{ post:order }}{% else %}999{% endif %}"><a href="{{ post.url }}"><img src="{{ post.image }}"></a></div>{% endfor %}
 </div>
