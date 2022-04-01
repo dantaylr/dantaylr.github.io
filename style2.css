@@ -132,7 +132,11 @@ a:hover {
 .contentgrid {
     margin-left: -4px;
     margin-right: -4px;
-    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+ 
 }
 
 .contentgrid a{
