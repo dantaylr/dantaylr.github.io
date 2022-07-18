@@ -5,6 +5,6 @@ image: ../images/mind-palace/mind-palace-thumb.gif
 
 Cover art and promo video for [Pedestrian Tactics](pedestriantactics.com) Mind Palace single
 
-![](../images/mind-palace-cover-art.jpeg)
+![](../images/mind-palace/mind-palace-cover-art.jpeg)
 
 <video controls src="images/mind-palace/mind-palace-video.mov"></video>
