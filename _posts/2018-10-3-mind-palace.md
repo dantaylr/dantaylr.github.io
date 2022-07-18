@@ -7,4 +7,4 @@ Cover art and promo video for [Pedestrian Tactics](pedestriantactics.com) Mind P
 
 ![](../images/mind-palace-cover-art.jpeg)
 
-<video controls src="images/mind-palace/mind-palace-video.mp4"></video>
+<video controls src="images/mind-palace/mind-palace-video.mov"></video>
