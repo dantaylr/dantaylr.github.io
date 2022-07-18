@@ -89,6 +89,10 @@ h2 {
     font-size: 36px;
 }
 
+h3 {
+color: var(--color-secondary);
+}
+
 a {
     color: var(--color-tertiary);
     text-decoration: none;
