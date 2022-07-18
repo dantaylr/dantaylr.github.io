@@ -1,7 +1,7 @@
 ---
 title: Graypants Wick
 image: ../images/wick/wick-hearth.jpeg
-width 27
+<!--- width: 27 --->
 ---
 
 Wick design and manufacture consulting

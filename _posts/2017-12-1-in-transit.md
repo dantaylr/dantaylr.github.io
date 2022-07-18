@@ -1,7 +1,7 @@
 ---
 title: In Transit EP
 image: ../images/in-transit/in-transit-photo-series-4.jpg
-width 35
+<!--- width: 35 --->
 ---
 
 In Transit EP and photo series
