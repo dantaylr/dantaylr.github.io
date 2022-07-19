@@ -1,7 +1,7 @@
 ---
 title: Mountains Rendering
 image: images/mountains-rendering.jpg
-width: 20
+width: 24
 ---
 
 Misc timed rendering, under 1hr

@@ -1,7 +1,7 @@
 ---
 title: Wake Up Artwork
 image: images/wake-up-no.jpeg
-width: 30
+width: 32
 ---
 
 Misc social media artwork

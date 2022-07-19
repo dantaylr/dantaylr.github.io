@@ -1,7 +1,7 @@
 ---
 title: Mind Palace Cover Art
 image: ../images/mind-palace/mind-palace-thumb.gif
-width: 30
+width: 28
 ---
 
 Cover art and promo video for [Pedestrian Tactics](pedestriantactics.com) Mind Palace single
