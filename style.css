@@ -153,7 +153,6 @@ a:hover {
 .griditem 
 {
     /* width: calc(33.33% - 16px); */
-    height: 50vh;
     margin-bottom: var(--spacing);
     margin-left: calc(var(--spacing)/2);
     margin-right: calc(var(--spacing)/2);
