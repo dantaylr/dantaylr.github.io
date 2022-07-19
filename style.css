@@ -158,11 +158,12 @@ a:hover {
     margin-left: calc(var(--spacing)/2);
     margin-right: calc(var(--spacing)/2);
 }
-
+/*
 .griditem img 
 {
     height: 100%;
 }
+*/
 
 .pagegrid
 {
