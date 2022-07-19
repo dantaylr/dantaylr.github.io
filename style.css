@@ -138,7 +138,7 @@ a:hover {
     margin-right: -8px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: start;
 }
 
