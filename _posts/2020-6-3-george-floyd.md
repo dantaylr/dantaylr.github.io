@@ -1,7 +1,7 @@
 ---
 title: George Floyd Artwork
 image: images/george-floyd.jpg
-width: 25
+width: 20
 ---
 
 Social media artwork in response to the events of George Floyd
