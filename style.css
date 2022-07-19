@@ -119,6 +119,12 @@ a:hover {
     box-sizing: border-box;
 }
 
+.header
+{
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
 .pagecontent {
     margin: 0 auto;
     max-width: 80vh;
@@ -134,7 +140,8 @@ a:hover {
 }
 */
 
-.contentgrid {
+.contentgrid 
+{
     margin-left: -calc(var(--spacing)/2);
     margin-right: -calc(var(--spacing)/2);
     display: flex;
@@ -143,7 +150,8 @@ a:hover {
     align-items: start;
 }
 
-.griditem {
+.griditem 
+{
     /* width: calc(33.33% - 16px); */
     height: 50vh;
     margin-bottom: var(--spacing);
@@ -151,7 +159,8 @@ a:hover {
     margin-right: calc(var(--spacing)/2);
 }
 
-.griditem img {
+.griditem img 
+{
     height: 100%;
 }
 
@@ -168,11 +177,6 @@ a:hover {
     margin-right: calc(var(--spacing)/2);
     margin-bottom: var(--spacing);
     width: calc(50% - var(--spacing);
-}
-
-.header {
-    margin-top: 32px;
-    margin-bottom: 32px;
 }
 
 /*responsive stuff*/
