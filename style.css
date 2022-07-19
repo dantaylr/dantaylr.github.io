@@ -60,6 +60,7 @@ table {
     --color-primary: white;
     --color-secondary: #b8b8b8;
     --color-tertiary: black;
+    --spacing: 4px;
 }
 
 
@@ -134,8 +135,8 @@ a:hover {
 */
 
 .contentgrid {
-    margin-left: -8px;
-    margin-right: -8px;
+    margin-left: -calc(var(--spacing)/2);
+    margin-right: -calc(var(--spacing)/2);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -145,9 +146,9 @@ a:hover {
 .griditem {
     /* width: calc(33.33% - 16px); */
     height: 50vh;
-    margin-bottom: 16px;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-bottom: var(--spacing);
+    margin-left: calc(var(--spacing)/2);
+    margin-right: calc(var(--spacing)/2);
 }
 
 .griditem img {
@@ -163,10 +164,10 @@ a:hover {
 /* content grid items not on the main grid */
 .pagegrid img, .pagegrid video
 {
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-bottom: 16px;
-    width: calc(33.33% - 16px);
+    margin-left: calc(var(--spacing)/2);
+    margin-right: calc(var(--spacing)/2);
+    margin-bottom: var(--spacing);
+    width: calc(50% - var(--spacing);
 }
 
 .header {
