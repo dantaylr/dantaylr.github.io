@@ -196,12 +196,12 @@ a:hover {
     /*
       .contentgrid {
       grid-template-columns: repeat(2, auto);
-    }
-    */
+    } 
     .pagegrid img, .pagegrid video
     {
         width: calc(50% - 16px);
     }
+    */
 }
 
 @media screen and (max-width: 480px) {
@@ -210,8 +210,9 @@ a:hover {
       {
       grid-template-columns: repeat(1, auto);
     }
-    */
+    
     .griditem {
         width: calc(100% - 16px) !important;
     }
+    */
 }
