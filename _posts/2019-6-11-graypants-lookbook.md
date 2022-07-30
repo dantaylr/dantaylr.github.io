@@ -8,4 +8,5 @@ During this year at the company I directed the brand, establishing decisions and
 
 In order to produce the lookbook I conducted studio photography, illustrated orthographic product views, and coordinated printing services to retain the physical quality while keeping costs minimal
 
+
 <video controls src="images/graypants-lookbook-flipthrough.mp4"></video>
