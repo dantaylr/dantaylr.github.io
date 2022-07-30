@@ -1,6 +1,4 @@
 ---
-image:
-published: false
 ---
 
 Graypants 2019 lookbook
