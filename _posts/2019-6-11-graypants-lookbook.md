@@ -1,5 +1,5 @@
 ---
-Graypants 2019 lookbook
+title: Graypants 2019 lookbook
 ---
 
 Graypants 2019 lookbook
