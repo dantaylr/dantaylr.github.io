@@ -2,6 +2,8 @@
 title: Graypants 2019 lookbook
 ---
 
-Layout, illustration, design, studio photography, and printing coordination for the 2019 [Graypants](graypants.com) lookbook
+Design of the 2019 [Graypants](graypants.com) collection 
+
+During 2019 I directed the brand for the company, establishing decisions and systems for typography, colors, photography, and illustrations. The lookbook involved conducting studio photography, illustrating orthographic product views, and coordinating printing services to retain the physical quality while keeping costs minimal
 
 <video controls src="images/graypants-lookbook-flipthrough.mp4"></video>
