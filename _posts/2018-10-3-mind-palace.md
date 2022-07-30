@@ -4,7 +4,7 @@ image: ../images/mind-palace/mind-palace-thumb.gif
 width: 28
 ---
 
-Cover art and promo video for [Pedestrian Tactics](pedestriantactics.com) Mind Palace single
+Cover art and promo video for [Pedestrian Tactics](https://pedestriantactics.com) Mind Palace single
 
 ![](../images/mind-palace/mind-palace-cover-art.jpeg)
 
