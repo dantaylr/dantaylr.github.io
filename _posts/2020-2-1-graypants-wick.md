@@ -1,6 +1,6 @@
 ---
 title: Graypants Wick
-image: ../images/wick/wick-hearth.jpeg
+image: ../images/wick/wick-rendering-2.jpeg
 width: 33
 ---
 
