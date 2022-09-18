@@ -18,9 +18,9 @@ I worked directly with [Graypants](https://graypants.com) to design, manufacture
 
 ![](../images/wick/wick-studio-bottom.jpg)
 
-![](../images/wick/wick-branding-1)
+![](../images/wick/wick-branding-1.jpeg)
 
-![](../images/wick/wick-branding-2)
+![](../images/wick/wick-branding-2.jpeg)
 
 ![](../images/wick/wick-rendering-2.jpeg)
 
