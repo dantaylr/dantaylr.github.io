@@ -1,10 +1,4 @@
----
-title: In Transit EP
-image: ../images/in-transit/in-transit-photo-series-4.jpg
-width: 30
----
-
-In Transit EP and photo series
+ 
 
 Designed for the [Pedestrian Tactics](https://pedestriantactics.com) project
 
