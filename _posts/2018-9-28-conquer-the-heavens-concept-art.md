@@ -11,11 +11,7 @@ The visuals focused on conveying various emotions through the setting of space a
 ***
 
 ![](../images/cth/sketches-ship.jpg)
-
 ![](../images/cth/concept-purple.jpg)
-
 ![](../images/cth/concept-orange.jpg)
-
 ![](../images/cth/concept-deepblue.jpg)
-
 ![](../images/cth/concept-green.jpg)

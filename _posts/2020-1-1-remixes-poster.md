@@ -9,5 +9,4 @@ Rendering designed for a showcase of remixed works by the [Pedestrian Tactics](h
 ***
 
 ![](../images/2020-remixes-poster-source.jpeg)
-
 ![](../images/2020-remixes-poster.jpeg)

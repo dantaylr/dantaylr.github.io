@@ -9,11 +9,7 @@ Design, branding, photography, and manufacturing coordination for [Graypants](ht
 ***
 
 ![](../images/wick/wick-hearth.jpeg)
-
 ![](../images/wick/wick-rendering-2.jpeg)
-
 ![](../images/wick/wick-branding-1.jpeg)
-
 ![](../images/wick/wick-branding-2.jpeg)
-
 ![](../images/wick/wick-rendering-2.jpeg)

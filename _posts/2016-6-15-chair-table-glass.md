@@ -13,21 +13,12 @@ Over the course of three months I designed and facilitated the manufacturing of 
 ***
 
 ![](../images/chair-table-glass/outline.jpg)
-
 ![](../images/chair-table-glass/sketches.jpg)
-
 ![](../images/chair-table-glass/models.jpg)
-
 ![](../images/chair-table-glass/rhino.jpg)
-
 ![](../images/chair-table-glass/manufacturing-2.jpg)
-
 ![](../images/chair-table-glass/manufacturing-3.jpg)
-
 ![](../images/chair-table-glass/manufacturing-1.jpg)
-
 ![](../images/chair-table-glass/all-studio-1.jpg)
-
 ![](../images/chair-table-glass/chair-studio.jpg)
-
 ![](../images/chair-table-glass/glass-studio.jpg)

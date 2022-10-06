@@ -9,7 +9,5 @@ HUD icons and typography for a game conceived by [Nick Glenn](https://twitter.co
 ***
 
 ![](../images/cth/font-construction.jpg)
-
 ![](../images/cth/font-emoji.jpg)
-
 ![](../images/cth/font-weights.jpg)

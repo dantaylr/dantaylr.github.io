@@ -9,5 +9,4 @@ Cover art and promo video for [Pedestrian Tactics](https://pedestriantactics.com
 ***
 
 ![](../images/mind-palace/mind-palace-cover-art.jpeg)
-
 <video controls src="images/mind-palace/mind-palace-video.mov"></video>
