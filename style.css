@@ -253,7 +253,7 @@ a:hover {
 
 .grid-item {
     /* width: calc(33.33% - 16px); */
-    margin-bottom: var(--spacing);
+    margin-bottom: 4px;
     margin-left: 2px;
     margin-right: 2px;
 }
