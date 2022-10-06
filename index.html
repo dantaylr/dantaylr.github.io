@@ -2,14 +2,27 @@
 layout: default
 title: Index
 ---
-<div class="header-area">
-    I'm Dan <br/>
-    I'm a multimedia artist <br/>
-    This is a selection of my visual work<br/>
-    Contact me <a href="mailto:hi@imdantaylor.com">here</a>
+<div id="header-container">
+    I'm Dan
+    <br>
+    I'm a multimedia designer
+    <br>
+    This is a selection of my work
+    <br>
 </div>
-<div class="contentgrid">
-    {% for post in site.posts %}{% if post.image %}<div class="griditem" style="{% if post:width %}width:{{ post:width }}%{% else %}height: 50vh{% endif %};"><a href="{{ post.url }}"><img src="{{ post.image }}" style="{% if post:width %}width:100%{% else %}height:100%;{% endif %};"></a></div>{% endif %}{% endfor %}
+<div id="page-container">
+    <div class="content-grid">
+        {% for post in site.posts %}{% if post.image %}
+        <div class="griditem" style="{% if post:width %}width:{{ post:width }}%{% else %}height: 50vh{% endif %};">
+            <a href="{{ post.url }}">
+                <img src="{{ post.image }}" style="{% if post:width %}width:100%{% else %}height:100%;{% endif %};">
+            </a>
+        </div>
+        {% endif %}{% endfor %}
+    </div>
 </div>
-
+<div id="footer-container">
+    Contact me
+    <a href="mailto:hi@imdantaylor.com">here</a>
+</div>
 <h3>V16</h3>

@@ -94,14 +94,9 @@ h3 {
 color: var(--color-secondary);
 }
 
-a {
-    color: var(--color-tertiary);
+a, a:hover {
     text-decoration: none;
-}
-
-a:hover {
-    color: var(--color-primary);
-    text-decoration: none;
+    opacity: 60%;
 }
 
 .pagecontent img, .pagecontent video {
@@ -111,7 +106,7 @@ a:hover {
 
 /*containers*/
 
-.container {
+#site-container {
     margin: 0 auto;
     padding: 32px;
     width: 100%;
@@ -119,27 +114,22 @@ a:hover {
     box-sizing: border-box;
 }
 
-.header-area
+#header-container
 {
     position: fixed;
     top: 0;
     /* margin-bottom: 32px; */
 }
 
-.pagecontent {
+#content-container {
+    margin: 0 auto;
+    margin-top: 64px;
+}
+
+#post-content {
     margin: 0 auto;
     max-width: 80vh;
 }
-
-/*
- .contentgrid {
- display: grid;
- gap: 8px;
- grid-template-columns: repeat(3, auto);
- grid-template-rows: masonry;
- margin-bottom: 16px;
-}
-*/
 
 .contentgrid 
 {
@@ -165,19 +155,19 @@ a:hover {
 }
 */
 
-.pagegrid
+.post-grid
 {
     margin-left:-8px;
     margin-right: -8px;
 }
 
 /* content grid items not on the main grid */
-.pagegrid img, .pagegrid video
+.post-grid img, .post-grid video
 {
     margin-left: calc(var(--spacing)/2);
     margin-right: calc(var(--spacing)/2);
     margin-bottom: var(--spacing);
-    width: calc(50% - var(--spacing);
+    width: calc(50% - var(--spacing));
 }
 
 /*responsive stuff*/
@@ -194,7 +184,7 @@ a:hover {
 /*screen size*/
 
 @media screen and (max-width: 750px) {
-    /*
+    
       .contentgrid {
       grid-template-columns: repeat(2, auto);
     } 
@@ -202,7 +192,7 @@ a:hover {
     {
         width: calc(50% - 16px);
     }
-    */
+   
 }
 
 @media screen and (max-width: 480px) {
