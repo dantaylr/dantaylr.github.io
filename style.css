@@ -3,31 +3,109 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
-    -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape while allowing user zoom */
+    -webkit-text-size-adjust: 100%;
+    /* Prevent font scaling in landscape while allowing user zoom */
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
 
@@ -35,16 +113,20 @@ body {
     line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
     list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
     quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
@@ -70,7 +152,13 @@ html {
     background-color: var(--color-secondary);
 }
 
-html, body, p, a, h1, h2, h3 {
+html,
+body,
+p,
+a,
+h1,
+h2,
+h3 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 400;
     font-size: 20px;
@@ -92,22 +180,24 @@ h2 {
 }
 
 h3 {
-color: var(--color-secondary);
+    color: var(--color-secondary);
 }
 
-a, a:hover {
+a,
+a:hover {
     text-decoration: none;
-    padding-bottom: .5em;
+    padding-bottom: 4px;
     border-bottom: 1px solid var(--color-primary);
     /* opacity: 60%; */
 }
 
-.hiddenlink a
-{
+.hidden-link a,
+.grid-item a {
     border-bottom: none;
 }
 
-.pagecontent img, .pagecontent video {
+#post-content img,
+#post-content video {
     width: 100%;
     margin-bottom: 16px;
 }
@@ -122,17 +212,21 @@ a, a:hover {
     box-sizing: border-box;
 }
 
-#header-container
-{
+#header-container {
     position: fixed;
     top: 0;
     /* margin-bottom: 32px; */
 }
 
-#footer-container
-{
+#page-container {
+    margin-top: 64px;
+    margin-bottom: 64px;
+}
+
+#footer-container {
     position: fixed;
-    bottom: 0;
+    bottom: 32px;
+    width: 100%;
     text-align: right;
     /* margin-bottom: 32px; */
 }
@@ -147,8 +241,7 @@ a, a:hover {
     max-width: 80vh;
 }
 
-.content-grid 
-{
+.content-grid {
     margin-left: -calc(var(--spacing)/2);
     margin-right: -calc(var(--spacing)/2);
     display: flex;
@@ -157,13 +250,13 @@ a, a:hover {
     align-items: start;
 }
 
-.grid-item 
-{
+.grid-item {
     /* width: calc(33.33% - 16px); */
     margin-bottom: var(--spacing);
     margin-left: calc(var(--spacing)/2);
     margin-right: calc(var(--spacing)/2);
 }
+
 /*
 .griditem img 
 {
@@ -171,15 +264,14 @@ a, a:hover {
 }
 */
 
-.post-grid
-{
-    margin-left:-8px;
+.post-grid {
+    margin-left: -8px;
     margin-right: -8px;
 }
 
 /* content grid items not on the main grid */
-.post-grid img, .post-grid video
-{
+.post-grid img,
+.post-grid video {
     margin-left: calc(var(--spacing)/2);
     margin-right: calc(var(--spacing)/2);
     margin-bottom: var(--spacing);
@@ -191,8 +283,8 @@ a, a:hover {
 
 @media (prefers-color-scheme: dark) {
     :root {
-	--color-primary: white;
-    --color-secondary: black;
+        --color-primary: white;
+        --color-secondary: black;
     }
 }
 
@@ -200,15 +292,16 @@ a, a:hover {
 /*screen size*/
 
 @media screen and (max-width: 750px) {
-    
-      .contentgrid {
-      grid-template-columns: repeat(2, auto);
-    } 
-    .pagegrid img, .pagegrid video
-    {
+
+    .contentgrid {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .pagegrid img,
+    .pagegrid video {
         width: calc(50% - 16px);
     }
-   
+
 }
 
 @media screen and (max-width: 480px) {
