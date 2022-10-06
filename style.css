@@ -96,7 +96,9 @@ color: var(--color-secondary);
 
 a, a:hover {
     text-decoration: none;
-    opacity: 60%;
+    padding-bottom: .5em;
+    border-bottom: 1px solid var(--color-primary);
+    /* opacity: 60%; */
 }
 
 .pagecontent img, .pagecontent video {
@@ -180,14 +182,14 @@ a, a:hover {
 
 /*responsive stuff*/
 
-/*
+
 @media (prefers-color-scheme: dark) {
     :root {
 	--color-primary: white;
     --color-secondary: black;
     }
 }
-*/
+
 
 /*screen size*/
 
