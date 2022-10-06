@@ -150,6 +150,7 @@ table {
 
 html {
     background-color: var(--color-secondary);
+    letter-spacing: .02em;
 }
 
 html,
@@ -212,21 +213,23 @@ a:hover {
 
 #header-container {
     position: fixed;
-    top: 32px;
+    top: var(--spacing);
+    bottom: var(--spacing);
+    /* margin-bottom: 32px; */
+}
+
+#footer-container {
+    position: fixed;
+    bottom: var(--spacing);
+    right: var(--spacing);
+    width: -calc(100% - (var(--spacing)*2));
+    text-align: right;
     /* margin-bottom: 32px; */
 }
 
 #page-container {
     margin-top: 128px;
     margin-bottom: 128px;
-}
-
-#footer-container {
-    position: fixed;
-    bottom: 32px;
-    width: -calc(100% - (var(--spacing)*2));
-    text-align: right;
-    /* margin-bottom: 32px; */
 }
 
 #content-container {
