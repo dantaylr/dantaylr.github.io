@@ -4,19 +4,11 @@ image: ../images/wick/wick-rendering-2.jpeg
 width: 33
 ---
 
-Wick design and manufacture consulting
-
-I worked directly with [Graypants](https://graypants.com) to design, manufacture, and brand a new portable light, as the company's first entry into the consumer goods market
+Design, branding, photography, and manufacturing coordination for [Graypants](https://graypants.com) debut entry into the consumer goods market. Since its release it was featured in [Dezeen](https://www.dezeen.com/2020/12/02/graypants-wick-lighting-dezeen-showroom/), [Design Milk](https://design-milk.com/our-favorite-candlelight-is-now-available-in-new-modern-shades/), and many other fantastic blogs and shops. My friend found them at Molbaks
 
 ![](../images/wick/wick-hearth.jpeg)
 
-![](../images/wick/wick-prototypes.jpg)
-
-![](../images/wick/wick-cad.jpg)
-
-![](../images/wick/wick-studio-top.jpg)
-
-![](../images/wick/wick-studio-bottom.jpg)
+![](../images/wick/wick-rendering-2.jpeg)
 
 ![](../images/wick/wick-branding-1.jpeg)
 
