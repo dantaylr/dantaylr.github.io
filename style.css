@@ -121,8 +121,8 @@ a:hover {
 
 .header-area
 {
-    margin-top: 32px;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
+    position: fixed;
 }
 
 .pagecontent {
