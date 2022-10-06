@@ -165,22 +165,7 @@ h3 {
     font-size: 20px;
     color: var(--color-primary);
     margin-bottom: 16px;
-}
-
-body {
-    line-height: 24px;
-}
-
-h1 {
-    font-size: 48px;
-}
-
-h2 {
-    font-size: 36px;
-}
-
-h3 {
-    color: var(--color-secondary);
+    line-height: 32px;
 }
 
 a,
