@@ -160,7 +160,7 @@ h1,
 h2,
 h3 {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 20px;
     color: var(--color-primary);
     margin-bottom: 16px;
@@ -214,19 +214,19 @@ a:hover {
 
 #header-container {
     position: fixed;
-    top: 0;
+    top: 32px;
     /* margin-bottom: 32px; */
 }
 
 #page-container {
-    margin-top: 64px;
-    margin-bottom: 64px;
+    margin-top: 128px;
+    margin-bottom: 128px;
 }
 
 #footer-container {
     position: fixed;
     bottom: 32px;
-    width: 100%;
+    width: -calc(100% - var(--spacing)/2);
     text-align: right;
     /* margin-bottom: 32px; */
 }
