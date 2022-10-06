@@ -190,7 +190,8 @@ a:hover {
     border-bottom: 1px solid var(--color-primary);
 }
 
-a .hidden-link {
+a .hidden-link,
+.grid-item a {
     border-bottom: none;
 }
 
