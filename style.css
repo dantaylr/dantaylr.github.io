@@ -142,7 +142,7 @@ table {
     --color-primary: black;
     --color-secondary: white;
     --color-tertiary: #b8b8b8;
-    --spacing: 4px;
+    --spacing: 32px;
 }
 
 
@@ -164,7 +164,6 @@ h3 {
     font-size: 20px;
     color: var(--color-primary);
     margin-bottom: 16px;
-    background-color: var(--color-secondary);
 }
 
 body {
@@ -188,7 +187,6 @@ a:hover {
     text-decoration: none;
     padding-bottom: 4px;
     border-bottom: 1px solid var(--color-primary);
-    /* opacity: 60%; */
 }
 
 .hidden-link a,
@@ -206,7 +204,7 @@ a:hover {
 
 #site-container {
     margin: 0 auto;
-    padding: 32px;
+    padding: var(--spacing);
     width: 100%;
     /*max-width: 1024px;*/
     box-sizing: border-box;
@@ -226,7 +224,7 @@ a:hover {
 #footer-container {
     position: fixed;
     bottom: 32px;
-    width: -calc(100% - var(--spacing)/2);
+    width: -calc(100% - (var(--spacing)*2));
     text-align: right;
     /* margin-bottom: 32px; */
 }
@@ -242,8 +240,8 @@ a:hover {
 }
 
 .content-grid {
-    margin-left: -calc(var(--spacing)/2);
-    margin-right: -calc(var(--spacing)/2);
+    margin-left: 2px;
+    margin-right: 2px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -253,29 +251,8 @@ a:hover {
 .grid-item {
     /* width: calc(33.33% - 16px); */
     margin-bottom: var(--spacing);
-    margin-left: calc(var(--spacing)/2);
-    margin-right: calc(var(--spacing)/2);
-}
-
-/*
-.griditem img 
-{
-    height: 100%;
-}
-*/
-
-.post-grid {
-    margin-left: -8px;
-    margin-right: -8px;
-}
-
-/* content grid items not on the main grid */
-.post-grid img,
-.post-grid video {
-    margin-left: calc(var(--spacing)/2);
-    margin-right: calc(var(--spacing)/2);
-    margin-bottom: var(--spacing);
-    width: calc(50% - var(--spacing));
+    margin-left: 2px;
+    margin-right: 2px;
 }
 
 /*responsive stuff*/
@@ -291,28 +268,6 @@ a:hover {
 
 /*screen size*/
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 750px) {}
 
-    .contentgrid {
-        grid-template-columns: repeat(2, auto);
-    }
-
-    .pagegrid img,
-    .pagegrid video {
-        width: calc(50% - 16px);
-    }
-
-}
-
-@media screen and (max-width: 480px) {
-    /*
-      .contentgrid 
-      {
-      grid-template-columns: repeat(1, auto);
-    }
-    
-    .griditem {
-        width: calc(100% - 16px) !important;
-    }
-    */
-}
+@media screen and (max-width: 480px) {}
