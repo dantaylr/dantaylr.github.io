@@ -3,7 +3,7 @@
 Designed for the [Pedestrian Tactics](https://pedestriantactics.com) project
 
 A compilation of sound and visuals captured and synthesized during 5.5 months in Thailand, Vietnam, and Hong Kong
-
+---
 ![](../images/in-transit/in-transit-photo-series-2.jpg)
 
 ![](../images/in-transit/in-transit-photo-series-3.jpg)

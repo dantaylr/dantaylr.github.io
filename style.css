@@ -197,7 +197,11 @@ a .hidden-link {
 #post-content img,
 #post-content video {
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
+}
+
+hr {
+    margin-bottom: var(--spacing);
 }
 
 /*containers*/

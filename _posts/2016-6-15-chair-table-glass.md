@@ -9,7 +9,7 @@ Chair Table Glass
 A design and manufacturing project capitalizing on a body of knowledge claiming that sitting isn't very good for the body
 
 Over the course of three months I designed and facilitated the manufacturing of three complimentary pieces that supported the user minimally
-
+---
 ![](../images/chair-table-glass/outline.jpg)
 
 ![](../images/chair-table-glass/sketches.jpg)
