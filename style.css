@@ -57,9 +57,9 @@ table {
 /*End CSS Reset*/
 
 :root {
-    --color-primary: white;
-    --color-secondary: #b8b8b8;
-    --color-tertiary: black;
+    --color-primary: black;
+    --color-secondary: white;
+    --color-tertiary: #b8b8b8;
     --spacing: 4px;
 }
 
