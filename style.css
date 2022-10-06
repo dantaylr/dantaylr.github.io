@@ -102,6 +102,11 @@ a, a:hover {
     /* opacity: 60%; */
 }
 
+.hiddenlink a
+{
+    border-bottom: none;
+}
+
 .pagecontent img, .pagecontent video {
     width: 100%;
     margin-bottom: 16px;
