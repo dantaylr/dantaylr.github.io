@@ -13,7 +13,7 @@ title: Index
 <div id="page-container">
     <div class="content-grid">
         {% for post in site.posts %}{% if post.image %}
-        <div class="griditem" style="{% if post:width %}width:{{ post:width }}%{% else %}height: 50vh{% endif %};">
+        <div class="grid-item" style="{% if post:width %}width:{{ post:width }}%{% else %}height: 50vh{% endif %};">
             <a href="{{ post.url }}">
                 <img src="{{ post.image }}" style="{% if post:width %}width:100%{% else %}height:100%;{% endif %};">
             </a>

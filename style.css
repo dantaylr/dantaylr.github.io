@@ -121,6 +121,14 @@ a, a:hover {
     /* margin-bottom: 32px; */
 }
 
+#footer-container
+{
+    position: fixed;
+    bottom: 0;
+    text-align: right;
+    /* margin-bottom: 32px; */
+}
+
 #content-container {
     margin: 0 auto;
     margin-top: 64px;
@@ -131,7 +139,7 @@ a, a:hover {
     max-width: 80vh;
 }
 
-.contentgrid 
+.content-grid 
 {
     margin-left: -calc(var(--spacing)/2);
     margin-right: -calc(var(--spacing)/2);
@@ -141,7 +149,7 @@ a, a:hover {
     align-items: start;
 }
 
-.griditem 
+.grid-item 
 {
     /* width: calc(33.33% - 16px); */
     margin-bottom: var(--spacing);
