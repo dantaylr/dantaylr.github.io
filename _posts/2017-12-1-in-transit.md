@@ -1,4 +1,4 @@
- ---
+---
 title: In Transit Photo Series
 image: ../images/in-transit/in-transit-photo-series-2.jpg
 width: 30
