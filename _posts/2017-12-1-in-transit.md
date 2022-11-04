@@ -1,5 +1,5 @@
 ---
-title: In Transit Photo Series
+title: In Transit
 image: ../images/in-transit/in-transit-photo-series-2.jpg
 width: 30
 ---
@@ -25,4 +25,4 @@ Logo, animated promo video, and photo series designed and captured for the [Pede
 
 ***
 
-More of my photo work can be found [here](hhtps://photos.imdantaylor.com)
+More of my photo work can be found [here](https://photos.imdantaylor.com)
