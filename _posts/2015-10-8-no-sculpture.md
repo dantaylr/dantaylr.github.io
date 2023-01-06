@@ -1,6 +1,7 @@
 ---
 image: images/no-sculpture.jpeg
 width: 22
+caption: Installation piece
 ---
 
 Misc sculpture, wood and paint

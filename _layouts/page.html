@@ -4,8 +4,10 @@ layout: default
 <div id="header-container">
     <a class="hidden-link" href="/"><</a>
 </div>
-<div id="content-container" >
 <div id="post-content">
+    <div id="content-container" >
+        <p class="caption">{{ page.date | date: '%-m/%-d/%Y' }}</p>
+        
     {{ content }}
 </div>
 </div>

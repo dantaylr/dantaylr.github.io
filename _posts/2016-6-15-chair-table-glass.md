@@ -2,6 +2,7 @@
 title: Chair Table Glass
 image: ../images/chair-table-glass/chair-studio.jpg
 width: 56
+caption: Product design and manufacturing
 ---
 
 Chair Table Glass

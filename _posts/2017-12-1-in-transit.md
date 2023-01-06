@@ -2,6 +2,7 @@
 title: In Transit
 image: ../images/in-transit/in-transit-photo-series-2.jpg
 width: 30
+caption: Photo series
 ---
 
 Logo, animated promo video, and photo series designed and captured for the [Pedestrian Tactics](https://pedestriantactics.com) project during 5.5 months in Thailand, Vietnam, and Hong Kong

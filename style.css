@@ -175,19 +175,17 @@ h3 {
 .caption {
     font-size: 8pt;
     font-weight: 400;
-    margin-bottom: 0;
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
-a,
-a:hover {
+a, a:hover, a:active, a:visited, a:focus {
     text-decoration: none;
     padding-bottom: 2px;
     border-bottom: 1px solid var(--color-primary);
 }
 
-.hidden-link,
-.grid-item a {
+.hidden-link, .hidden-link:active, .hidden-link:hover, .hidden-link:focus, .hidden-link:visited,
+.grid-item a, .grid-item a:active, .grid-item a:hover, .grid-item a:visited, .grid-item a:focus {
     border-bottom: none;
 }
 
@@ -254,9 +252,9 @@ hr {
 
 .grid-item {
     /* width: calc(33.33% - 16px); */
-    margin-bottom: 2rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    margin-bottom: 2rem;
 }
 
 /*responsive stuff*/
