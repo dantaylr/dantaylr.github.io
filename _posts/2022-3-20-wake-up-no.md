@@ -1,6 +1,6 @@
 ---
 title: Wake Up Artwork
-image: images/wake-up-no.jpeg
+image: 
 width: 32
 ---
 

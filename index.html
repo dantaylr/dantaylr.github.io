@@ -17,6 +17,9 @@ title: Index
             <a href="{{ post.url }}">
                 <img src="{{ post.image }}" style="{% if post:width %}width:100%{% else %}height:100%;{% endif %};">
             </a>
+            <p class="caption">{{ post.date | date: '%-m/%-d/%Y' }}<br/>{{ post.title }}
+            {% if post:width %}<br/>{{ post:caption }}{% endif %}
+        </p>
         </div>
         {% endif %}{% endfor %}
     </div>
