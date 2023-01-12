@@ -213,7 +213,6 @@ hr {
 #header-container {
     position: fixed;
     top: var(--spacing);
-    bottom: var(--spacing);
     /* margin-bottom: 32px; */
 }
 

@@ -1,7 +1,7 @@
 <!--
     PT Notes:
 
-    How :title works in Jekyll
+    How .title works in Jekyll
         If a title isn't specified for an HTML, nothing is generated. 
         If it isn't specified for a markdown file, 
         a title is automatically generated from the file name and 
@@ -17,7 +17,7 @@
     <!--SITE META-->
 
     <!--If the current page doesn't have a title, the file name is used-->
-    <title>I'm Dan Taylor - {% if page:title %}{{ page:title }}{% else %}{{ page:name }}{% endif %}</title>
+    <title>I'm Dan Taylor - {% if page.title %}{{ page.title }}{% else %}{{ page.name }}{% endif %}</title>
     <meta title=”description” content="I'm Dan Taylor. I'm a multimedia designer. This is a collection of my recent design work. Follow me on Instagram @im_dan_taylor.">
     
     <!--/SITE META-->

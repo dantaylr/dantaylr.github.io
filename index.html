@@ -13,12 +13,12 @@ title: Index
 <div id="page-container">
     <div class="content-grid">
         {% for post in site.posts %}{% if post.image %}
-        <div class="grid-item" style="{% if post:width %}width:{{ post:width }}%{% else %}height: 50vh{% endif %};">
+        <div class="grid-item" style="{% if post.width %}width:{{ post.width }}%{% else %}height: 50vh{% endif %};">
             <a href="{{ post.url }}">
-                <img src="{{ post.image }}" style="{% if post:width %}width:100%{% else %}height:100%;{% endif %};">
+                <img src="{{ post.image }}" style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
             </a>
             <a href="{{ post.url }}" class="caption">{{ post.date | date: '%-m/%-d/%Y' }}<br/>{{ post.title }}
-            {% if post:width %}<br/>{{ post:caption }}{% endif %}
+            {% if post.width %}<br/>{{ post.caption }}{% endif %}
             </a>
         </div>
         {% endif %}{% endfor %}
