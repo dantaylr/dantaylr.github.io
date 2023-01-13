@@ -192,7 +192,7 @@ a, a:hover, a:active, a:visited, a:focus {
 #post-content img,
 #post-content video {
     width: 100%;
-    margin-bottom: 4px;
+    margin-bottom: 2rem;
 }
 
 hr {
