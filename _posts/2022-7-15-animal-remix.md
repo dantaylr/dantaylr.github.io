@@ -1,7 +1,7 @@
 ---
 title: Animal remix promo video
 image: ../images/animal-remix/animal-remix-thumb.gif
-width: 35
+width: 27
 caption: Motion design, 3D rendering
 ---
 
