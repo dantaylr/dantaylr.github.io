@@ -1,7 +1,7 @@
 ---
 title: The Grind
 image: ../images/the-grind-thumb.gif
-width: 56
+width: 43
 caption: Game design and development
 ---
 
