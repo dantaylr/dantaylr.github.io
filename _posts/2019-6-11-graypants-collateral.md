@@ -1,7 +1,7 @@
 ---
 title: Graypants Collateral
 image: ../images/graypants-collateral/graypants-collateral-2.jpg
-width: 30
+width: 56
 caption: Print magazine design
 ---
 
