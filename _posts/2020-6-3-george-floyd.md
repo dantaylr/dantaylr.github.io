@@ -1,6 +1,5 @@
 ---
 title: George Floyd
-image: images/george-floyd.jpg
 width: 21
 caption: Social media artwork
 ---
