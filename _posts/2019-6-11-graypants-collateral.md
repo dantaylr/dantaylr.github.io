@@ -18,5 +18,3 @@ Print design, illustration, and product photography for Graypants' annual produc
 <video controls src="images/graypants-lookbook-flipthrough.mp4"></video>
 
 ***
-
-More of my photo work can be found [here](https://photos.imdantaylor.com)
