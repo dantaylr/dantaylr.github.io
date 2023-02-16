@@ -141,16 +141,24 @@ table {
 :root {
     --color-primary: black;
     --color-secondary: white;
-    --color-tertiary: #b8b8b8;
+    --color-tertiary: #c2c2c2;
+    /* --color-tertiary: #b8b8b8; */
     --spacing: 32px;
 }
 
+@font-face {
+	font-family: "Hyperwalk Body";
+	src: url("../fonts/Hyperwalk-Body.woff2") format("woff2"),
+		url("../fonts/Hyperwalk-Body.woff") format("woff");
+}
 
 /*text*/
 
 html {
-    background-color: var(--color-secondary);
-    letter-spacing: .02em;
+    background-color: var(--color-tertiary);
+    font-family: "Hyperwalk Body", "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 17pt;
+    letter-spacing: 0.03em;
 }
 
 html,
@@ -160,29 +168,39 @@ a,
 h1,
 h2,
 h3 {
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-weight: 300;
-    font-size: 16pt;
+    line-height: 1.2em;
+    margin-bottom: 1rem;
     color: var(--color-primary);
-    margin-bottom: 16px;
-    line-height: 28px;
 }
 
 .grid-item img {
     margin-bottom: .5rem;
 }
 
+.grid-item a, .grid-item a:active, .grid-item a:hover, .grid-item a:visited, .grid-item a:focus {
+    color: var(--color-primary);
+}
+
 .caption {
-    font-size: 8pt;
+    font-size: 10pt;
     font-weight: 400;
-    line-height: 1.4;
 }
 
 a, a:hover, a:active, a:visited, a:focus {
+    color: var(--color-secondary);
     text-decoration: none;
-    padding-bottom: 2px;
-    border-bottom: 1px solid var(--color-primary);
+    /* padding-bottom: 2px; */
+    /* border-bottom: 1px solid var(--color-); */
 }
+
+/* h1 a {
+border-bottom: 1px solid var(--color-secondary);
+}
+
+h1, h1 a {
+    color: var(--color-secondary);
+    /* filter: invert(100%); */
+} */
 
 .hidden-link, .hidden-link:active, .hidden-link:hover, .hidden-link:focus, .hidden-link:visited,
 .grid-item a, .grid-item a:active, .grid-item a:hover, .grid-item a:visited, .grid-item a:focus {
@@ -251,25 +269,28 @@ hr {
 
 .grid-item {
     /* width: calc(33.33% - 16px); */
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 2rem;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    margin-bottom: 1rem;
 }
 
 /*responsive stuff*/
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     :root {
         --color-primary: white;
         --color-secondary: black;
     }
-}
+} */
 
 
 /*screen size*/
 
 @media screen and (max-width: 750px) {
+    :root {
+        font-size: 15pt;
+    }
     .grid-item {
         margin-left: 0;
         margin-right: 0;

@@ -3,12 +3,15 @@ layout: default
 title: Index
 ---
 <div id="header-container">
-    I'm <a class="hidden-link" href="https://drive.google.com/file/d/1aLAiSwaUFlv800rtVOGh8nWSsdbxMapQ/view?usp=drivesdk">Dan Taylor</a>
-    <br>
-    I'm a multimedia designer
-    <br>
-    This is a selection of my work
-    <br>
+    <h1>
+    <a class="hidden-link"
+            href="https://drive.google.com/file/d/1aLAiSwaUFlv800rtVOGh8nWSsdbxMapQ/view?usp=drivesdk">I'm Dan Taylor</a>
+        <br>
+        I'm a multimedia designer
+        <br>
+        This is a selection of my work
+        <br>
+    </h1>
 </div>
 <div id="page-container">
     <div class="content-grid">
@@ -17,17 +20,20 @@ title: Index
             <a href="{{ post.url }}">
                 <img src="{{ post.image }}" style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
             </a>
-            <a href="{{ post.url }}" class="caption">{{ post.date | date: '%-m/%-d/%Y' }}<br/>{{ post.title }}
-            {% if post.width %}<br/>{{ post.caption }}{% endif %}
+            <a href="{{ post.url }}" class="caption">{{ post.date | date: '%-m/%-d/%Y' }}<br />{{ post.title }}
+                {% if post.width %}<br />{{ post.caption }}{% endif %}
             </a>
         </div>
         {% endif %}{% endfor %}
     </div>
 </div>
 <div id="footer-container">
-    Contact me by
-    <a href="mailto:hi@imdantaylor.com">email</a>
-    <br>
-    or on
-    <a href="http://instagram.com/im_dan_taylor">Instagram</a>
+    <h1>
+
+        Contact me by
+        <a href="mailto:hi@imdantaylor.com">email</a>
+        <br>
+        or on
+        <a href="http://instagram.com/im_dan_taylor">Instagram</a>
+    </h1>
 </div>
