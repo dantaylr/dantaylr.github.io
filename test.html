@@ -1,0 +1,122 @@
+<body>
+    <div id="player"></div>
+    <!-- add buttons for all four directions using unicode arrow characters as the button text -->
+    <button id="up-button" class="arrowButton">&#x2191;</button>
+    <button id="down-button" class="arrowButton">&#x2193;</button>
+    <button id="left-button" class="arrowButton">&#x2190;</button>
+    <button id="right-button" class="arrowButton">&#x2192;</button>
+    <!-- add an image called background-image -->
+    <img id="background-image" src="https://scx2.b-cdn.net/gfx/news/hires/2012/howcanyousee.png">
+</body>
+<script lang="text/javascript">
+    // create a variable for moveDistance
+    const moveDistance = 50;
+    
+    // create a variable for the x and y position of the background-image
+    let x = 0;
+    let y = 0;
+    let xBounds = 5;
+    let yBounds = 4;
+
+    // create a function that sets the background-image's position based from the center of the screen and offset by the x and y variables
+    function moveBackground() {
+        document.getElementById("background-image").style.transform = `translate(-50%, -50%) translate(${-x*moveDistance}px, ${-y*moveDistance}px)`;
+    }
+
+    function tryMove(inx, iny) {
+        // if x + inx is less than 0 or greater than xBounds, return
+        if (x + inx < -xBounds || x + inx > xBounds) {
+            return;
+        }
+        // if y + iny is less than 0 or greater than yBounds, return
+        if (y + iny < -yBounds || y + iny > yBounds) {
+            return;
+        }
+            x += inx;
+            y += iny;
+            moveBackground();
+    }
+
+    // add event listeners to each button that call the appropriate function
+    document.getElementById("up-button").addEventListener("click", () => tryMove(0, -1));
+    document.getElementById("down-button").addEventListener("click", () => tryMove(0, 1));
+    document.getElementById("left-button").addEventListener("click", () => tryMove(-1, 0));
+    document.getElementById("right-button").addEventListener("click", () => tryMove(1, 0));
+
+    // add event listeners for the keyboard arrow keys that call the appropriate function
+    document.addEventListener("keydown", (e) => {
+        switch (e.key) {
+            case "ArrowUp":
+                tryMove(0, -1);
+                break;
+            case "ArrowDown":
+                tryMove(0, 1);
+                break;
+            case "ArrowLeft":
+                tryMove(-1, 0);
+                break;
+            case "ArrowRight":
+                tryMove(1, 0);
+                break;
+        }
+    });
+</script>
+<style>
+    :root {
+        --buttonDistance: 20px;
+    }
+    body {
+        background-color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+        /* prevent scrollbars when moving map outside bounds */
+        overflow: hidden;
+    }
+    #background-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+    #player {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .arrowButton {
+        font-size: 14pt;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+    #up-button {
+        position: absolute;
+        top: calc(50% - var(--buttonDistance) - 12pt);
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #down-button {
+        position: absolute;
+        top: calc(50% + var(--buttonDistance) + 12pt);
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #left-button {
+        position: absolute;
+        top: 50%;
+        left: calc(50% - var(--buttonDistance) - 12pt);
+        transform: translate(-50%, -50%);
+    }
+    #right-button {
+        position: absolute;
+        top: 50%;
+        left: calc(50% + var(--buttonDistance) + 12pt);
+        transform: translate(-50%, -50%);
+    }
+</style>
