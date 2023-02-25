@@ -6,40 +6,43 @@
     <button id="left-button" class="arrowButton">&#x2190;</button>
     <button id="right-button" class="arrowButton">&#x2192;</button>
     <!-- add an image called background-image -->
-    <img id="background-image" src="https://scx2.b-cdn.net/gfx/news/hires/2012/howcanyousee.png">
+    <img id="background-image" src="images/map.gif">
 </body>
 <script lang="text/javascript">
     // create a variable for moveDistance
-    const moveDistance = 50;
+    const moveDistance = 32;
     
     // create a variable for the x and y position of the background-image
     let x = 0;
     let y = 0;
-    let xBounds = 5;
-    let yBounds = 4;
 
     // create a function that sets the background-image's position based from the center of the screen and offset by the x and y variables
-    function moveBackground() {
-        document.getElementById("background-image").style.transform = `translate(-50%, -50%) translate(${-x*moveDistance}px, ${-y*moveDistance}px)`;
-    }
 
     function tryMove(inx, iny) {
-        // if x + inx is less than 0 or greater than xBounds, return
-        if (x + inx < -xBounds || x + inx > xBounds) {
+        newX = x + inx;
+        newY = y + iny;
+
+        if (checkCollision(newX, newY)) {
             return;
         }
-        // if y + iny is less than 0 or greater than yBounds, return
-        if (y + iny < -yBounds || y + iny > yBounds) {
-            return;
-        }
-            x += inx;
-            y += iny;
-            moveBackground();
+
+        x = newX;
+        y = newY;
+        moveTo(x, y);
+    }
+
+    // create a moveTo function that takes in an x and y position and moves the background-image to that position
+    function moveTo(inX,inY)
+    {
+        x = inX;
+        y = inY;
+        // move the background-image
+        document.getElementById("background-image").style.transform = `translate(${-x*moveDistance}px, ${y*moveDistance}px)`;
     }
 
     // add event listeners to each button that call the appropriate function
-    document.getElementById("up-button").addEventListener("click", () => tryMove(0, -1));
-    document.getElementById("down-button").addEventListener("click", () => tryMove(0, 1));
+    document.getElementById("up-button").addEventListener("click", () => tryMove(0, 1));
+    document.getElementById("down-button").addEventListener("click", () => tryMove(0, -1));
     document.getElementById("left-button").addEventListener("click", () => tryMove(-1, 0));
     document.getElementById("right-button").addEventListener("click", () => tryMove(1, 0));
 
@@ -47,10 +50,10 @@
     document.addEventListener("keydown", (e) => {
         switch (e.key) {
             case "ArrowUp":
-                tryMove(0, -1);
+                tryMove(0, 1);
                 break;
             case "ArrowDown":
-                tryMove(0, 1);
+                tryMove(0, -1);
                 break;
             case "ArrowLeft":
                 tryMove(-1, 0);
@@ -61,9 +64,12 @@
         }
     });
 
-function findBlackPixelsInImage(url) {
+function findBlackPixelsInImage() {
   // Create an image element
   const img = new Image();
+
+    // Set the src of the image to start loading it
+    img.src = "images/collision-map.png";
 
   // Set the onload function to extract pixel data once the image has loaded
   img.onload = function() {
@@ -98,20 +104,32 @@ function findBlackPixelsInImage(url) {
     }
 
     console.log(blackPixels);
+    return blackPixels;
   };
-
-  // Set the src of the image to start loading it
-  img.src = url;
 }
 
-findBlackPixelsInImage('my-image.bmp');
+var collisionMap = findBlackPixelsInImage();
+
+function checkCollision(x, y) {
+    for (var i = 0; i < collisionMap.length; i++) {
+        if (collisionMap[i].x == x && collisionMap[i].y == y) {
+            return true;
+        }
+    }
+    return false;
+}
+
+// create a variable for the starting position
+    const startingPosition = {x: 6, y: -6};
+    // "spawn"
+    moveTo(startingPosition.x, startingPosition.y);
 </script>
 <style>
     :root {
         --buttonDistance: 20px;
     }
     body {
-        background-color: #000;
+        background-color: white;
         font-family: Arial, Helvetica, sans-serif;
         /* prevent scrollbars when moving map outside bounds */
         overflow: hidden;
@@ -120,7 +138,6 @@ findBlackPixelsInImage('my-image.bmp');
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
         z-index: -1;
     }
     #player {
@@ -129,13 +146,13 @@ findBlackPixelsInImage('my-image.bmp');
         left: 50%;
         width: 20px;
         height: 20px;
-        background-color: #fff;
+        background-color: black;
         border-radius: 50%;
         transform: translate(-50%, -50%);
     }
     .arrowButton {
         font-size: 14pt;
-        color: #fff;
+        color: black;
         background-color: transparent;
         border: none;
         outline: none;
