@@ -64,7 +64,8 @@
         }
     });
 
-function findBlackPixelsInImage() {
+// find black pixels in the collision image
+let collisionMap = [];
   // Create an image element
   const img = new Image();
 
@@ -104,11 +105,10 @@ function findBlackPixelsInImage() {
     }
 
     console.log(blackPixels);
-    return blackPixels;
+    collisionMap = blackPixels;
   };
-}
 
-var collisionMap = findBlackPixelsInImage();
+console.log(collisionMap)
 
 function checkCollision(x, y) {
     for (var i = 0; i < collisionMap.length; i++) {
