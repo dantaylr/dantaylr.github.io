@@ -6,12 +6,12 @@
     <button id="left-button" class="arrowButton">&#x2190;</button>
     <button id="right-button" class="arrowButton">&#x2192;</button>
     <!-- add an image called background-image -->
-    <img id="background-image" src="images/map.gif">
+        <img id="background-image" width="896px" src="images/map.svg">
 </body>
 <script lang="text/javascript">
     // create a variable for moveDistance
-    const moveDistance = 32;
-    
+    const moveDistance = 64;
+
     // create a variable for the x and y position of the background-image
     let x = 0;
     let y = 0;
@@ -22,7 +22,7 @@
         newX = x + inx;
         newY = y + iny;
 
-        if (checkCollision(newX, newY)) {
+        if (isColliding(newX, newY) == true) {
             return;
         }
 
@@ -31,20 +31,68 @@
         moveTo(x, y);
     }
 
+    // create a function similar to tryMove but returns a bool called canMove
+    function canMove(inx, iny) {
+        newX = x + inx;
+        newY = y + iny;
+
+        if (isColliding(newX, newY) == true) {
+            return false;
+        }
+
+        return true;
+    }
+
+    // create variables for each button so they can be referenced later
+    const upButton = document.getElementById("up-button");
+    const downButton = document.getElementById("down-button");
+    const leftButton = document.getElementById("left-button");
+    const rightButton = document.getElementById("right-button");
+
+
+    // add event listeners to each button that call the appropriate function
+    upButton.addEventListener("click", () => tryMove(0, 1));
+    downButton.addEventListener("click", () => tryMove(0, -1));
+    leftButton.addEventListener("click", () => tryMove(-1, 0));
+    rightButton.addEventListener("click", () => tryMove(1, 0));
+
+    // create a function called refreshAvailableDirections that checks all four movement directions and hides the movement buttons if a direction isn't available
+    function refreshAvailableDirections() {
+        if (canMove(0, 1) == false) {
+            upButton.style.display = "none";
+        } else {
+            upButton.style.display = "block";
+        }
+
+        if (canMove(0, -1) == false) {
+            downButton.style.display = "none";
+        } else {
+            downButton.style.display = "block";
+        }
+
+        if (canMove(-1, 0) == false) {
+            leftButton.style.display = "none";
+        } else {
+            leftButton.style.display = "block";
+        }
+
+        if (canMove(1, 0) == false) {
+            rightButton.style.display = "none";
+        } else {
+            rightButton.style.display = "block";
+        }
+    }
+
     // create a moveTo function that takes in an x and y position and moves the background-image to that position
-    function moveTo(inX,inY)
-    {
+    function moveTo(inX, inY) {
         x = inX;
         y = inY;
         // move the background-image
-        document.getElementById("background-image").style.transform = `translate(${-x*moveDistance}px, ${y*moveDistance}px)`;
-    }
+        document.getElementById("background-image").style.transform = `translate(${-x * moveDistance}px, ${y * moveDistance}px)`;
+        console.log("moved to " + x + ", " + y)
 
-    // add event listeners to each button that call the appropriate function
-    document.getElementById("up-button").addEventListener("click", () => tryMove(0, 1));
-    document.getElementById("down-button").addEventListener("click", () => tryMove(0, -1));
-    document.getElementById("left-button").addEventListener("click", () => tryMove(-1, 0));
-    document.getElementById("right-button").addEventListener("click", () => tryMove(1, 0));
+        refreshAvailableDirections();
+    }
 
     // add event listeners for the keyboard arrow keys that call the appropriate function
     document.addEventListener("keydown", (e) => {
@@ -64,82 +112,95 @@
         }
     });
 
-// find black pixels in the collision image
-let collisionMap = [];
-  // Create an image element
-  const img = new Image();
+    // find black pixels in the collision image
+    let collisionMap = [];
+    // Create an image element
+    const img = new Image();
 
     // Set the src of the image to start loading it
     img.src = "images/collision-map.png";
 
-  // Set the onload function to extract pixel data once the image has loaded
-  img.onload = function() {
-    // Create a canvas element
-    const canvas = document.createElement('canvas');
-    canvas.width = img.width;
-    canvas.height = img.height;
+    // Set the onload function to extract pixel data once the image has loaded
+    img.onload = function () {
+        // Create a canvas element
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
 
-    // Get the 2D context of the canvas
-    const ctx = canvas.getContext('2d');
+        // Get the 2D context of the canvas
+        const ctx = canvas.getContext('2d');
 
-    // Draw the image onto the canvas
-    ctx.drawImage(img, 0, 0);
+        // Draw the image onto the canvas
+        ctx.drawImage(img, 0, 0);
 
-    // Get the pixel data of the canvas
-    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        // Get the pixel data of the canvas
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-    // Loop through the pixels and find the black ones
-    const blackPixels = [];
-    for (let y = 0; y < canvas.height; y++) {
-      for (let x = 0; x < canvas.width; x++) {
-        const index = (y * canvas.width + x) * 4; // Each pixel has 4 values: red, green, blue, and alpha
-        const red = imageData.data[index];
-        const green = imageData.data[index + 1];
-        const blue = imageData.data[index + 2];
-        const alpha = imageData.data[index + 3];
+        // Loop through the pixels and find the black ones
+        const blackPixels = [];
+        for (let y = 0; y < canvas.height; y++) {
+            for (let x = 0; x < canvas.width; x++) {
+                const index = (y * canvas.width + x) * 4; // Each pixel has 4 values: red, green, blue, and alpha
+                const red = imageData.data[index];
+                const green = imageData.data[index + 1];
+                const blue = imageData.data[index + 2];
+                const alpha = imageData.data[index + 3];
 
-        if (red === 0 && green === 0 && blue === 0 && alpha === 255) { // Check if the pixel is black
-          blackPixels.push({x, y}); // Add the coordinate to the list of black pixels
+                if (red === 0 && green === 0 && blue === 0 && alpha === 255) { // Check if the pixel is black
+                    // create a new integer that is the inverse of y, explicitly cast it to an integer
+                    const newY = -y;
+                    blackPixels.push({ x, y: newY }); // Add the coordinate to the list of black pixels
+                    console.log(x, newY)
+                }
+            }
         }
-      }
+
+        console.log(blackPixels.length);
+        collisionMap = blackPixels;
+
+        // then spawn
+        // create a variable for the starting position
+        const startingPosition = { x: 6, y: -6 };
+        // "spawn"
+        moveTo(startingPosition.x, startingPosition.y);
+    };
+
+    console.log(collisionMap)
+
+    function isColliding(inX, inY) {
+        console.log("checking collision")
+        for (var i = 0; i < collisionMap.length; i++) {
+            console.log("checking " + collisionMap[i].x + ", " + collisionMap[i].y)
+            if (collisionMap[i].x == inX && collisionMap[i].y == inY) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    console.log(blackPixels);
-    collisionMap = blackPixels;
-  };
-
-console.log(collisionMap)
-
-function checkCollision(x, y) {
-    for (var i = 0; i < collisionMap.length; i++) {
-        if (collisionMap[i].x == x && collisionMap[i].y == y) {
-            return true;
-        }
-    }
-    return false;
-}
-
-// create a variable for the starting position
-    const startingPosition = {x: 6, y: -6};
-    // "spawn"
-    moveTo(startingPosition.x, startingPosition.y);
 </script>
 <style>
     :root {
         --buttonDistance: 20px;
     }
+
+    html, body {
+        /* prevent scrollbars when moving */
+        overflow: hidden;
+    }
+
     body {
         background-color: white;
         font-family: Arial, Helvetica, sans-serif;
-        /* prevent scrollbars when moving map outside bounds */
-        overflow: hidden;
     }
+
     #background-image {
         position: absolute;
         top: 50%;
         left: 50%;
         z-index: -1;
     }
+
     #player {
         position: absolute;
         top: 50%;
@@ -150,6 +211,7 @@ function checkCollision(x, y) {
         border-radius: 50%;
         transform: translate(-50%, -50%);
     }
+
     .arrowButton {
         font-size: 14pt;
         color: black;
@@ -157,24 +219,28 @@ function checkCollision(x, y) {
         border: none;
         outline: none;
     }
+
     #up-button {
         position: absolute;
         top: calc(50% - var(--buttonDistance) - 12pt);
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     #down-button {
         position: absolute;
         top: calc(50% + var(--buttonDistance) + 12pt);
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
     #left-button {
         position: absolute;
         top: 50%;
         left: calc(50% - var(--buttonDistance) - 12pt);
         transform: translate(-50%, -50%);
     }
+
     #right-button {
         position: absolute;
         top: 50%;
