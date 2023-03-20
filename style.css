@@ -139,11 +139,12 @@ table {
 /*End CSS Reset*/
 
 :root {
-    --color-primary: black;
-    --color-secondary: white;
-    --color-tertiary: #c2c2c2;
+    --color-foreground: black;
+    --color-background: white;
+    --color-accent: #c7c7c7;
     /* --color-tertiary: #b8b8b8; */
-    --spacing: 32px;
+    /* spacing between horizontal rule elements and around the site */
+    --outer-margin: 3rem;
 }
 
 @font-face {
@@ -155,9 +156,9 @@ table {
 /*text*/
 
 html {
-    background-color: var(--color-tertiary);
+    background-color: var(--color-background);
     font-family: "Hyperwalk Body", "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 19pt;
+    font-size: 16pt;
 }
 
 html,
@@ -169,7 +170,7 @@ h2,
 h3 {
     line-height: 1.2em;
     margin-bottom: 1rem;
-    color: var(--color-primary);
+    color: var(--color-foreground);
 }
 
 .grid-item img {
@@ -181,7 +182,7 @@ h3 {
 .grid-item a:hover,
 .grid-item a:visited,
 .grid-item a:focus {
-    color: var(--color-primary);
+    color: var(--color-foreground);
 }
 
 .caption {
@@ -194,10 +195,10 @@ a:hover,
 a:active,
 a:visited,
 a:focus {
-    color: var(--color-secondary);
+    color: var(--color-foreground);
     text-decoration: none;
-    /* padding-bottom: 2px; */
-    /* border-bottom: 1px solid var(--color-); */
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--color-foreground);
 }
 
 /* h1 a {
@@ -229,14 +230,14 @@ h1, h1 a {
 
 hr {
     border: none;
-    margin-bottom: var(--spacing);
+    margin-bottom: 3rem;
 }
 
 /*containers*/
 
 #site-container {
     margin: 0 auto;
-    padding: var(--spacing);
+    /* padding: var(--outer-margin); */
     width: 100%;
     /*max-width: 1024px;*/
     box-sizing: border-box;
@@ -244,34 +245,45 @@ hr {
 
 #header-container {
     position: fixed;
-    top: var(--spacing);
-    /* margin-bottom: 32px; */
+    top: 1rem;
+    left: 1rem;
+    max-width: 20rem;
 }
+
+/* #header-container p, #footer-container p, #header-container a, #footer-container a {
+    color: var(--color-accent);
+} */
 
 #footer-container {
     position: fixed;
-    bottom: var(--spacing);
-    right: var(--spacing);
-    width: -calc(100% - (var(--spacing)*2));
+    bottom: 1rem;
+    right: 1rem;
     text-align: right;
-    /* margin-bottom: 32px; */
 }
 
-#page-container {
-    margin-top: 128px;
-    margin-bottom: 128px;
+#page-container, #content-container {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
-#content-container {
+/* #content-container {
     margin: 0 auto;
-    margin-top: 64px;
-}
+    margin-top: 8rem;
+} */
 
 #post-content {
     margin: 0 auto;
-    max-width: 80vh;
+    max-width: 100vh;
 }
 
+/* if the content grid is going to be single page */
+/* .content-grid {
+    max-width: 80vh;
+} */
+
+/* if the content griod is a grid */
 .content-grid {
     margin-left: 2px;
     margin-right: 2px;
@@ -283,9 +295,11 @@ hr {
 
 .grid-item {
     /* width: calc(33.33% - 16px); */
-    margin-left: .5rem;
-    margin-right: .5rem;
-    margin-bottom: 1rem;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 16px;
+    /* if single page grid */
+    /* width: 100% !important; */
 }
 
 /*responsive stuff*/

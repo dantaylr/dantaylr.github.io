@@ -1,6 +1,6 @@
 ---
 title: Fishtank Sessions EP Promo Art
-image: ../images/fishtank sessions/fishtank-sessions-1.jpeg
+# image: ../images/fishtank sessions/fishtank-sessions-1.jpeg
 width: 47
 caption: Photo series
 ---

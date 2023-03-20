@@ -1,5 +1,5 @@
 ---
-image: images/no-sculpture.jpeg
+# image: images/no-sculpture.jpeg
 width: 35
 caption: Installation piece
 ---

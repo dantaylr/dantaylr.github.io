@@ -1,6 +1,6 @@
 ---
 title: Conquer The Heavens Game
-image: ../images/cth/concept-purple.jpg
+# image: ../images/cth/concept-purple.jpg
 width: 55
 caption: Concept artwork
 ---
