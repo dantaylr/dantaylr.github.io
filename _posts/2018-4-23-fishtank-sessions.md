@@ -5,7 +5,7 @@ width: 47
 caption: Photo series
 ---
 
-Cover art and promo material for a release by [Pedestrian Tactics](https://pedestriantactics.com)
+Cover art and promo material for a release by [Pedestrian Tactics](https://pedestriantactics.com).
 
 ***
 

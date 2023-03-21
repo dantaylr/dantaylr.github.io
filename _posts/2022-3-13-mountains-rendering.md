@@ -4,7 +4,7 @@ width: 46
 caption: Timed 3D render and painting
 ---
 
-Misc timed rendering, under 1hr
+Misc timed rendering, under 1hr.
 
 ***
 

@@ -4,7 +4,7 @@ width: 21
 caption: Social media artwork
 ---
 
-Social media artwork in response to the events of George Floyd
+Social media artwork in response to the events of George Floyd.
 
 ***
 

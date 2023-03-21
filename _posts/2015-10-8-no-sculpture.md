@@ -4,7 +4,7 @@ width: 35
 caption: Installation piece
 ---
 
-Misc sculpture, wood and paint
+Misc sculpture, wood and paint.
 
 ***
 

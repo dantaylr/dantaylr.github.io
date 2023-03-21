@@ -4,7 +4,7 @@ image:
 width: 32
 ---
 
-Misc social media artwork
+Misc social media artwork.
 
 ***
 

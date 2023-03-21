@@ -6,7 +6,7 @@ caption: EP cover art, photo series
 order: 6
 ---
 
-Logo, animated promo video, and photo series designed and captured for the [Pedestrian Tactics](https://pedestriantactics.com) project during 5.5 months in Thailand, Vietnam, and Hong Kong
+Logo, animated promo video, and photo series designed and captured for the [Pedestrian Tactics](https://pedestriantactics.com) project during 5.5 months in Thailand, Vietnam, and Hong Kong.
 
 ***
 

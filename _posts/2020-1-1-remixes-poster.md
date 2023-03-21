@@ -6,7 +6,7 @@ caption: 3D artwork, typography
 order: 4
 ---
 
-Rendering designed for a showcase of remixed works by the [Pedestrian Tactics](https://pedestriantactics.com) project
+Rendering designed for a showcase of remixed works by the [Pedestrian Tactics](https://pedestriantactics.com) project.
 
 ***
 

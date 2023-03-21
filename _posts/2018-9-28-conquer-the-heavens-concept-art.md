@@ -5,9 +5,9 @@ width: 55
 caption: Concept artwork
 ---
 
-Concept artwork for a game conceived by [Nick Glenn](https://twitter.com/nickglenndotcom)
+Concept artwork for a game conceived by [Nick Glenn](https://twitter.com/nickglenndotcom).
 
-The visuals focused on conveying various emotions through the setting of space as opposed to being visually accurate. The game’s unique multi-axis gameplay allowed for the design of assets and environments that rejected the concepts of up and down
+The visuals focused on conveying various emotions through the setting of space as opposed to being visually accurate. The game’s unique multi-axis gameplay allowed for the design of assets and environments that rejected the concepts of up and down.
 
 ***
 

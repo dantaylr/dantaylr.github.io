@@ -6,7 +6,7 @@ caption: Typeface design
 order: 1
 ---
 
-HUD icons and typography for a game conceived by [Nick Glenn](https://twitter.com/nickglenndotcom)
+HUD icons and typography for a game conceived by [Nick Glenn](https://twitter.com/nickglenndotcom).
 
 ***
 

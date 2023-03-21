@@ -6,7 +6,7 @@ caption: Print magazine design
 order: 2
 ---
 
-Print design, illustration, and product photography for Graypants' annual product lookbook
+Print design, illustration, and product photography for Graypants' annual product lookbook.
 
 ***
 
