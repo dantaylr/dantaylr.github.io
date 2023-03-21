@@ -13,6 +13,9 @@ A detailed breakdown of the project is on my [Behance](https://www.behance.net/g
 ***
 
 ![](../images/wick/wick-hearth.jpeg)
+
+In addition to scultping the CAD portion of the product itself I built accurate rendering environments to simulate differences in material finishes and light temperatures.
+
 ![](../images/wick/wick-rendering-2.jpeg)
 ![](../images/wick/wick-branding-1.jpeg)
 ![](../images/wick/wick-branding-2.jpeg)
