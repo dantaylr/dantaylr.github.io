@@ -10,7 +10,7 @@ Carbon Recipe
 
 In the interest of spreading awareness about carbon emissions and a desire to bring a deeper fulfilling value to our everyday decisions, I created a [web app](https://carbonrecipe.netlify.app/) that allows anyone to easily see and experiment with their carbon footprint. 
 
-After using many emissions calculators I was faced with difficult questions involving locating my gas and electricity bills and making numerical estimates that I couldn't easily conjure up on the spot. Many calculators just spat out a number at the end of a lengthy questionnaire and told you to do things like use reusable bags and pay for carbon offsets.
+Many emissions calculators I used asked difficult questions involving locating utility bills and making numerical calculations that couldn't easily be estimated on the spot. The results commonly didn't identify specific changes that could be made and instead advised general things like using reusable bags and paying for carbon offsets.
 
 I wanted something that immedietly showed me the heavy hitters behind my own impact and encouraged me to experiment.
 
