@@ -3,7 +3,7 @@ title: Graypants Collateral
 image: ../images/graypants-collateral/graypants-collateral-2.jpg
 width: 63
 caption: Print magazine design
-order: 2
+order: 1
 ---
 
 Print design, illustration, and product photography for Graypants' annual product lookbook.
