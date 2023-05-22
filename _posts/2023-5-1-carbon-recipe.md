@@ -8,7 +8,7 @@ caption: Emission awareness that people can actually understand
 
 Carbon Recipe
 
-In the interest of spreading awareness about carbon emissions and a desire to bring a deeper fulfilling value to our everyday decisions, I created a web application that would allow the average person to easily see and experiment with their carbon footprint. 
+In the interest of spreading awareness about carbon emissions and a desire to bring a deeper fulfilling value to our everyday decisions, I created a [web application](https://carbonrecipe.netlify.app/) that would allow the average person to easily see and experiment with their carbon footprint. 
 
 After using many emissions calculators I was faced with difficult questions involving locating my gas and electricity bills and making numerical estimates that I couldn't easily conjure up on the spot. Many calculators just spat out a number at the end of a lengthy questionnaire and told you to do things like use reusable bags and pay for carbon offsets.
 
