@@ -12,7 +12,7 @@ In the interest of spreading awareness about carbon emissions and a desire to br
 
 Many emissions calculators I used asked difficult questions involving locating utility bills and making numerical calculations that couldn't easily be estimated on the spot. The results commonly didn't identify specific changes that could be made and instead advised general things like using reusable bags and paying for carbon offsets.
 
-I wanted something that immedietly showed me the heavy hitters behind my own impact and encouraged me to experiment.
+I wanted something that immedietly showed me the heavy hitters behind my own impact and encouraged me to try things.
 
 ***
 
