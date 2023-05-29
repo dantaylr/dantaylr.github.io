@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Image Mosaic</title>
+  <style>
+    .pixel {
+      height: 9px;
+      width: 9px;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+    .subpixel {
+      width: 3px;
+      height: 9px;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+    }
+    .row {
+      height: 9px;
+    }
+    #mosaicContainer {
+      height: auto;
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+  <input type="file" id="imageInput" accept="image/*" onchange="handleImageUpload(event)" />
+  <!-- create a drop down for mosaic type that accepts pixel and rgb -->
+  <select id="mosaicType" onchange="generateMosaic()">
+    <option value="pixel">Pixel</option>
+    <option value="rgb">RGB</option>
+  <input type="number" id="pixelDivision" placeholder="Pixel Division" onchange="generateMosaic()" />
+  <div id="mosaicContainer"></div>
+
+  <script>
+    var selectedImage;
+
+function handleImageUpload(event) {
+  selectedImage = event.target.files[0];
+  generateMosaic();
+}
+    function generateMosaic() {
+
+      
+      var pixelDivision = parseInt(document.getElementById("pixelDivision").value);
+      var mosaicContainer = document.getElementById("mosaicContainer");
+      mosaicContainer.innerHTML = "";
+
+
+      var reader = new FileReader();
+      reader.onload = function(event) {
+
+      var image = new Image();
+      image.src = event.target.result;
+
+      image.onload = function() {
+        var canvas = document.createElement("canvas");
+        canvas.width = image.width;
+        canvas.height = image.height;
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(image, 0, 0);
+        var imageData = ctx.getImageData(0, 0, image.width, image.height).data;
+        for (var y = 0; y < image.height; y += pixelDivision) {
+          var rowDiv = document.createElement("div");
+          rowDiv.className = "row";
+          mosaicContainer.appendChild(rowDiv);
+          for (var x = 0; x < image.width; x += pixelDivision) {
+            var pixelIndex = (y * image.width + x) * 4;
+            var red = imageData[pixelIndex];
+            var green = imageData[pixelIndex + 1];
+            var blue = imageData[pixelIndex + 2];
+            var alpha = imageData[pixelIndex + 3];
+            var pixelDiv = document.createElement("div");
+            pixelDiv.className = "pixel";
+
+            // if the selection is pixel
+            if (document.getElementById("mosaicType").value === "rgb") {
+             
+            
+            // create subpixels for red green and blue
+
+            var redDiv = document.createElement("div");
+            redDiv.className = "subpixel";
+            redDiv.style.backgroundColor = "rgba(" + red + ",0,0," + alpha / 255 + ")";
+            pixelDiv.appendChild(redDiv);
+
+            var greenDiv = document.createElement("div");
+            greenDiv.className = "subpixel";
+            greenDiv.style.backgroundColor = "rgba(0," + green + ",0," + alpha / 255 + ")";
+            pixelDiv.appendChild(greenDiv);
+
+            var blueDiv = document.createElement("div");
+            blueDiv.className = "subpixel";
+            blueDiv.style.backgroundColor = "rgba(0,0," + blue + "," + alpha / 255 + ")";
+            pixelDiv.appendChild(blueDiv);
+            }
+            else {
+              pixelDiv.style.backgroundColor = "rgba(" + red + "," + green + "," + blue + "," + alpha / 255 + ")";
+            }
+
+            rowDiv.appendChild(pixelDiv);
+          }
+        }
+      };
+    };
+      if (selectedImage) {
+        reader.readAsDataURL(selectedImage);
+      }
+      
+    }
+  </script>
+</body>
+</html>
