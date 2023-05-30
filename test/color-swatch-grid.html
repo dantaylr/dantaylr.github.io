@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Color Swatch Grid</title>
+    <style>
+        .swatch {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            text-transform: uppercase;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="input-container">
+        X cells
+        <input type="number" id="xCells" value="5" onchange="generate()" />
+    </div>
+    <div class="input-container">
+        Y cells
+        <input type="number" id="yCells" value="5" onchange="generate()" />
+    </div>
+    <div class="input-container">
+        Hue Offset
+        <input type="number" id="hueOffset" value="0" onchange="generate()" />
+    </div>
+    <div id="container"></div>
+    <script>
+        function generate() {
+            var container = document.getElementById("container");
+
+            // Clear the container element
+            container.innerHTML = "";
+
+            var xCells = parseInt(document.getElementById("xCells").value);
+            var yCells = parseInt(document.getElementById("yCells").value);
+
+            // multiply the xCells and yCells and display the total in body text by appending to the container
+            var totalCells = xCells * yCells;
+            var totalCellsText = document.createElement('div');
+            totalCellsText.innerHTML = "Total Cells: " + totalCells;
+            container.appendChild(totalCellsText);
+
+            // modify yCells so it works with the grid removint the white and black parts
+            yCells += 2;
+
+            var hueOffset = parseInt(document.getElementById("hueOffset").value); // Set the hue offset here
+            var hueStep = 360 / xCells;
+            var lightnessStep = 100 / (yCells - 1); // Set the lightness step here
+            for (var y = 1; y < yCells - 1; y++) {
+                var row = document.createElement('div'); // Create a new div element for each row
+                row.className = 'row';
+                for (var x = 0; x < xCells; x++) {
+                    var hue = (x * hueStep + hueOffset) % 360; // Add the hue offset here
+                    var saturation = 100;
+                    var lightness = 100 - y * lightnessStep;
+                    var color = 'hsl(' + hue + ', ' + saturation + '%, ' + lightness + '%)';
+                    var swatch = document.createElement('div');
+                    swatch.className = 'swatch';
+                    swatch.style.backgroundColor = color;
+                    var rgb = swatch.style.backgroundColor.match(/\d+/g);
+                    var hex = '#' + Number(rgb[0]).toString(16).padStart(2, '0') + Number(rgb[1]).toString(16).padStart(2, '0') + Number(rgb[2]).toString(16).padStart(2, '0');
+                    swatch.innerHTML = hex;
+                    row.appendChild(swatch); // Append the swatch element to the row element
+                }
+                container.appendChild(row); // Append the row element to the body element
+            }
+        }
+        // run the generate command when the document loads
+        generate();
+    </script>
+</body>
+
+</html>
