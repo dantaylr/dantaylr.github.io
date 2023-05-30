@@ -4,6 +4,12 @@
 <head>
     <title>Color Swatch Grid</title>
     <style>
+        /* make the container shrink to the content */
+
+        .swatch-container {
+            display: inline-block;
+        }
+
         .swatch {
             display: flex;
             flex-direction: column;
@@ -12,42 +18,119 @@
             height: 100px;
             margin: 0;
             padding: 0;
-            text-align: center;
-            font-size: 12px;
             color: white;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .external-swatch-text {
+            text-align: center;
         }
 
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 12px;
         }
 
+        /* make the row let the boxes sit next to eachother but don't expand the row to the end of the screen */
         .row {
             display: flex;
-            flex-wrap: nowrap;
+            flex-direction: row;
+            width: auto;
+            margin: 0;
+            padding: 0;
+        }
+
+        .input-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: left;
+        }
+        .input-container p {
+            margin: 0;
+            padding: 0;
+            margin-bottom: 1em;
+            width: 100px;
+            text-align: left;
         }
     </style>
 </head>
 
 <body>
     <div class="input-container">
+        <p>
         X cells
+        </p>
         <input type="number" id="xCells" value="5" onchange="generate()" />
     </div>
+
     <div class="input-container">
+        <p>
         Y cells
+        </p>
         <input type="number" id="yCells" value="5" onchange="generate()" />
     </div>
+
     <div class="input-container">
+        <p>
         Hue Offset
+        </p>
         <input type="number" id="hueOffset" value="0" onchange="generate()" />
     </div>
+
+    <!-- add an input for swatch width -->
+    <div class="input-container">
+        <p>
+        Swatch Width
+        </p>
+        <input type="number" id="swatchWidth" value="100" onchange="generate()" />
+    </div>
+
+    <!-- add an input for swatch height -->
+    <div class="input-container">
+        <p>
+        Swatch Height
+        </p>
+        <input type="number" id="swatchHeight" value="100" onchange="generate()" />
+    </div>
+
+    <!-- add an input for swatch margin -->
+    <div class="input-container">
+        <p>
+        Swatch Margin
+        </p>
+        <input type="number" id="swatchMargin" value="0" onchange="generate()" />
+    </div>
+
+    <!-- add a number for text size -->
+    <div class="input-container">
+        <p>
+        Text Size
+        </p>
+        <input type="number" id="textSize" value="12" onchange="generate()" />
+    </div>
+
+    <!-- create an input container with a checkbox that controls whether the text is uppercase -->
+    <div class="input-container">
+        <p>
+        Uppercase
+        </p>
+        <input type="checkbox" id="uppercase" onchange="generate()" />
+    </div>
+
+    <!-- create a checkbox that defines if the text should be below the swatch -->
+    <div class="input-container">
+        <p>
+        Text Below
+        </p>
+        <input type="checkbox" id="textBelow" onchange="generate()" />
+    </div>
+
     <div id="container"></div>
+
     <script>
         function generate() {
+
             var container = document.getElementById("container");
 
             // Clear the container element
@@ -61,6 +144,10 @@
             var totalCellsText = document.createElement('div');
             totalCellsText.innerHTML = "Total Cells: " + totalCells;
             container.appendChild(totalCellsText);
+
+            // create a label for the total size of the grid
+            var totalSizeText = document.createElement('div');
+            container.appendChild(totalSizeText);
 
             // modify yCells so it works with the grid removint the white and black parts
             yCells += 2;
@@ -76,16 +163,69 @@
                     var saturation = 100;
                     var lightness = 100 - y * lightnessStep;
                     var color = 'hsl(' + hue + ', ' + saturation + '%, ' + lightness + '%)';
+                    var swatchContainer = document.createElement('div');
+                    swatchContainer.className = 'swatch-container';
                     var swatch = document.createElement('div');
                     swatch.className = 'swatch';
                     swatch.style.backgroundColor = color;
                     var rgb = swatch.style.backgroundColor.match(/\d+/g);
                     var hex = '#' + Number(rgb[0]).toString(16).padStart(2, '0') + Number(rgb[1]).toString(16).padStart(2, '0') + Number(rgb[2]).toString(16).padStart(2, '0');
-                    swatch.innerHTML = hex;
-                    row.appendChild(swatch); // Append the swatch element to the row element
+                    // check if the uppercase checkbox is checked
+                    if (document.getElementById("uppercase").checked) {
+                        hex = hex.toUpperCase();
+                    }
+                    // check if the text below checkbox is checked
+                    if (!document.getElementById("textBelow").checked) {
+                        swatch.innerHTML = hex;
+                    }
+                    swatchContainer.appendChild(swatch); // Append the swatch element to the row element
+                    if (document.getElementById("textBelow").checked) {
+                        // add the hex value in a div below the swatch
+                        var hexText = document.createElement('div');
+                        hexText.className = 'external-swatch-text';
+                        hexText.innerHTML = hex;
+                        swatchContainer.appendChild(hexText);
+                    }
+                    row.appendChild(swatchContainer);
                 }
                 container.appendChild(row); // Append the row element to the body element
             }
+
+                        // change the css property for swatch margin
+                        var swatchMargin = document.getElementById("swatchMargin").value;
+            var swatch = document.getElementsByClassName("swatch");
+            var belowText = document.getElementsByClassName("external-swatch-text");
+            for (var i = 0; i < swatch.length; i++) {
+                swatch[i].style.margin = swatchMargin + "px";
+            }
+            // resize swatch
+            var swatchWidth = document.getElementById("swatchWidth").value;
+            var swatchHeight = document.getElementById("swatchHeight").value;
+            for (var i = 0; i < swatch.length; i++) {
+                swatch[i].style.width = swatchWidth + "px";
+                swatch[i].style.height = swatchHeight + "px";
+            }
+            // change the text size
+            var textSize = document.getElementById("textSize").value;
+            for (var i = 0; i < swatch.length; i++) {
+                swatch[i].style.fontSize = textSize + "pt";
+            }
+            for (var i = 0; i < belowText.length; i++) {
+                belowText[i].style.fontSize = textSize + "pt";
+            }
+
+
+            // calculate the total width using the margins and the width of the swatch
+            var totalWidth = (xCells * (parseInt(document.getElementById("swatchWidth").value) + (parseInt(document.getElementById("swatchMargin").value) * 2)));
+            // calculate the total height using the margins and the height of the swatch
+            // be sure to include the height of the text if it is below the swatch
+            var totalHeight = ((yCells-2) * (parseInt(document.getElementById("swatchHeight").value) + (parseInt(document.getElementById("swatchMargin").value) * 2)));
+            if (document.getElementById("textBelow").checked) {
+                totalHeight += (yCells * parseInt(document.getElementById("textSize").value));
+            }
+            // display the total size of the grid
+            var totalSize = totalWidth + "px x " + totalHeight + "px";
+            totalSizeText.innerHTML = "Total size: " + totalSize;
         }
         // run the generate command when the document loads
         generate();
