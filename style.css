@@ -275,6 +275,8 @@ hr {
 
 /* if the content grid is a grid */
 .content-grid {
+    padding-left: 1rem;
+    padding-right: 1rem;
     margin-left: 2px;
     margin-right: 2px;
     display: flex;
