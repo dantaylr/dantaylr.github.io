@@ -148,16 +148,16 @@ table {
 }
 
 @font-face {
-    font-family: "Hyperwalk Body";
-    src: url("../fonts/Hyperwalk-Body.woff2") format("woff2"),
-        url("../fonts/Hyperwalk-Body.woff") format("woff");
+    font-family: "PT-F7 Body";
+    src: url("../fonts/PT-F7-Body.woff2") format("woff2"),
+        url("../fonts/PT-F7-Body.woff") format("woff");
 }
 
 /*text*/
 
 html {
     background-color: var(--color-background);
-    font-family: "Hyperwalk Body", "Helvetica Neue", Helvetica, sans-serif;
+    font-family: "PT-F7 Body", "Helvetica Neue", Helvetica, sans-serif;
     font-size: 16pt;
 }
 
@@ -312,8 +312,8 @@ hr {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-primary: white;
-        --color-secondary: black;
+        --color-foreground: white;
+        --color-background: black;
     }
 }
 
