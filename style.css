@@ -310,12 +310,12 @@ hr {
 /*responsive stuff*/
 
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
         --color-primary: white;
         --color-secondary: black;
     }
-} */
+}
 
 
 /*screen size*/
