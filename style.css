@@ -250,6 +250,10 @@ hr {
     margin-top: 2rem;
 }
 
+.fixed {
+    position: fixed;
+}
+
 
 #footer-container {
     margin-bottom:2rem;
