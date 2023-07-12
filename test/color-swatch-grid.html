@@ -5,6 +5,10 @@
     <title>Color Swatch Grid</title>
     <style>
         /* make the container shrink to the content */
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 12px;
+        }
 
         .swatch-container {
             display: inline-block;
@@ -24,11 +28,13 @@
 
         .external-swatch-text {
             text-align: center;
+            margin: 0;
+            padding: 0;
         }
 
-        body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 12px;
+        .external-swatch-text p {
+            margin: 0;
+            padding: 0;
         }
 
         /* make the row let the boxes sit next to eachother but don't expand the row to the end of the screen */
@@ -46,6 +52,7 @@
             align-items: center;
             justify-content: left;
         }
+
         .input-container p {
             margin: 0;
             padding: 0;
@@ -59,29 +66,38 @@
 <body>
     <div class="input-container">
         <p>
-        X cells
+            X cells
         </p>
         <input type="number" id="xCells" value="5" onchange="generate()" />
     </div>
 
     <div class="input-container">
         <p>
-        Y cells
+            Y cells
         </p>
         <input type="number" id="yCells" value="5" onchange="generate()" />
     </div>
 
     <div class="input-container">
         <p>
-        Hue Offset
+            Hue Offset
         </p>
         <input type="number" id="hueOffset" value="0" onchange="generate()" />
     </div>
 
+    <!-- add an input for lightness offset -->
+    <div class="input-container">
+        <p>
+            Lightness Offset
+        </p>
+        <input type="number" id="lightnessOffset" value="0" onchange="generate()" />
+    </div>
+
+
     <!-- add an input for swatch width -->
     <div class="input-container">
         <p>
-        Swatch Width
+            Swatch Width
         </p>
         <input type="number" id="swatchWidth" value="100" onchange="generate()" />
     </div>
@@ -89,7 +105,7 @@
     <!-- add an input for swatch height -->
     <div class="input-container">
         <p>
-        Swatch Height
+            Swatch Height
         </p>
         <input type="number" id="swatchHeight" value="100" onchange="generate()" />
     </div>
@@ -97,7 +113,7 @@
     <!-- add an input for swatch margin -->
     <div class="input-container">
         <p>
-        Swatch Margin
+            Swatch Margin
         </p>
         <input type="number" id="swatchMargin" value="0" onchange="generate()" />
     </div>
@@ -105,7 +121,7 @@
     <!-- add a number for text size -->
     <div class="input-container">
         <p>
-        Text Size
+            Text Size
         </p>
         <input type="number" id="textSize" value="12" onchange="generate()" />
     </div>
@@ -113,7 +129,7 @@
     <!-- create an input container with a checkbox that controls whether the text is uppercase -->
     <div class="input-container">
         <p>
-        Uppercase
+            Uppercase
         </p>
         <input type="checkbox" id="uppercase" onchange="generate()" />
     </div>
@@ -121,10 +137,19 @@
     <!-- create a checkbox that defines if the text should be below the swatch -->
     <div class="input-container">
         <p>
-        Text Below
+            Text Below
         </p>
         <input type="checkbox" id="textBelow" onchange="generate()" />
     </div>
+
+    <!-- create a checkbox for swapping the 0 to an O -->
+    <div class="input-container">
+        <p>
+            Swap 0 to O
+        </p>
+        <input type="checkbox" id="swapZero" onchange="generate()" />
+    </div>
+    
 
     <div id="container"></div>
 
@@ -150,18 +175,19 @@
             container.appendChild(totalSizeText);
 
             // modify yCells so it works with the grid removint the white and black parts
-            yCells += 2;
+            let yCellsMod = yCells + 2;
 
             var hueOffset = parseInt(document.getElementById("hueOffset").value); // Set the hue offset here
             var hueStep = 360 / xCells;
-            var lightnessStep = 100 / (yCells - 1); // Set the lightness step here
-            for (var y = 1; y < yCells - 1; y++) {
+            var lightnessStep = 100 / (yCellsMod - 1); // Set the lightness step here
+            var lightnessOffset = parseFloat(document.getElementById("lightnessOffset").value); // Set the lightness offset here
+            for (var y = 1; y < yCellsMod - 1; y++) {
                 var row = document.createElement('div'); // Create a new div element for each row
                 row.className = 'row';
                 for (var x = 0; x < xCells; x++) {
                     var hue = (x * hueStep + hueOffset) % 360; // Add the hue offset here
                     var saturation = 100;
-                    var lightness = 100 - y * lightnessStep;
+                    var lightness = (100 - y * lightnessStep) + lightnessOffset;
                     var color = 'hsl(' + hue + ', ' + saturation + '%, ' + lightness + '%)';
                     var swatchContainer = document.createElement('div');
                     swatchContainer.className = 'swatch-container';
@@ -170,6 +196,10 @@
                     swatch.style.backgroundColor = color;
                     var rgb = swatch.style.backgroundColor.match(/\d+/g);
                     var hex = '#' + Number(rgb[0]).toString(16).padStart(2, '0') + Number(rgb[1]).toString(16).padStart(2, '0') + Number(rgb[2]).toString(16).padStart(2, '0');
+                    // check if the swap zero checkbox is checked
+                    if (document.getElementById("swapZero").checked) {
+                        hex = hex.replace(/0/g, 'O');
+                    }
                     // check if the uppercase checkbox is checked
                     if (document.getElementById("uppercase").checked) {
                         hex = hex.toUpperCase();
@@ -191,37 +221,40 @@
                 container.appendChild(row); // Append the row element to the body element
             }
 
-                        // change the css property for swatch margin
-                        var swatchMargin = document.getElementById("swatchMargin").value;
+            // change the css property for swatch margin
+            var swatchMargin = parseInt(document.getElementById("swatchMargin").value);
             var swatch = document.getElementsByClassName("swatch");
             var belowText = document.getElementsByClassName("external-swatch-text");
             for (var i = 0; i < swatch.length; i++) {
                 swatch[i].style.margin = swatchMargin + "px";
             }
             // resize swatch
-            var swatchWidth = document.getElementById("swatchWidth").value;
-            var swatchHeight = document.getElementById("swatchHeight").value;
+            var swatchWidth = parseInt(document.getElementById("swatchWidth").value);
+            var swatchHeight = parseInt(document.getElementById("swatchHeight").value);
             for (var i = 0; i < swatch.length; i++) {
                 swatch[i].style.width = swatchWidth + "px";
                 swatch[i].style.height = swatchHeight + "px";
             }
             // change the text size
-            var textSize = document.getElementById("textSize").value;
+            var textSize = parseInt(document.getElementById("textSize").value);
             for (var i = 0; i < swatch.length; i++) {
-                swatch[i].style.fontSize = textSize + "pt";
+                swatch[i].style.fontSize = textSize + "px";
+                // set the line height to thge same as the text size
+                swatch[i].style.lineHeight = textSize + "px";
             }
             for (var i = 0; i < belowText.length; i++) {
-                belowText[i].style.fontSize = textSize + "pt";
+                belowText[i].style.fontSize = textSize + "px";
+                // set the line height to thge same as the text size
+                belowText[i].style.lineHeight = textSize + "px";
             }
 
-
             // calculate the total width using the margins and the width of the swatch
-            var totalWidth = (xCells * (parseInt(document.getElementById("swatchWidth").value) + (parseInt(document.getElementById("swatchMargin").value) * 2)));
+            var totalWidth = (xCells * (swatchWidth + (swatchMargin * 2))) - (swatchMargin * 2);
             // calculate the total height using the margins and the height of the swatch
             // be sure to include the height of the text if it is below the swatch
-            var totalHeight = ((yCells-2) * (parseInt(document.getElementById("swatchHeight").value) + (parseInt(document.getElementById("swatchMargin").value) * 2)));
+            var totalHeight = (yCells * (swatchHeight + (swatchMargin * 2))) - (swatchMargin * 2);
             if (document.getElementById("textBelow").checked) {
-                totalHeight += (yCells * parseInt(document.getElementById("textSize").value));
+                totalHeight += (yCells * textSize) + swatchMargin;
             }
             // display the total size of the grid
             var totalSize = totalWidth + "px x " + totalHeight + "px";

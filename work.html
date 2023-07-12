@@ -1,0 +1,37 @@
+---
+layout: default
+title: Index
+---
+<div id="header-container">
+    <h1>
+        <a class="hidden-link" href="/"><</a>
+    </h1>
+</div>
+<div id="page-container">
+    <div class="content-grid">
+        <!-- if there isn't an order assigned, sort them to the last -->
+        {% assign sorted_posts = site.posts | sort: 'order', 'last' %}
+        <!-- loop through the posts -->
+        {% for post in sorted_posts %}{% if post.image %}
+        <div class="grid-item" style="{% if post.width %}width:{{ post.width }}%{% else %}height: 50vh{% endif %};">
+            <a href="{{ post.url }}">
+                <img src="{{ post.image }}" style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
+            </a>
+            <!-- {{ post.date | date: '%-m/%-d/%Y' }}<br /> -->
+            <a href="{{ post.url }}" class="caption">{{ post.title }}
+                {% if post.width %}<br />{{ post.caption }}{% endif %}
+            </a>
+        </div>
+        {% endif %}{% endfor %}
+    </div>
+</div>
+<!-- <div id="footer-container">
+    <p>
+
+        Contact me by
+        <a href="mailto:hi@imdantaylor.com">email</a>
+        <br>
+        or on
+        <a href="http://instagram.com/im_dan_taylor">Instagram</a>
+    </p>
+</div> -->

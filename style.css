@@ -168,7 +168,7 @@ a,
 h1,
 h2,
 h3 {
-    line-height: 1.2em;
+    line-height: 1.3em;
     margin-bottom: 1rem;
     color: var(--color-foreground);
 }
@@ -230,52 +230,42 @@ h1, h1 a {
 
 hr {
     border: none;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 /*containers*/
 
 #site-container {
     margin: 0 auto;
-    /* padding: var(--outer-margin); */
     width: 100%;
-    /*max-width: 1024px;*/
     box-sizing: border-box;
 }
 
-#header-container {
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    max-width: 20rem;
+#header-container, #footer-container {
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
-/* #header-container p, #footer-container p, #header-container a, #footer-container a {
-    color: var(--color-accent);
-} */
+#header-container {
+    margin-top: 2rem;
+}
+
 
 #footer-container {
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+    margin-bottom:2rem;
     text-align: right;
 }
 
 #page-container, #content-container {
-    margin-top: 8rem;
-    margin-bottom: 8rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 auto;
+    max-width: 1024px;
 }
 
-/* #content-container {
-    margin: 0 auto;
-    margin-top: 8rem;
-} */
-
 #post-content {
-    margin: 0 auto;
-    max-width: 100vh;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
 }
 
 /* if the content grid is going to be single page */
@@ -283,7 +273,7 @@ hr {
     max-width: 80vh;
 } */
 
-/* if the content griod is a grid */
+/* if the content grid is a grid */
 .content-grid {
     margin-left: 2px;
     margin-right: 2px;
@@ -302,6 +292,21 @@ hr {
     /* width: 100% !important; */
 }
 
+.page-row {
+    /* make a row that automatically spaces divs evenly */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    align-items: top;
+}
+
+.page-row-item {
+    font-size: 10pt;
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
 /*responsive stuff*/
 
 
@@ -318,6 +323,20 @@ hr {
 @media screen and (max-width: 750px) {
     :root {
         font-size: 15pt;
+    }
+
+    #header-container, #footer-container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    #post-content {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .page-row {
+        grid-template-columns: 1fr 1fr;
     }
 
     .grid-item {
