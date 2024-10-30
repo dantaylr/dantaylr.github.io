@@ -85,3 +85,23 @@ title: Index
 		<a href="http://instagram.com/im_dan_taylor">Instagram</a>
 	</p>
 </div>
+
+<style>
+	#page-container {
+    /* center the page horizontally and vertically */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+/* create a breakpoint for the height that prevents vertical centering */
+/* this will trigger when the height is below 600px or the width is below 600px */
+@media (max-height: 700px), (max-width: 700px) {
+	#page-container {
+		margin-top: 3rem;
+		justify-content: flex-start;
+	}
+}
+</style>

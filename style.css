@@ -158,7 +158,8 @@ table {
 html {
     background-color: var(--color-background);
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 16pt;
+    font-size: 14pt;
+	letter-spacing: .02em;
 }
 
 html,
@@ -169,7 +170,7 @@ h1,
 h2,
 h3 {
     line-height: 1.3em;
-    margin-bottom: 1rem;
+    margin-bottom: .7rem;
     color: var(--color-foreground);
 }
 
@@ -186,7 +187,7 @@ h3 {
 }
 
 .caption {
-    font-size: 10pt;
+    font-size: 8pt;
     font-weight: 400;
 }
 
@@ -196,9 +197,10 @@ a:active,
 a:visited,
 a:focus {
     color: var(--color-foreground);
-    text-decoration: none;
+    text-decoration: underline;
+	text-underline-offset: 4px;;
     padding-bottom: 2px;
-    border-bottom: 1px solid var(--color-foreground);
+    /* border-bottom: 1px solid var(--color-foreground); */
 }
 
 /* h1 a {
@@ -219,7 +221,8 @@ h1, h1 a {
 .grid-item a:hover,
 .grid-item a:visited,
 .grid-item a:focus {
-    border-bottom: none;
+    /* border-bottom: none; */
+	text-decoration: none;
 }
 
 #post-content img,
@@ -235,29 +238,41 @@ hr {
 
 /*containers*/
 
-#site-container {
+/* #site-container {
     margin: 0 auto;
     width: 100%;
     box-sizing: border-box;
-}
+} */
 
-#header-container, #footer-container {
+/* #header-container, #footer-container {
     margin-left: 2rem;
     margin-right: 2rem;
-}
+} */
 
-#header-container {
+/* #header-container {
     margin-top: 2rem;
-}
+} */
 
-.fixed {
+/* .fixed {
     position: fixed;
-}
+} */
 
 
-#footer-container {
+/* #footer-container {
     margin-bottom:2rem;
     text-align: right;
+} */
+
+#header-container {
+	position: fixed;
+	top: 1rem;
+	left: 1rem;
+}
+
+#footer-container {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
 }
 
 #page-container, #content-container {
@@ -308,9 +323,9 @@ hr {
 }
 
 .page-row-item {
-    font-size: 10pt;
+	font-size: 8pt;
+	line-height: 1.5em;
     list-style: none;
-    margin-bottom: 2rem;
 }
 
 /*responsive stuff*/
@@ -327,14 +342,6 @@ hr {
 /*screen size*/
 
 @media screen and (max-width: 750px) {
-    :root {
-        font-size: 15pt;
-    }
-
-    #header-container, #footer-container {
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
 
     #post-content {
         margin-left: 2rem;
