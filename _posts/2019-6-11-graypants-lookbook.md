@@ -1,5 +1,6 @@
 ---
 title: Graypants 2019 lookbook
+width: 80
 ---
 
 Design of the 2019 [Graypants](https://graypants.com) collection lookbook.

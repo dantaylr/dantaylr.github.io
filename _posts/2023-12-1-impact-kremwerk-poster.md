@@ -1,8 +1,9 @@
 ---
-title: Animal remix promo video
-image: ../images/animal-remix/animal-remix-thumb.gif
-width: 50
-caption: Motion design, 3D rendering
+title: Impact! Productions at Kremwerk Poster
+image: ../images/impact-kremwerk-poster.jpg
+width: 45
+
+caption: Graphic design, typography
 ---
 
 Promo video and visualizer design for a release by Ill Gates, Kandisha, and Bil Bless with a remix by [Pedestrian Tactics](http://pedestriantactics.com).

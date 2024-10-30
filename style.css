@@ -84,14 +84,14 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    -webkit-text-size-adjust: 100%;
-    /* Prevent font scaling in landscape while allowing user zoom */
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	-webkit-text-size-adjust: 100%;
+	/* Prevent font scaling in landscape while allowing user zoom */
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -106,60 +106,71 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+	display: block;
 }
 
 body {
-    line-height: 1;
+	line-height: 1;
 }
 
 ol,
 ul {
-    list-style: none;
+	list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none;
+	quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
+	content: '';
+	content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /*End CSS Reset*/
 
 :root {
-    --color-foreground: black;
-    --color-background: white;
-    --color-accent: #c7c7c7;
-    /* --color-tertiary: #b8b8b8; */
-    /* spacing between horizontal rule elements and around the site */
-    --outer-margin: 3rem;
+	--color-foreground: black;
+	--color-background: white;
+	--color-accent: #c7c7c7;
+	/* --color-tertiary: #b8b8b8; */
+	/* spacing between horizontal rule elements and around the site */
+	--outer-margin: 3rem;
 }
 
 @font-face {
-    font-family: "PT-F7 Body";
-    src: url("../fonts/PT-F7-Body.woff2") format("woff2"),
-        url("../fonts/PT-F7-Body.woff") format("woff");
+	font-family: "Hyperwalk VF";
+	src: url("../fonts/HyperwalkVF.woff2") format("woff2"),
+		url("../fonts/HyperwalkVF.ttf") format("ttf"),
+		url("../fonts/HyperwalkVF.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Hyperwalk Mono VF";
+	src: url("../fonts/HyperwalkMonoVF.woff2") format("woff2"),
+		url("../fonts/HyperwalkMonoVF.ttf") format("ttf"),
+		url("../fonts/HyperwalkMonoVF.woff") format("woff");
 }
 
 /*text*/
 
-html {
-    background-color: var(--color-background);
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 14pt;
-	letter-spacing: .02em;
+:root {
+	background-color: var(--color-background);
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: regular;
+	/* font-family: "Hyperwalk VF"; */
+	/* font-weight: 80; */
+	font-size: 16pt;
+	letter-spacing: .01em;
 }
 
 html,
@@ -169,26 +180,18 @@ a,
 h1,
 h2,
 h3 {
-    line-height: 1.3em;
-    margin-bottom: .7rem;
-    color: var(--color-foreground);
-}
-
-.grid-item img {
-    margin-bottom: .5rem;
-}
-
-.grid-item a,
-.grid-item a:active,
-.grid-item a:hover,
-.grid-item a:visited,
-.grid-item a:focus {
-    color: var(--color-foreground);
+	line-height: 1.3em;
+	margin-bottom: .7rem;
+	color: var(--color-foreground);
 }
 
 .caption {
-    font-size: 8pt;
-    font-weight: 400;
+	font-size: 8pt;
+	letter-spacing: .05em;
+}
+
+.mono {
+	/* font-family: "Hyperwalk Mono VF", "Courier New", Courier, monospace; */
 }
 
 a,
@@ -196,72 +199,24 @@ a:hover,
 a:active,
 a:visited,
 a:focus {
-    color: var(--color-foreground);
-    text-decoration: underline;
-	text-underline-offset: 4px;;
-    padding-bottom: 2px;
-    /* border-bottom: 1px solid var(--color-foreground); */
+	color: var(--color-foreground);
+	text-decoration: underline;
+	text-underline-offset: 4px;
 }
-
-/* h1 a {
-border-bottom: 1px solid var(--color-secondary);
-}
-
-h1, h1 a {
-    color: var(--color-secondary);
-    /* filter: invert(100%); */
 
 .hidden-link,
 .hidden-link:active,
 .hidden-link:hover,
 .hidden-link:focus,
-.hidden-link:visited,
-.grid-item a,
-.grid-item a:active,
-.grid-item a:hover,
-.grid-item a:visited,
-.grid-item a:focus {
-    /* border-bottom: none; */
+.hidden-link:visited {
 	text-decoration: none;
 }
 
-#post-content img,
-#post-content video {
-    width: 100%;
-    margin-bottom: 2rem;
-}
-
 hr {
-    border: none;
-    margin-bottom: 2rem;
+	border: none;
+	/* border: 1px solid var(--color-foreground); */
+	margin-bottom: 2rem;
 }
-
-/*containers*/
-
-/* #site-container {
-    margin: 0 auto;
-    width: 100%;
-    box-sizing: border-box;
-} */
-
-/* #header-container, #footer-container {
-    margin-left: 2rem;
-    margin-right: 2rem;
-} */
-
-/* #header-container {
-    margin-top: 2rem;
-} */
-
-/* .fixed {
-    position: fixed;
-} */
-
-
-/* #footer-container {
-    margin-bottom:2rem;
-    text-align: right;
-} */
 
 #header-container {
 	position: fixed;
@@ -274,89 +229,3 @@ hr {
 	bottom: 1rem;
 	right: 1rem;
 }
-
-#page-container, #content-container {
-    margin: 0 auto;
-    max-width: 1024px;
-}
-
-#post-content {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    margin-left: 6rem;
-    margin-right: 6rem;
-}
-
-/* if the content grid is going to be single page */
-/* .content-grid {
-    max-width: 80vh;
-} */
-
-/* if the content grid is a grid */
-.content-grid {
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin-left: 2px;
-    margin-right: 2px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: start;
-}
-
-.grid-item {
-    /* width: calc(33.33% - 16px); */
-    margin-left: 4px;
-    margin-right: 4px;
-    margin-bottom: 16px;
-    /* if single page grid */
-    /* width: 100% !important; */
-}
-
-.page-row {
-    /* make a row that automatically spaces divs evenly */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
-    align-items: top;
-}
-
-.page-row-item {
-	font-size: 8pt;
-	line-height: 1.5em;
-    list-style: none;
-}
-
-/*responsive stuff*/
-
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-foreground: white;
-        --color-background: black;
-    }
-}
-
-
-/*screen size*/
-
-@media screen and (max-width: 750px) {
-
-    #post-content {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-
-    .page-row {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .grid-item {
-        margin-left: 0;
-        margin-right: 0;
-        width: 100% !important;
-    }
-}
-
-@media screen and (max-width: 480px) {}

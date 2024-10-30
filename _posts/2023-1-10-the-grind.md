@@ -1,7 +1,7 @@
 ---
 title: The Grind
 image: ../images/the-grind-screenshot-3.jpg
-width: 43
+width: 35
 caption: Game design and development
 ---
 

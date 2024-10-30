@@ -2,32 +2,99 @@
 layout: default
 title: Index
 ---
-<div id="header-container" class="fixed">
-    <h1>
-        <a class="hidden-link" href="/"><</a>
-    </h1>
+<div id="header-container">
+	<h1>
+		<a class="hidden-link" href="/">&lt;</a>
+	</h1>
 </div>
 <hr />
 <hr />
 <hr />
-<div id="page-container">
-    <div class="content-grid">
-        <!-- if there isn't an order assigned, sort them to the last -->
-        {% assign sorted_posts = site.posts | sort: 'order', 'last' %}
-        <!-- loop through the posts -->
-        {% for post in sorted_posts %}{% if post.image %}
-        <div class="grid-item" style="{% if post.width %}width:{{ post.width }}%{% else %}height: 50vh{% endif %};">
-            <a href="{{ post.url }}">
-                <img src="{{ post.image }}" style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
-            </a>
-            <!-- {{ post.date | date: '%-m/%-d/%Y' }}<br /> -->
-            <a href="{{ post.url }}" class="caption">{{ post.title }}
-                {% if post.width %}<br />{{ post.caption }}{% endif %}
-            </a>
-        </div>
-        {% endif %}{% endfor %}
-    </div>
+<div id="container">
+	<div class="content-grid">
+		<!-- if there isn't an order assigned, sort them to the last -->
+		{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
+		<!-- loop through the posts -->
+		{% for post in sorted_posts %}{% if post.image %}
+		<div class="grid-item" style="{% if post.width %}width:{{ post.width }}%{% else %}height: 50vh{% endif %};">
+			<a href="{{ post.url }}">
+				<img src="{{ post.image }}" style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
+			</a>
+			<!-- {{ post.date | date: '%-m/%-d/%Y' }}<br /> -->
+			<div id="caption-area">
+				<a id="date" class="caption" href="{{ post.url }}">{{ post.date | date: '%Y-%-m-%-d' }}</a>
+				<a href="{{ post.url }}" class="caption">{{ post.title }}
+					{% if post.width %}<br />{{ post.caption }}{% endif %}
+				</a>
+			</div>
+		</div>
+		{% endif %}{% endfor %}
+	</div>
 </div>
+<style>
+	#container {
+		max-width: 1800px;
+	}
+
+	#caption-area {
+		display: flex;
+		flex-direction: row;
+	}
+
+	#date {
+		width: 7em;
+	}
+
+	.content-grid {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin-left: 2px;
+		margin-right: 2px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: start;
+	}
+
+	.grid-item {
+		/* width: calc(33.33% - 16px); */
+		margin-left: 4px;
+		margin-right: 4px;
+		margin-bottom: 16px;
+		/* if single page grid */
+		/* width: 100% !important; */
+	}
+
+	.grid-item img {
+		margin-bottom: .5rem;
+	}
+
+	.grid-item a,
+	.grid-item a:active,
+	.grid-item a:hover,
+	.grid-item a:visited,
+	.grid-item a:focus {
+		color: var(--color-foreground);
+	}
+
+	.grid-item a,
+	.grid-item a:active,
+	.grid-item a:hover,
+	.grid-item a:visited,
+	.grid-item a:focus {
+		/* border-bottom: none; */
+		text-decoration: none;
+	}
+
+	@media screen and (max-width: 720px) {
+
+		.grid-item {
+			margin-left: 0;
+			margin-right: 0;
+			width: 100% !important;
+		}
+	}
+</style>
 <!-- <div id="footer-container">
     <p>
 

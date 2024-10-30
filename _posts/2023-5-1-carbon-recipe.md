@@ -1,7 +1,7 @@
 ---
 title: Carbon Recipe Web App
 image: ../images/carbon-recipe/carbon-recipe-1.jpg
-width: 70
+width: 28
 order: 1
 caption: Emission awareness that people can actually understand
 ---
