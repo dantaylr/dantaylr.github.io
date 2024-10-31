@@ -6,7 +6,7 @@ width: 45
 caption: Graphic design, typography
 ---
 
-Promo video and visualizer design for a release by Ill Gates, Kandisha, and Bil Bless with a remix by [Pedestrian Tactics](http://pedestriantactics.com).
+promotional video and visualizer design for a release by Ill Gates, Kandisha, and Bil Bless with a remix by [Pedestrian Tactics](http://pedestriantactics.com).
 
 ---
 
