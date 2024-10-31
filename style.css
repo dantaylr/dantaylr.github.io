@@ -204,10 +204,6 @@ a:focus {
 	text-underline-offset: 4px;
 }
 
-.highlight {
-	/* color: lightgray; */
-}
-
 .hidden-link,
 .hidden-link:active,
 .hidden-link:hover,
@@ -235,6 +231,16 @@ hr {
 	right: .5em;
 }
 
-#footer-container a, #footer-container p {
+.highlight {
+	color: white;
+}
+
+#header-container,
+#footer-container {
+	mix-blend-mode: difference;
+}
+
+#footer-container a,
+#footer-container p {
 	margin-bottom: 0;
 }
