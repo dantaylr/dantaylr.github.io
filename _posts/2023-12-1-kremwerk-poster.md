@@ -1,5 +1,5 @@
 ---
-title: Impact! Productions at Kremwerk Poster
+title: Kremwerk Poster
 image: ../images/impact-kremwerk-poster-1.jpg
 width: 45
 

@@ -1,5 +1,5 @@
 ---
-title: Bronze Whale Pedestrian Tactics Remix promotional Video
+title: Bronze Whale Video
 image: ../images/bronze-whale/bronze-whale-thumb.gif
 width: 58
 caption: Motion design

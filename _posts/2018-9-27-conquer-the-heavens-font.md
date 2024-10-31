@@ -1,5 +1,5 @@
 ---
-title: Conquer The Heavens UI Font
+title: Conquer The Heavens Font
 image: ../images/cth/font-construction.jpg
 width: 30
 caption: Typeface design

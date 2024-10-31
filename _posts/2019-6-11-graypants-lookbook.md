@@ -1,5 +1,5 @@
 ---
-title: Graypants 2019 lookbook
+title: Graypants Lookbook
 width: 80
 ---
 

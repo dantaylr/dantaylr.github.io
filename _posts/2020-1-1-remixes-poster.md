@@ -1,8 +1,8 @@
 ---
-title: Gas Mask Remixes Poster
+title: Remixes Poster
 image: ../images/2020-remixes-poster-source.jpeg
 width: 44
-caption: 3D artwork, typography
+caption: 3D rendering, graphic design, typography
 order: 4
 ---
 

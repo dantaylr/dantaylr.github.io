@@ -226,12 +226,16 @@ hr {
 
 #header-container {
 	position: fixed;
-	top: 1rem;
-	left: 1rem;
+	top: .5em;
+	left: .5em;
 }
 
 #footer-container {
 	position: fixed;
-	bottom: 1rem;
-	right: 1rem;
+	bottom: .5em;
+	right: .5em;
+}
+
+#footer-container a, #footer-container p {
+	margin-bottom: 0;
 }

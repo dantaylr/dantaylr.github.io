@@ -1,5 +1,5 @@
 ---
-title: Carbon Recipe Web App
+title: Carbon Recipe
 image: ../images/carbon-recipe/carbon-recipe-1.jpg
 width: 28
 order: 1

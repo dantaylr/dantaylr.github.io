@@ -1,5 +1,5 @@
 ---
-title: Fishtank Sessions EP promotional Art
+title: Fishtank Sessions
 image: ../images/fishtank sessions/fishtank-sessions-1.jpeg
 width: 47
 caption: Photo series

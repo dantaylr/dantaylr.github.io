@@ -2,14 +2,22 @@
 layout: default
 ---
 <div id="header-container">
-	<h1>
-		<a class="hidden-link" href="work">&lt;</a>
-	</h1>
+	<p class="highlight">
+		<a class="hidden-link" href="/">Dan</a> / <a class="hidden-link" href="work">Work</a> / {{
+		page.title }}
+	</p>
+</div>
+<div id="footer-container">
+	<p class="highlight">
+		<a class="hidden-link" href="contact">Contact me</a>
+	</p>
 </div>
 <div id="post">
 	<div id="page-container">
-		<p id="title" class="caption mono">{{ page.date | date: '%Y-%-m-%-d' }} <br>{{ page.title }}</p>
-		<!-- <p class="caption">{{ page.title }}</p> -->
+		<div id="captions">
+		<p id="date" class="caption mono">{{ page.date | date: '%Y-%-m-%-d' }}</p>
+		<p id="caption" class="caption mono">{{ page.caption }}</p>
+	</div>
 		<div id="content">
 			{{ content }}
 		</div>
@@ -24,7 +32,17 @@ layout: default
 		margin-right: auto;
 	}
 
-	#title, hr {
+	#captions {
+		display: flex;
+		flex-direction: row;
+	}
+
+	#date {
+		width: 7em;
+	}
+
+	#title,
+	hr {
 		margin-bottom: 2rem;
 	}
 
@@ -38,6 +56,7 @@ layout: default
 		margin-bottom: 8px;
 		width: 100%;
 	}
+
 	/* #content p {
 		margin-bottom: 1rem;
 	} */

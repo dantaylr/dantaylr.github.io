@@ -1,5 +1,5 @@
 ---
-title: Mind Palace Cover Art
+title: Mind Palace
 image: ../images/mind-palace/mind-palace-thumb.gif
 width: 53
 caption: 3D rendering, cover art

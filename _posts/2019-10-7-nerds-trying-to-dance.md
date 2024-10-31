@@ -1,5 +1,5 @@
 ---
-title: Nerds Trying To Dance Cover Art
+title: Nerds Trying To Dance
 image: ../images/nttd/nttd-cover-without-text.jpeg
 width: 32
 caption: Electronic music cover art

@@ -1,5 +1,5 @@
 ---
-title: Pedestrian Tactics Mix Visualizer
+title: PT Visualizer
 image: ../images/pandemic-medicine-thumb.gif
 width: 55
 caption: Motion design, 3D rendering
