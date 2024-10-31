@@ -5,9 +5,9 @@ width: 35
 caption: Game design and development
 ---
 
-Game design and development for a satirical parody of the experience of freelancing at coffee shops. The game takes place in three coffee shops based on actual coffee shops in Seattle Washington and follows a newcomer trying to pay off their expensive rent by taking various freelance jobs from the locals and managing their own productivity.
+Game design and development for a satirical parody of the experience of freelancing at coffee shops. The game takes place in three coffee shops based on actual coffee shops in Seattle Washington.
 
-The game is written in C# utilizing the Godot Engine. Initially the game was written in Unity.
+The process involved creating a system for the 2.5D characters along with the 3D artwork for the maps, building a custom typeface for the dialogue, and writing scripts for handling branching dialogue along with general gameplay. The game was written in C# using the Godot and Unity engines.
 
 ---
 
