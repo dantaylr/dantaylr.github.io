@@ -6,8 +6,8 @@ width: 45
 caption: Graphic design, typography
 ---
 
-promotional video and visualizer design for a release by Ill Gates, Kandisha, and Bil Bless with a remix by [Pedestrian Tactics](http://pedestriantactics.com).
+Promotional poster design for an electronic dance show at Kremwerk Nightclub put on by Impact! Productions.
 
 ---
 
-<video controls src="images/animal-remix/animal-remix-video.mp4"></video>
+![](../images/impact-kremwerk-poster.jpg)
