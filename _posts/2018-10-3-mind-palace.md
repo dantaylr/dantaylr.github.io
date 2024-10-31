@@ -8,7 +8,7 @@ order: 11
 
 Cover art and promo video for [Pedestrian Tactics](https://pedestriantactics.com) Mind Palace single.
 
-***
+---
 
 ![](../images/mind-palace/mind-palace-cover-art.jpeg)
 <video controls src="images/mind-palace/mind-palace-video.mov"></video>

@@ -6,6 +6,6 @@ caption: Timed 3D render and painting
 
 Misc timed rendering, under 1hr.
 
-***
+---
 
 ![](images/mountains-rendering.jpg)

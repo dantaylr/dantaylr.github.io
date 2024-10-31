@@ -7,7 +7,7 @@ caption: Photo series
 
 Cover art and promo material for a release by [Pedestrian Tactics](https://pedestriantactics.com).
 
-***
+---
 
 ![](../images/fishtank sessions/fishtank-sessions-1.jpeg)
 ![](../images/fishtank sessions/fishtank-sessions-2.jpeg)

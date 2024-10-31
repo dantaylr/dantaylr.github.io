@@ -6,34 +6,39 @@ layout: default
 		<a class="hidden-link" href="work">&lt;</a>
 	</h1>
 </div>
-<hr />
-<hr />
-<hr />
-<div id="post-content">
+<div id="post">
 	<div id="page-container">
-		<p class="caption mono">{{ page.date | date: '%Y-%-m-%-d' }}</p>
-		<hr>
-		<!-- <hr /> -->
-		{{ content }}
+		<p id="title" class="caption mono">{{ page.date | date: '%Y-%-m-%-d' }} <br>{{ page.title }}</p>
+		<!-- <p class="caption">{{ page.title }}</p> -->
+		<div id="content">
+			{{ content }}
+		</div>
 	</div>
 </div>
 
 <style>
 	#page-container {
 		/* center the page horizontally and vertically */
-		max-width: 960px;
+		max-width: 800px;
 		margin-left: auto;
 		margin-right: auto;
 	}
 
-	#post-content img,
-	#post-content video {
-		width: 100%;
+	#title, hr {
 		margin-bottom: 2rem;
 	}
 
-
-	#post-content {
+	#post {
 		margin: 2rem;
+		margin-top: 6rem;
 	}
+
+	#content img,
+	#content video {
+		margin-bottom: 8px;
+		width: 100%;
+	}
+	/* #content p {
+		margin-bottom: 1rem;
+	} */
 </style>

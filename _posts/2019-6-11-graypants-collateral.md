@@ -8,14 +8,10 @@ order: 1
 
 Print design, illustration, and product photography for Graypants' annual product lookbook.
 
-***
+---
 
 ![](../images/graypants-collateral/graypants-collateral-1.jpg)
 ![](../images/graypants-collateral/graypants-collateral-2.jpg)
 ![](../images/graypants-collateral/graypants-collateral-3.jpg)
 
-***
-
 <video controls src="images/graypants-lookbook-flipthrough.mp4"></video>
-
-***

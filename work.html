@@ -7,9 +7,6 @@ title: Index
 		<a class="hidden-link" href="/">&lt;</a>
 	</h1>
 </div>
-<hr />
-<hr />
-<hr />
 <div id="container">
 	<div class="content-grid">
 		<!-- if there isn't an order assigned, sort them to the last -->
@@ -34,6 +31,8 @@ title: Index
 <style>
 	#container {
 		max-width: 1800px;
+		margin: 2rem;
+		margin-top: 6rem;
 	}
 
 	#caption-area {
@@ -46,23 +45,15 @@ title: Index
 	}
 
 	.content-grid {
-		padding-left: 1rem;
-		padding-right: 1rem;
-		margin-left: 2px;
-		margin-right: 2px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+		gap: 8px;
 		align-items: start;
 	}
 
 	.grid-item {
-		/* width: calc(33.33% - 16px); */
-		margin-left: 4px;
-		margin-right: 4px;
 		margin-bottom: 16px;
-		/* if single page grid */
-		/* width: 100% !important; */
 	}
 
 	.grid-item img {

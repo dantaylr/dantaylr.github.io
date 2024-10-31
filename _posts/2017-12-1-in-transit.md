@@ -8,7 +8,7 @@ order: 6
 
 Logo, animated promo video, and photo series designed and captured for the [Pedestrian Tactics](https://pedestriantactics.com) project during 5.5 months in Thailand, Vietnam, and Hong Kong.
 
-***
+---
 
 ![](../images/in-transit/in-transit-photo-series-1.jpg)
 ![](../images/in-transit/in-transit-photo-series-2.jpg)
@@ -21,10 +21,6 @@ Logo, animated promo video, and photo series designed and captured for the [Pede
 ![](../images/in-transit/in-transit-photo-series-9.jpg)
 ![](../images/in-transit/in-transit-photo-series-10.jpg)
 
-***
-
 <video controls src="images/in-transit/in-transit-video.mp4"></video>
-
-***
 
 More of my photo work can be found on my [instagram](https://instagram.com/im_dan_taylor)

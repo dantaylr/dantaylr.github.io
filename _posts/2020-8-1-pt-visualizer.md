@@ -5,12 +5,13 @@ width: 55
 caption: Motion design, 3D rendering
 order: 8
 ---
-<p>
-    Motion graphics developed for a half-hour mix by the
-    <a href="https://pedestriantactics.com">Pedestrian Tactics</a>
-    project.
-</p>
-<hr>
+
+Motion graphics developed for a half-hour mix by the
+[Pedestrian Tactics](https://pedestriantactics.com)
+project.
+
+---
+
 <iframe
     width="100%"
     height="75%"
