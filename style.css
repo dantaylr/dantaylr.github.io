@@ -167,10 +167,10 @@ table {
 	background-color: var(--color-background);
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	font-weight: regular;
-	/* font-family: "Hyperwalk VF"; */
-	/* font-weight: 80; */
+	font-family: "Hyperwalk VF";
+	font-weight: 80;
 	font-size: 16pt;
-	letter-spacing: .01em;
+	letter-spacing: .02em;
 }
 
 
@@ -179,14 +179,17 @@ a,
 h1,
 h2,
 h3 {
-	line-height: 1.3em;
+	line-height: 1.4em;
 	margin-bottom: .7rem;
 	color: var(--color-foreground);
 }
 
 .caption {
 	font-size: 8pt;
-	letter-spacing: .05em;
+	letter-spacing: .0em;
+	font-family: "Hyperwalk Mono VF";
+	/* text-transform: uppercase; */
+	font-weight: 80;
 }
 
 .mono {
@@ -201,7 +204,7 @@ a:focus {
 	/* color: red; */
 	text-decoration: underline;
 	/* text-decoration: none; */
-	text-underline-offset: 4px;
+	text-underline-offset: .3em;
 }
 
 .hidden-link,
