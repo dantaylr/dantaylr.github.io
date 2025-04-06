@@ -1,7 +1,7 @@
 ---
 title: IKEA Upptacka Video
 video: ../images/ikea-upptacka/ikea-upptacka-thumbnail.mp4
-width: 55
+width: 45
 caption: 3D animation
 order: 1
 ---
