@@ -17,10 +17,18 @@ title: Work
 		<!-- if there isn't an order assigned, sort them to the last -->
 		{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
 		<!-- loop through the posts -->
-		{% for post in sorted_posts %}{% if post.image %}
+		{% for post in sorted_posts %}{% if post.hidden != true %}
 		<div class="grid-item" style="{% if post.width %}width:{{ post.width }}%{% else %}height: 50vh{% endif %};">
 			<a href="{{ post.url }}">
+				{% if post.image %}
 				<img src="{{ post.image }}" style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
+				{% endif %}
+				{% if post.video %}
+				<video autoplay loop muted playsinline style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
+					<source src="{{ post.video }}" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				{% endif %}
 			</a>
 			<!-- {{ post.date | date: '%-m/%-d/%Y' }}<br /> -->
 			<div id="caption-area">
@@ -61,7 +69,7 @@ title: Work
 		margin-bottom: 16px;
 	}
 
-	.grid-item img {
+	.grid-item img, .grid-item video {
 		margin-bottom: .5rem;
 	}
 

@@ -1,8 +1,8 @@
 ---
 title: Kremwerk Poster
 image: ../images/impact-kremwerk-poster-1.jpg
-width: 45
-
+width: 35
+hidden: true
 caption: Graphic design, typography
 ---
 

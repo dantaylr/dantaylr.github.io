@@ -1,7 +1,7 @@
 ---
 title: Fishtank Sessions
 image: ../images/fishtank sessions/fishtank-sessions-1.jpeg
-width: 47
+width: 33
 caption: Photo series
 ---
 

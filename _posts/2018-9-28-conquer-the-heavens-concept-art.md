@@ -1,6 +1,6 @@
 ---
 title: Conquer The Heavens Concept Art
-# image: ../images/cth/concept-purple.jpg
+image: ../images/cth/concept-purple.jpg
 width: 55
 caption: Concept artwork
 ---

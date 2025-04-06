@@ -6,7 +6,11 @@ caption: Print magazine design
 order: 1
 ---
 
-Print design, illustration, and product photography for Graypants' annual product lookbook.
+Print design, illustration, and product photography for the [Graypants](https://graypants.com) annual product lookbook.
+
+During this year at the company I directed the brand, establishing decisions and systems for typography, colors, photography, and illustrations.
+
+In order to produce the lookbook I conducted studio photography, illustrated orthographic product views, and coordinated printing services to retain the physical quality while keeping costs minimal.
 
 ---
 
