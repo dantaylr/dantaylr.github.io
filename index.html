@@ -70,7 +70,7 @@ title: Index
 <style>
 	#page-container {
 		/* center the page horizontally and vertically */
-		max-width: 800px;
+		max-width: var(--max-paragraph-width);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -105,7 +105,9 @@ title: Index
 			margin-top: 3rem;
 			justify-content: flex-start;
 		}
+	}
 
+	@media (max-width: 600px) {
 		#row {
 			grid-template-columns: 1fr;
 		}

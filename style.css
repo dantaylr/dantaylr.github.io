@@ -1,13 +1,3 @@
-
-:root {
-	--color-foreground: black;
-	--color-background: white;
-	--color-accent: #c7c7c7;
-	/* --color-tertiary: #b8b8b8; */
-	/* spacing between horizontal rule elements and around the site */
-	--outer-margin: 3rem;
-}
-
 @font-face {
 	font-family: "Hyperwalk VF";
 	src: url("../fonts/HyperwalkVF.woff2") format("woff2"),
@@ -25,34 +15,39 @@
 /*text*/
 
 :root {
+	--color-foreground: black;
+	--color-background: white;
+	--color-accent: #c7c7c7;
+	/* spacing between horizontal rule elements and around the site */
+	--outer-margin: 3rem;
+	--spacer: 2em;
+	/* includes max width of the page itself */
+	--max-paragraph-width: 46rem;
 	background-color: var(--color-background);
-	/* font-family: "Helvetica Neue", Helvetica, sans-serif; */
-	/* font-weight: regular; */
-	font-family: "Hyperwalk VF", "Helvetica Neue", Helvetica, sans-serif;
-	font-weight: 65;
-	font-size: 15pt;
-	letter-spacing: .01em;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 16pt;
+	font-weight: 300;
+	letter-spacing: 0.03em;
 }
 
+.spacer {
+	margin-left: var(--spacer);
+}
 
 p,
 a,
 h1,
 h2,
 h3 {
-	line-height: 1.4em;
+	line-height: 1.3em;
 	margin-bottom: .7rem;
 	color: var(--color-foreground);
 }
 
 .caption {
 	font-size: 9pt;
-	font-weight: 80;
-	/* letter-spacing: .03em; */
-}
-
-.mono {
-	/* font-family: "Hyperwalk Mono VF", "Courier New", Courier, monospace; */
+	font-weight: 400;
+	letter-spacing: .05em;
 }
 
 a,
@@ -60,10 +55,9 @@ a:hover,
 a:active,
 a:visited,
 a:focus {
-	/* color: red; */
 	text-decoration: underline;
-	/* text-decoration: none; */
-	text-underline-offset: 4px;
+	text-underline-offset: .2em;
+	text-decoration-thickness: 1px;
 }
 
 .hidden-link,
@@ -76,8 +70,6 @@ a:focus {
 
 hr {
 	border: none;
-	/* border: 1px solid var(--color-foreground); */
-	/* margin-top: 2rem; */
 	margin-bottom: 2rem;
 }
 
@@ -105,4 +97,12 @@ hr {
 #footer-container a,
 #footer-container p {
 	margin-bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-foreground: white;
+		--color-background: black;
+		--color-accent: #c7c7c7;
+	}
 }

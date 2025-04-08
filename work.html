@@ -18,25 +18,26 @@ title: Work
 		{% assign sorted_posts = site.posts | sort: 'date' | reverse %}
 		<!-- loop through the posts -->
 		{% for post in sorted_posts %}{% if post.hidden != true %}
+
 		<div class="grid-item" style="{% if post.width %}width:{{ post.width }}%{% else %}height: 50vh{% endif %};">
 			<a href="{{ post.url }}">
+				<!-- <a href="{{ post.url }}"> -->
 				{% if post.image %}
 				<img src="{{ post.image }}" style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
 				{% endif %}
 				{% if post.video %}
-				<video autoplay loop muted playsinline style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
+				<video autoplay loop muted playsinline
+					style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
 					<source src="{{ post.video }}" type="video/mp4">
 					Your browser does not support the video tag.
 				</video>
 				{% endif %}
+				<!-- </a> -->
+				<!-- {{ post.date | date: '%-m/%-d/%Y' }}<br /> -->
+				<div id="caption-area">
+					<p class="caption">{{ post.date | date: '%Y-%-m-%-d' }}<span class="spacer"></span>{{ post.title }}</p>
+				</div>
 			</a>
-			<!-- {{ post.date | date: '%-m/%-d/%Y' }}<br /> -->
-			<div id="caption-area">
-				<a id="date" class="caption" href="{{ post.url }}">{{ post.date | date: '%Y-%-m-%-d' }}</a>
-				<a href="{{ post.url }}" class="caption">{{ post.title }}
-					{% if post.width %}<br />{{ post.caption }}{% endif %}
-				</a>
-			</div>
 		</div>
 		{% endif %}{% endfor %}
 	</div>
@@ -69,7 +70,8 @@ title: Work
 		margin-bottom: 16px;
 	}
 
-	.grid-item img, .grid-item video {
+	.grid-item img,
+	.grid-item video {
 		margin-bottom: .5rem;
 	}
 

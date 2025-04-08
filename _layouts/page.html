@@ -15,8 +15,7 @@ layout: default
 <div id="post">
 	<div id="page-container">
 		<div id="captions">
-		<p id="date" class="caption mono">{{ page.date | date: '%Y-%-m-%-d' }}</p>
-		<p id="caption" class="caption mono">{{ page.caption }}</p>
+		<p class="caption">{{ page.date | date: '%Y-%-m-%-d' }}<span class="spacer"></span>{{ page.title }}<span class="spacer"></span>{{ page.caption }}</p>
 	</div>
 		<div id="content">
 			{{ content }}
@@ -27,7 +26,7 @@ layout: default
 <style>
 	#page-container {
 		/* center the page horizontally and vertically */
-		max-width: 800px;
+		max-width: var(--max-paragraph-width);
 		margin-left: auto;
 		margin-right: auto;
 	}
