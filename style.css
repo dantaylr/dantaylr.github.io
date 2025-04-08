@@ -20,7 +20,7 @@
 	--color-accent: #c7c7c7;
 	/* spacing between horizontal rule elements and around the site */
 	--outer-margin: 3rem;
-	--spacer: 2em;
+	--spacer: 1.5em;
 	/* includes max width of the page itself */
 	--max-paragraph-width: 46rem;
 	background-color: var(--color-background);
