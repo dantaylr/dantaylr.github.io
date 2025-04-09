@@ -20,7 +20,7 @@ title: Work
 		{% for post in sorted_posts %}{% if post.hidden != true %}
 
 		<div class="grid-item" style="{% if post.width %}width:{{ post.width }}%{% else %}height: 50vh{% endif %};">
-			<a href="{{ post.url }}">
+			<a class="hidden-link" href="{{ post.url }}">
 				<!-- <a href="{{ post.url }}"> -->
 				{% if post.image %}
 				<img src="{{ post.image }}" style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">

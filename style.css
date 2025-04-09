@@ -25,7 +25,7 @@
 	--max-paragraph-width: 38rem;
 	background-color: var(--color-background);
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
-	font-size: 16pt;
+	font-size: 14pt;
 	font-weight: 400;
 	letter-spacing: 0.02em;
 }
@@ -39,18 +39,21 @@ a,
 h1,
 h2,
 h3 {
-	line-height: 1.3em;
+	line-height: 1.4em;
 	margin-bottom: .7rem;
 	color: var(--color-foreground);
 }
 
 .caption {
+	line-height: 1.4em;
 	font-size: 9pt;
 	font-weight: 400;
 	letter-spacing: .05em;
 }
 
-a,
+/* underlined links */
+
+/* a,
 a:hover,
 a:active,
 a:visited,
@@ -58,6 +61,25 @@ a:focus {
 	text-decoration: underline;
 	text-underline-offset: .2em;
 	text-decoration-thickness: 1px;
+} */
+
+/* highlighted links */
+
+a,
+a:hover,
+a:active,
+a:visited,
+a:focus {
+	text-decoration: none;
+	color: var(--color-background);
+	background-color: var(--color-foreground);
+	padding-left: .2em;
+	padding-right: .2em;
+	padding-top: .05em;
+	padding-bottom: .05em;
+	/* prevent punctuation from being right after */
+	margin-left: .1em;
+	margin-right: .1em;
 }
 
 .hidden-link,
@@ -65,7 +87,12 @@ a:focus {
 .hidden-link:hover,
 .hidden-link:focus,
 .hidden-link:visited {
+	color: var(--color-foreground);
+	background-color: transparent;
 	text-decoration: none;
+	/* undo everything else being done to links */
+	padding: 0;
+	margin: 0;
 }
 
 hr {
@@ -85,9 +112,9 @@ hr {
 	right: .5em;
 }
 
-.highlight {
+/* .highlight {
 	color: white;
-}
+} */
 
 #header-container,
 #footer-container {
