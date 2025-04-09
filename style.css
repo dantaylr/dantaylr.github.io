@@ -121,6 +121,10 @@ hr {
 	mix-blend-mode: difference;
 }
 
+#header-container *, #footer-container * {
+	color: white;
+}
+
 #footer-container a,
 #footer-container p {
 	margin-bottom: 0;
