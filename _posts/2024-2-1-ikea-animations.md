@@ -1,5 +1,5 @@
 ---
-title: IKEA Upptacka Video
+title: IKEA Kreativ Animations
 video: ../images/ikea-animations/ikea-kreativ-upptacka-thumbnail.mp4
 width: 45
 caption: 3D animation
