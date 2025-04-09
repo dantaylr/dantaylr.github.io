@@ -27,9 +27,11 @@
 	<link rel="stylesheet" href="/reset.css">
 	<link rel="stylesheet" href="/style.css">
 
+	{% if jekyll.environment == "production" %}
 	<!-- tracking -->
-	<script defer src="https://umami.catalystsoftworks.com/script.js" data-website-id="3e20ed2c-7762-4d69-a29d-df3d36582aca"></script>
-
+	<script defer src="https://umami.catalystsoftworks.com/script.js"
+		data-website-id="3e20ed2c-7762-4d69-a29d-df3d36582aca"></script>
+	{% endif %}
 </head>
 
 <body>
