@@ -106,6 +106,21 @@ hr {
 	margin-bottom: 2rem;
 }
 
+.arrow-left, .arrow-right {
+	font-family: "Hyperwalk VF", sans-serif;
+	/* font-size: 14pt; */
+	font-weight: 60;
+	line-height: 1rem;
+}
+
+.arrow-left::before {
+	content: "←";
+}
+
+.arrow-right::before {
+	content: "→";
+}
+
 #header-container {
 	position: fixed;
 	top: .5em;
