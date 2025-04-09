@@ -23,7 +23,7 @@ title: Work
 			<a class="hidden-link" href="{{ post.url }}">
 				<!-- <a href="{{ post.url }}"> -->
 				{% if post.image %}
-				<img src="{{ post.image }}" style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
+				<img {% if post.contrast %}class="contrast"{% endif %} src="{{ post.image }}" style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
 				{% endif %}
 				{% if post.video %}
 				<video autoplay loop muted playsinline

@@ -2,6 +2,7 @@
 title: Conquer The Heavens Font
 image: ../images/cth/font-construction.jpg
 width: 30
+contrast: true
 caption: Typeface design
 order: 2
 ---

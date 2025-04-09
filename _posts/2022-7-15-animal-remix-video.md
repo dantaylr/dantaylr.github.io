@@ -1,6 +1,7 @@
 ---
 title: Animal Remix Video
 image: ../images/animal-remix/animal-remix-thumb.gif
+contrast: true
 width: 32
 caption: Motion design, 3D rendering
 ---

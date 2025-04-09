@@ -34,6 +34,12 @@
 	margin-left: var(--spacer);
 }
 
+/* make videos off-black or off-white by lightening them slightly */
+/* this can be added to a post by adding "contrast: true" */
+.contrast {
+	filter: contrast(0.75);
+}
+
 p,
 a,
 h1,
@@ -121,6 +127,7 @@ hr {
 	mix-blend-mode: difference;
 }
 
+/* lock the color of the header and footer because of the blend mode */
 #header-container *, #footer-container * {
 	color: white;
 }
