@@ -7,7 +7,7 @@ caption: Motion design
 order: 3
 ---
 
-promotional video for remix by [Pedestrian Tactics](https://pedestriantactics.com).
+Promotional video for remix by [Pedestrian Tactics](https://pedestriantactics.com).
 
 ---
 

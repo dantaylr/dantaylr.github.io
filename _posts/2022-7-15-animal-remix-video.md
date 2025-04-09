@@ -6,7 +6,7 @@ width: 32
 caption: Motion design, 3D rendering
 ---
 
-promotional video and visualizer design for a release by Ill Gates, Kandisha, and Bil Bless with a remix by [Pedestrian Tactics](http://pedestriantactics.com).
+Promotional video and visualizer design for a release by Ill Gates, Kandisha, and Bil Bless with a remix by [Pedestrian Tactics](http://pedestriantactics.com).
 
 ---
 

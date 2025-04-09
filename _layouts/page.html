@@ -15,8 +15,9 @@ layout: default
 <div id="post">
 	<div id="page-container">
 		<div id="captions">
-		<p class="caption">{{ page.date | date: '%Y-%-m-%-d' }}<span class="spacer"></span>{{ page.title }}<span class="spacer"></span>{{ page.caption }}</p>
-	</div>
+			<p class="caption">{{ page.date | date: '%Y-%-m-%-d' }}<span class="spacer"></span>{{ page.title }}<span
+					class="spacer"></span>{{ page.caption }}</p>
+		</div>
 		<div id="content">
 			{{ content }}
 		</div>
@@ -34,10 +35,6 @@ layout: default
 	#captions {
 		display: flex;
 		flex-direction: row;
-	}
-
-	#date {
-		width: 7em;
 	}
 
 	#title,
