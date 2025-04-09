@@ -1,6 +1,6 @@
 ---
 title: Mountains Rendering
-width: 46
+width: 28
 caption: Timed 3D render and painting
 image: images/mountains-rendering.jpg
 hidden: true

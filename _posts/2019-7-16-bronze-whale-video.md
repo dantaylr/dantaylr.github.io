@@ -1,6 +1,6 @@
 ---
 title: Bronze Whale Video
-image: ../images/bronze-whale/bronze-whale-thumb.gif
+video: ../images/bronze-whale/bronze-whale-video-thumb.mp4
 width: 58
 contrast: true
 caption: Motion design

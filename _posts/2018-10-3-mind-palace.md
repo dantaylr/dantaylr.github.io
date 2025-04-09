@@ -1,7 +1,7 @@
 ---
 title: Mind Palace
-image: ../images/mind-palace/mind-palace-thumb.gif
-width: 53
+video: ../images/mind-palace/mind-palace-video-thumb.mp4
+width: 33
 caption: 3D rendering, cover art
 order: 11
 ---
