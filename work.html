@@ -26,7 +26,7 @@ title: Work
 				<img {% if post.contrast %}class="contrast"{% endif %} src="{{ post.image }}" style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
 				{% endif %}
 				{% if post.video %}
-				<video autoplay loop muted playsinline
+				<video autoplay loop muted playsinline {% if post.contrast %}class="contrast"{% endif %}
 					style="{% if post.width %}width:100%{% else %}height:100%;{% endif %};">
 					<source src="{{ post.video }}" type="video/mp4">
 					Your browser does not support the video tag.
