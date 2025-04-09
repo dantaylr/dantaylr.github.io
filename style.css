@@ -37,7 +37,7 @@
 /* make videos off-black or off-white by lightening them slightly */
 /* this can be added to a post by adding "contrast: true" */
 .contrast {
-	filter: contrast(0.75);
+	filter: contrast(0.77);
 }
 
 p,
