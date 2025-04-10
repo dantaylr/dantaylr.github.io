@@ -136,6 +136,7 @@ hr {
 #header-container,
 #footer-container {
 	mix-blend-mode: difference;
+	z-index: 1;
 }
 
 /* lock the color of the header and footer because of the blend mode */
