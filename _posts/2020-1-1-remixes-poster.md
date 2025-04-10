@@ -1,7 +1,7 @@
 ---
 title: Remixes Poster
 image: ../images/2020-remixes-poster-source.jpeg
-width: 44
+width: 42
 caption: 3D rendering, graphic design, typography
 order: 4
 ---
