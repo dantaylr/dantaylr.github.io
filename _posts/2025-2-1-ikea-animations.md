@@ -1,9 +1,8 @@
 ---
 title: IKEA Kreativ Animations
 video: ../images/ikea-animations/ikea-kreativ-upptacka-thumbnail.mp4
-width: 45
+width: 51
 caption: 3D animation
-order: 1
 ---
 
 Promotional videos for IKEA Kreativ, IKEA's new interactive room design tool. Used both on IKEA's website and in-store.

@@ -3,7 +3,6 @@ title: Nerds Trying To Dance
 image: ../images/nttd/nttd-cover-without-text.jpeg
 width: 32
 caption: Electronic music cover art
-order: 10
 ---
 
 Cover art and video production for the Nerds Trying To Dance EP by

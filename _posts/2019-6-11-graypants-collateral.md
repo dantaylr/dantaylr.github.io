@@ -4,7 +4,6 @@ image: ../images/graypants-collateral/graypants-collateral-2.jpg
 width: 80
 caption: Print magazine design
 hidden: true
-order: 1
 ---
 
 Print design, illustration, and product photography for the [Graypants](https://graypants.com) annual product lookbook.
