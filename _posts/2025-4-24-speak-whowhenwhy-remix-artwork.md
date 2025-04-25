@@ -14,3 +14,5 @@ Cover art and release visualizer for WHOWHENWHY's remix of Corporate - Speak (Fe
 ---
 
 <video controls src="images/speak-whowhenwhy-remix-artwork/speak-whowhenwhy-remix-animation.mp4"></video>
+
+<video controls src="images/speak-whowhenwhy-remix-artwork/speak-remix-insta-story.mp4"></video>
