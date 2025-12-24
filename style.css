@@ -22,7 +22,7 @@
 	--outer-margin: 3rem;
 	--spacer: 1.5em;
 	/* includes max width of the page itself */
-	--max-paragraph-width: 38rem;
+	--max-paragraph-width: 42rem;
 	background-color: var(--color-background);
 	font-family: "Helvetica Neue", Helvetica, sans-serif;
 	font-size: 14pt;
