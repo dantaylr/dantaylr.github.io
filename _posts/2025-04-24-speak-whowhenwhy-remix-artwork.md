@@ -1,7 +1,7 @@
 ---
 title: Speak WHOWHENWHY Remix Artwork
 video: ../images/speak-whowhenwhy-remix-artwork/speak-whowhenwhy-remix-animation.mp4
-width: 26
+width: 36
 caption: Artwork, 2D animation
 ---
 

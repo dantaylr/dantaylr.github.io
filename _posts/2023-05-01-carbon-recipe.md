@@ -1,7 +1,7 @@
 ---
 title: Carbon Recipe
 image: ../images/carbon-recipe/carbon-recipe-1.jpg
-width: 37
+width: 18
 caption: Emission awareness that people can actually understand
 ---
 

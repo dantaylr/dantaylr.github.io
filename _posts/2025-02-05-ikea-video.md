@@ -1,7 +1,7 @@
 ---
 title: IKEA Kreativ Demo Video
 video: ../images/ikea-dp/ikea-dp-video-thumb.mp4
-width: 40
+width: 52
 caption: Video production
 ---
 
